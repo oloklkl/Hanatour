@@ -1,96 +1,64 @@
-// 메인 페이지 스타일
-.slide-intro {
-  .swiper-slide {
+
+
+
+.main-hanatour {
+  .logo {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+
+.event-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff;
     position: relative;
-    &.swiper-slide-active {
-      .text-area {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-      }
-    }
+ 
+        ::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
 
-    img {
-      object-position: 50% 100%;
-    }
-    .text-area {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 70%;
-      max-width: 400px;
-      opacity: 0;
-      transition: all 0.5s;
-      // .text-area__tit
-      &__tit {
-        font-size: 3rem;
-        color: $gray-90;
-        font-family: 'GmarketSansMedium';
-        font-weight: $font-medium;
-      }
-      &__cont {
-        color: $gray-70;
-      }
-      &__goto {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 7px 20px;
-        background: $primary;
-        color: $white;
-      }
-    }
-    img {
-      height: 50vh;
-    }
-  }
-  .swiper-pagination {
-    display: none;
-  }
-}
+        .event-banner-content {
+            position: relative;
+            z-index: 1;
+        }
 
-// tablet
-@media screen and (min-width: 600px) {
-  .slide-intro .swiper-slide img {
-    height: 70vh;
-  }
-}
+        .event-banner h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
 
-// desktop
-@media screen and (min-width: 1024px) {
-  .slide-intro {
-    .swiper-slide {
-      img {
-        height: 70vh;
-      }
-      .text-area {
-        width: 100%;
-        max-width: none;
-        text-align: left;
-      }
-      .text-area__tit {
-        font-size: 6rem;
-      }
-      .text-area__cont {
-        font-size: 2rem;
-      }
-      .text-area__goto {
-        margin-top: 30px;
-      }
-    }
-    .swiper-pagination {
-      display: block;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none;
-    }
-  }
-}
+        .event-banner p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
 
-.slide-studio {
-  overflow: visible;
-  margin-left: 0;
-  .swiper-pagination {
-    bottom: -50px;
-  }
+        .btn-event {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #eff14d;
+            color: #181818;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-event:hover {
+            background-color: #003cff;
+        }
+
 }

@@ -37,11 +37,6 @@ img {
   border: 0 none;
 }
 
-img,
-video {
-  max-width: 100%;
-}
-
 dl,
 ul,
 ol,
@@ -131,6 +126,7 @@ input {
 }
 
 /* 기본 폰트 설정 */
+/* mobile */
 html {
   font-size: $font-size-root;
 }
@@ -182,6 +178,33 @@ input[type="password"] {
   font-family: "Malgun Gothic";
 }
 
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+
+  a {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    padding: 7px 10px 5px;
+    background: $font-color-base;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0;
+
+    &:focus {
+      top: 0;
+      opacity: 1;
+      z-index: 1000;
+    }
+  }
+}
+
 /* 이미지 스프라이트 */
 .img-g {
   display: inline-block;
@@ -189,6 +212,9 @@ input[type="password"] {
   background: url(../../images/comm/img-comm.png) no-repeat;
   vertical-align: top;
 }
+
+/* 이미지 */
+/* global */
 
 .ir-pm {
   display: block;

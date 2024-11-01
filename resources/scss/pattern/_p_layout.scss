@@ -1,6 +1,6 @@
-// 사이트 레이아웃 스타일
+// 사이트 레이아웃 관련 요소
 
-// 전역 그리드
+// grid layout
 .inner {
   position: relative;
   width: 100%;
@@ -12,7 +12,6 @@
   }
 }
 
-// 스킵 네비게이션
 #skip-nav {
   position: fixed;
   top: 0;
@@ -69,7 +68,6 @@
     height: 0;
     background: $gray-5;
     transition: all 0.3s;
-    border-top: 1px solid $gray-20;
   }
   .inner {
     display: flex;
@@ -91,7 +89,7 @@
       display: block;
       width: 200px;
       height: 35px;
-      background: url("../../../resources/images/pattern/common/head_logo.svg") no-repeat 0 0 / contain;
+      background: url("../../../resources/images/pattern/common/logo_white.svg") no-repeat 0 0 / contain;
     }
     span {
       @include sr-only;
@@ -168,6 +166,7 @@
     right: 0;
     height: 0;
     padding: 0;
+    background: $gray-5;
     transition: all 0.3s;
     &::after {
       content: "";
@@ -270,4 +269,15 @@
     display: block;
     left: 0;
   }
+}
+
+
+// footer
+#footer {
+  display: block;
+  background: #181818;
+}
+
+#list-corp a {
+  color: #ffffff; text-decoration: none;
 }
