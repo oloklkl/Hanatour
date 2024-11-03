@@ -16,31 +16,6 @@
     padding-bottom: 2.34375vw;
     font-size: 3rem;
   }
-  &__more {
-    position: absolute;
-    top: 17px;
-    right: $p-mobile;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 2rem;
-    @include mobileMore {
-      right: $p-tablet;
-    }
-    &::after {
-      content: "\f061";
-      @include lineAwesome;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      
-      background: $gray-20;
-    }
-  }
 }
 
 // 전역 스타일
@@ -55,32 +30,97 @@
     justify-content: center;
     align-items: center;
     img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      position: relative;
+      width: 260px;
+      height: auto;
     }
     a {
       display: block;
       width: 100%;
       height: 100%;
     }
+    &__more {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      top: 17px;
+      right: $p-mobile;
+      font-size: 2rem;
+      @include mobileMore {
+        right: $p-tablet;
+      }
+      &::after {
+        content: '\f061';
+        @include lineAwesome;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: $gray-20;
+        border-radius: 50%;
+      }
   }
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    display: none;
+}
+}
+
+.sec-service  {
+  .sec-g__tit {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);  // 화면에서 요소를 완전히 숨김
+    white-space: nowrap;
   }
-  .swiper-button-next::before,
-  .swiper-button-prev::before {
-    @include lineAwesome;
-    font-size: 3rem;
-    color: $black;
-    opacity: 0.5;
+  .slide-service {
+    text-align: center;
+}
+
+  .business-tit {
+      margin-top: 50px;
+      font-size: 2rem;
+      color: #7CE9E2;
   }
-  .swiper-button-next::before {
-    content: "\f138";
+
+  .main-tit {
+      font-size: 4rem;
+      color: $white;
   }
-  .swiper-button-prev::before {
-    content: "\f137";
+
+  .sub-tit {
+      margin-bottom: 80px;
+      font-size: 2.4rem;
+      color: #bebebe;
   }
+  .image-container {
+    position: relative;
+    text-align: center;
+
+      .slide-description {
+          font-size: 1.5rem;
+          margin-top: 10px;
+          text-align: left;
+          
+              .category {
+                color: #7CE9E2;
+                font-size: 1.5rem;
+            }
+            
+              .text {
+                  font-size: 1rem;
+                  color: $white;
+                  line-height: 1.5;
+                  text-align: left;
+              }
+  }
+}
+    .sec-g__cont .swiper-slide a {
+      padding: 0;
+      margin: 0;
+      background: #181818;
+}
+  
 }
