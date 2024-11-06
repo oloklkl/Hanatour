@@ -79,10 +79,14 @@
     text-align: center;
 }
 
-  .business-tit {
+  .btn-business-tit {
       margin-top: 50px;
       font-size: 2rem;
       color: #7CE9E2;
+      background-color: $black;
+      border: 2px solid #7CE9E2;
+      padding: 10px 8px;
+      border-radius: 25px;
   }
 
   .main-tit {
@@ -104,13 +108,24 @@
           margin-top: 10px;
           text-align: left;
           
-              .category {
-                color: #7CE9E2;
-                font-size: 1.5rem;
+              .btn-category {
+                  position: absolute;
+                  top: 15px;
+                  left: 80px;
+                  color: #7CE9E2;
+                  font-weight: 600;
+                  font-size: 1.5rem;
+                  background-color: $black;
+                  padding: 5px 5px;
+                  border-radius: 15px;
             }
             
               .text {
-                  font-size: 1rem;
+                  position: absolute;
+                  top: 60px;
+                  left: 80px;
+                  font-weight: 600;
+                  font-size: 1.8rem;
                   color: $white;
                   line-height: 1.5;
                   text-align: left;
@@ -121,6 +136,7 @@
       padding: 0;
       margin: 0;
       background: #181818;
+      height: 880px;
 }
   
 }

@@ -52,12 +52,13 @@
     overflow: hidden;
 
      .video-overlay__main-text {
+       white-space: nowrap;
+       width: 100%;
        font-size: 3rem;
        font-weight: bold;
        margin-bottom: 10px;
     }
      .video-overlay__main-subtit {
-       margin-bottom: 10px;
        color: #ffffffef;
     }
 
@@ -70,7 +71,7 @@
       .video-container__video-overlay {
           position: absolute;
           top: 60%;
-          left: 60%;
+          left: 105%;
           text-align: left;
           color: white;
           transform: translate(-140%, -50%);
