@@ -283,10 +283,14 @@ legend {
 .sec-g {
   overflow: hidden;
   padding: 10vw 0;
+  height: 880px;
 }
 .sec-g__tit {
   padding-bottom: 2.34375vw;
   font-size: 3rem;
+}
+.sec-g .swiper-wrapper {
+  height: 880px;
 }
 
 .swiper {
@@ -386,7 +390,7 @@ legend {
   top: 0;
   right: 40px;
 }
-.sec-service .image-wrapper2 {
+.sec-service .image-container .image-wrapper2 {
   position: absolute;
   background-color: #9EADDB;
   opacity: 0.5;
@@ -397,12 +401,56 @@ legend {
   top: 0;
   right: 20px;
 }
-.sec-service .slide-description {
+.sec-service .image-container .image-wrapper3 {
+  position: absolute;
+  background-color: #9EADDB;
+  opacity: 0.5;
+  width: 260px;
+  height: 462px;
+  transform: rotate(-10deg);
+  z-index: 2;
+  top: 0;
+  right: 40px;
+}
+.sec-service .image-container .image-wrapper4 {
+  position: absolute;
+  background-color: #7CE9E2;
+  opacity: 0.5;
+  width: 260px;
+  height: 462px;
+  transform: rotate(-25deg);
+  z-index: 1;
+  top: 0;
+  right: 20px;
+}
+.sec-service .image-container .image-wrapper5 {
+  position: absolute;
+  background-color: #7CE9E2;
+  opacity: 0.5;
+  width: 260px;
+  height: 462px;
+  transform: rotate(-10deg);
+  z-index: 2;
+  top: 0;
+  right: 40px;
+}
+.sec-service .image-container .image-wrapper6 {
+  position: absolute;
+  background-color: #C7D67A;
+  opacity: 0.5;
+  width: 260px;
+  height: 462px;
+  transform: rotate(-25deg);
+  z-index: 1;
+  top: 0;
+  right: 20px;
+}
+.sec-service .image-container .slide-description {
   font-size: 1.5rem;
   margin-top: 10px;
   text-align: left;
 }
-.sec-service .slide-description .btn-category {
+.sec-service .image-container .slide-description .btn-category {
   position: absolute;
   top: 15px;
   left: 60px;
@@ -414,7 +462,7 @@ legend {
   border-radius: 15px;
   z-index: 200;
 }
-.sec-service .slide-description .text {
+.sec-service .image-container .slide-description .text {
   position: absolute;
   top: 60px;
   left: 60px;
@@ -425,11 +473,10 @@ legend {
   text-align: left;
   z-index: 200;
 }
-
-.tags {
+.sec-service .tags {
   white-space: nowrap;
 }
-.tags .tag-item {
+.sec-service .tags .tag-item {
   display: inline-block;
   font-weight: 600;
   margin-top: 50px;
@@ -438,17 +485,11 @@ legend {
   color: rgba(190, 190, 190, 0.5882352941);
   line-height: 1.5;
 }
-
-.sec-g__cont .swiper-slide a {
+.sec-service .sec-g__cont .swiper-slide a {
   padding: 0;
   margin: 0;
   background: #181818;
-  height: 880px;
-}
-
-.main-middle-banner .middle-banner {
-  padding: 0;
-  margin: 0;
+  height: 920px;
 }
 
 .inner {
@@ -758,6 +799,37 @@ legend {
   font-size: 2rem;
 }
 
+.main-middle-banner {
+  position: relative;
+}
+.main-middle-banner .main-middle-banner__inner {
+  padding: 0;
+}
+.main-middle-banner .main-middle-banner__banner-image {
+  width: 390px;
+  height: 400px;
+}
+.main-middle-banner .main-middle-banner__message-text {
+  position: absolute;
+  display: inline-flex;
+  height: 56px;
+  background-color: #003cff;
+  line-height: 1.5;
+  color: #fff;
+  z-index: 3;
+  align-items: center;
+  white-space: nowrap;
+  animation: message-text 10s linear infinite;
+}
+@keyframes message-text {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .event-banner {
   background-size: cover;
   background-position: center;
@@ -812,7 +884,7 @@ legend {
   border-bottom: 3px solid #18181b;
   box-sizing: border-box;
 }
-.intro #Isolation_Mode {
+.intro #Capa_1 {
   width: 35px;
   height: 35px;
   margin-left: 100px;
@@ -842,15 +914,24 @@ legend {
   height: auto;
   overflow: hidden;
 }
+.video-container .fi-sr-pause {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 600px;
+  margin-left: 20px;
+}
 .video-container .video-overlay__main-text {
   white-space: nowrap;
   width: 100%;
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 10px;
+  margin-left: 20px;
 }
-.video-container .video-overlay__main-subtit {
+.video-container .video-overlay__subtit {
   color: rgba(255, 255, 255, 0.937254902);
+  margin-left: 20px;
 }
 .video-container .video-container__video {
   width: 100%;
