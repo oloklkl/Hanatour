@@ -370,38 +370,85 @@ legend {
 .sec-service .image-container {
   position: relative;
   text-align: center;
+  display: inline-block;
 }
-.sec-service .image-container .slide-description {
+.sec-service .image-container .image-content {
+  z-index: 3;
+}
+.sec-service .image-container .image-wrapper1 {
+  position: absolute;
+  background-color: #C7D67A;
+  opacity: 0.5;
+  width: 260px;
+  height: 462px;
+  transform: rotate(-10deg);
+  z-index: 2;
+  top: 0;
+  right: 40px;
+}
+.sec-service .image-wrapper2 {
+  position: absolute;
+  background-color: #9EADDB;
+  opacity: 0.5;
+  width: 260px;
+  height: 462px;
+  transform: rotate(-25deg);
+  z-index: 1;
+  top: 0;
+  right: 20px;
+}
+.sec-service .slide-description {
   font-size: 1.5rem;
   margin-top: 10px;
   text-align: left;
 }
-.sec-service .image-container .slide-description .btn-category {
+.sec-service .slide-description .btn-category {
   position: absolute;
   top: 15px;
-  left: 80px;
+  left: 60px;
   color: #7CE9E2;
   font-weight: 600;
   font-size: 1.5rem;
   background-color: #000;
   padding: 5px 5px;
   border-radius: 15px;
+  z-index: 200;
 }
-.sec-service .image-container .slide-description .text {
+.sec-service .slide-description .text {
   position: absolute;
   top: 60px;
-  left: 80px;
+  left: 60px;
   font-weight: 600;
   font-size: 1.8rem;
   color: #fff;
   line-height: 1.5;
   text-align: left;
+  z-index: 200;
 }
-.sec-service .sec-g__cont .swiper-slide a {
+
+.tags {
+  white-space: nowrap;
+}
+.tags .tag-item {
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-right: 10px;
+  padding: 2px 5px;
+  color: rgba(190, 190, 190, 0.5882352941);
+  line-height: 1.5;
+}
+
+.sec-g__cont .swiper-slide a {
   padding: 0;
   margin: 0;
   background: #181818;
   height: 880px;
+}
+
+.main-middle-banner .middle-banner {
+  padding: 0;
+  margin: 0;
 }
 
 .inner {

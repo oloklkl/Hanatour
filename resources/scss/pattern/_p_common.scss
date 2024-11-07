@@ -77,7 +77,7 @@
   }
   .slide-service {
     text-align: center;
-}
+  }
 
   .btn-business-tit {
       margin-top: 50px;
@@ -102,6 +102,33 @@
   .image-container {
     position: relative;
     text-align: center;
+    display: inline-block;
+      .image-content {
+        z-index: 3;
+      }
+      .image-wrapper1 {
+        position: absolute;
+        background-color: #C7D67A;
+        opacity: 0.5;
+        width: 260px;
+        height: 462px;
+        transform: rotate(-10deg);
+        z-index: 2;
+        top: 0;
+        right: 40px;
+      }
+      }
+      .image-wrapper2 {
+        position: absolute;
+        background-color: #9EADDB;
+        opacity: 0.5;
+        width: 260px;
+        height: 462px;
+        transform: rotate(-25deg);
+        z-index: 1;
+        top: 0;
+        right: 20px;
+      }
 
       .slide-description {
           font-size: 1.5rem;
@@ -111,32 +138,52 @@
               .btn-category {
                   position: absolute;
                   top: 15px;
-                  left: 80px;
+                  left: 60px;
                   color: #7CE9E2;
                   font-weight: 600;
                   font-size: 1.5rem;
                   background-color: $black;
                   padding: 5px 5px;
                   border-radius: 15px;
+                  z-index: 200;
             }
             
               .text {
                   position: absolute;
                   top: 60px;
-                  left: 80px;
+                  left: 60px;
                   font-weight: 600;
                   font-size: 1.8rem;
                   color: $white;
                   line-height: 1.5;
                   text-align: left;
+                  z-index: 200;
               }
+      }
   }
-}
+    .tags {
+      white-space: nowrap;
+
+      .tag-item {
+        display: inline-block;
+        font-weight: 600;
+        margin-top: 50px;
+        margin-right: 10px;
+        padding: 2px 5px;
+        color: #bebebe96;
+        line-height: 1.5;
+      }
+    }
     .sec-g__cont .swiper-slide a {
       padding: 0;
       margin: 0;
       background: #181818;
       height: 880px;
-}
+  }
   
+.main-middle-banner {
+      .middle-banner {
+        padding: 0;
+        margin: 0;
+      }
 }
