@@ -258,7 +258,7 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <a href="#">
-                      <button class="slide-service btn-business-tit">Business</button>
+                      <p class="slide-service business-tit">Business</p>
                       <p class="slide-service main-tit"><strong>여행서비스</strong></p>
                       <p class="slide-service sub-tit"><b>여행서비스</b></p>
                     <div class="image-container">
@@ -266,7 +266,7 @@
                           <div class="image-wrapper1"></div>
                           <div class="image-wrapper2"></div>
                     <div class="slide-description">
-                      <button class="slide-description btn-category">여행서비스</button>
+                      <p class="slide-description category">여행서비스</p>
                       <p class="slide-description text">
                         꿈꾸는 모든 여행이<br>
                         이루어질 수 있도록<br>
@@ -283,9 +283,9 @@
                   </div>
                     </a>
                   </div>
-                  <div class="swiper-service">
+                  <div class="swiper-slide">
                     <a href="#">
-                      <button class="slide-service btn-business-tit" style="color: #C7D67A;">Business</button>
+                      <p class="slide-service business-tit" style="color: #C7D67A;">Business</p>
                       <p class="slide-service main-tit"><strong>온라인서비스</strong></p>
                       <p class="slide-service sub-tit"><b>온라인서비스</b></p>
                     <div class="image-container">
@@ -293,7 +293,7 @@
                           <div class="image-wrapper3"></div>
                           <div class="image-wrapper4"></div>
                     <div class="slide-description">
-                      <button class="slide-description btn-category">온라인서비스</button>
+                      <p class="slide-description category">온라인서비스</p>
                       <p class="slide-description text">
 			          			내 손안의 여행 전문가,<br>
 			          			꿈꾸는 여행을 이루는<br>
@@ -310,9 +310,9 @@
                   </div>
                     </a>
                   </div>
-                  <div class="swiper-service">
+                  <div class="swiper-slide">
                     <a href="#">
-                      <button class="slide-service btn-business-tit" style="color: #9EADDB;">Business</button>
+                      <p class="slide-service business-tit" style="color: #9EADDB;">Business</p>
                       <p class="slide-service main-tit"><strong>B2B비지니스</strong></p>
                       <p class="slide-service sub-tit"><b>B2B비지니스</b></p>
                     <div class="image-container">
@@ -320,7 +320,7 @@
                           <div class="image-wrapper5"></div>
                           <div class="image-wrapper6"></div>
                     <div class="slide-description">
-                      <button class="slide-description btn-category">B2B비지니스</button>
+                      <p class="slide-description category">B2B비지니스</p>
                       <p class="slide-description text">
 					          	전국 어디에서도 만날<br>
 				          		수 있는, 믿을 수 있는<br>
@@ -339,6 +339,12 @@
                     </a>
                   </div>
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
               </div>
             </div>
           </div>
@@ -349,25 +355,28 @@
             <img src="../resources/images/pattern/content/airplane.jpg" alt="airplane img" class="main-middle-banner__banner-image" />
           </div>
           <div>
-            <p class="main-middle-banner__message-text">여행을 사랑하는 마음을 가득 담아, 지속 가능한 여행으로 더 나은 미래를 만들어가는 하나투어가 되겠습니다.</p>
+            <div class="main-middle-banner__message-text">여행을 사랑하는 마음을 가득 담아, 지속 가능한 여행으로 더 나은 미래를 만들어가는 하나투어가 되겠습니다.</div>
+            <div class="main-middle-banner__message-text">여행을 사랑하는 마음을 가득 담아, 지속 가능한 여행으로 더 나은 미래를 만들어가는 하나투어가 되겠습니다.</div>
+            <div class="main-middle-banner__message-text">여행을 사랑하는 마음을 가득 담아, 지속 가능한 여행으로 더 나은 미래를 만들어가는 하나투어가 되겠습니다.</div>
           </div>
         </section>
 
         <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
         <section class="sec-g sec-news">
           <div class="inner">
-            <div class="sec-g__desc">하나투어가 전하는 최신 여행 트렌드와 소식</div>
-            <h2 class="sec-g__tit">Travel Insights</h2>
-            <a href="#">
-              <em>More</em>
-              <!-- 버튼 링크 넣기-->
-            </a>
+            <div class="sec-news-wrapper">
+              <div class="sec-g__desc">하나투어가 전하는 최신 여행 트렌드와 소식</div>
+                  <h2 class="sec-g__tit">Travel Insights</h2>
+                  <a href="#" class="btn-more btn-icon">
+                    More<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512"><path d="M17.061,9.525,13.475,5.939a1.5,1.5,0,0,0-2.121,2.122L13.793,10.5H5a1.5,1.5,0,0,0,0,3h8.793l-2.439,2.439a1.5,1.5,0,0,0,2.121,2.122l3.586-3.586A3.505,3.505,0,0,0,17.061,9.525Z"/></svg>
+                  </a>
+              </div>
             <div class="sec-g__cont">
               <div class="board_list">
                 <ul class="board">
                   <li class="active">
                     <div class="thumb_area">
-                       <img src="../resources/images/pattern/thumb/Travel Insights-1.jpg" alt="img">
+                       <img src="../resources/images/pattern/thumb/Travel Insights-1.jpg" alt="img" class="thumb-img">
                     </div>
                     <div class="txt_area">
                        <p class="cate">브랜드</p>
@@ -377,7 +386,7 @@
   
           <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
                     <div class="thumb_area">
-                       <img src="../resources/images/pattern/thumb/Travel Insights-2.jpg" alt="img">
+                       <img src="../resources/images/pattern/thumb/Travel Insights-2.jpg" alt="img" class="thumb-img">
                     </div>
                     <div class="txt_area">
                        <p class="cate">브랜드</p>
@@ -387,7 +396,7 @@
   
           <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
                     <div class="thumb_area">
-                       <img src="../resources/images/pattern/thumb/Travel Insights-3.jpg" alt="img">
+                       <img src="../resources/images/pattern/thumb/Travel Insights-3.jpg" alt="img" class="thumb-img">
                     </div>
                     <div class="txt_area">
                       <p class="cate">브랜드</p>
@@ -397,13 +406,11 @@
                   </li>
                 </ul>
                </div>
-            </div>
-
-
+              </div>
             </div>
         </section>
 
-        <section class="main-hanatour">
+        <!-- <section class="main-hanatour">
           <div class="inner">
             <div class="main-hanatour__headline">
               <div class="main-hanatour__logo">
@@ -413,7 +420,6 @@
               <div class="main-hanatour__ui_more">
                 <a href="#">
                   <em>More</em>
-                  <!-- 버튼 링크 넣기-->
                 </a>
               </div>
 
@@ -454,17 +460,17 @@
             </div>
           </div>
         </div>
-        </section>
+        </section> --> 
 
         <section class="event-banner">
           <div class="inner">
           <div class="event-banner__content">
             <p class="event-banner__description">2024년 여름, 특별한 여행을 떠나세요!</p>
             <h2 class="event-banner__tit">7월 할인 한정 혜택</h2>
-            <img src="../resources/images/pattern/banners/summer-banner.jpg" alt="img">
+            <img src="../resources/images/pattern/banners/summer-banner.jpg" alt="img" class="event-banner__img">
             <a href="/event-page" class="btn-event">More</a>
           </div>
-        </div>
+         </div>
         </section>
 
       </main>
