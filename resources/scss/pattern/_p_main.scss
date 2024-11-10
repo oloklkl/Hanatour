@@ -19,6 +19,17 @@
         width: 390px;
         height: 400px;
     }
+    .main-middle-banner__intro-text {
+        position: absolute;
+        top: 50%;
+        margin-left: 20px;
+        color: $white;
+        font-size: 3rem;
+        font-weight: bold;
+        .highlighted-text {
+            color: #eff14d;
+        }
+    }
     .main-middle-banner__message-text {
         position: absolute;
         display: inline-flex;
@@ -48,11 +59,6 @@
 }
 
 .event-banner {
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: #ffffff;
-    position: relative;
     margin-top: 20px;
  
         // ::before {
@@ -70,13 +76,18 @@
             position: absolute;
             font-size: 1.2rem;
             z-index: 200;
-            top: 5px;
+            top: 45px;
+            color: #3888FF;
+            font-weight: bold;
+            margin-left: 40px;
         }
         .event-banner__tit {
             position: absolute;
             font-size: 2rem;
             z-index: 200;
-            top: 20px;
+            top: 60px;
+            color: $white;
+            margin-left: 40px;
         }
 
         .event-banner__img {
@@ -89,14 +100,21 @@
         .btn-event {
             position: absolute;
             display: inline-block;
-            padding: 10px 20px;
-            margin-top: 10px;
+            padding: 5px 10px;
+            top: 55px;
+            left: 70%;
             background-color: #eff14d;
             color: #181818;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
+            z-index: 202;
+            
+            #Bold {
+                width: 25px;
+                height: 25px;
+            }
         }
 
         .btn-event:hover {
@@ -122,3 +140,8 @@
   }
 }
 
+.sec-service {
+    .sec-g__cont .swiper-slide a {
+        object-position: 50% 100%;
+    }
+}

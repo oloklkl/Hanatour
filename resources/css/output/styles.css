@@ -481,7 +481,7 @@ legend {
   display: inline-block;
   font-weight: 600;
   margin-top: 50px;
-  margin-right: 10px;
+  margin-right: 15px;
   padding: 2px 5px;
   color: rgba(190, 190, 190, 0.5882352941);
   line-height: 1.5;
@@ -492,6 +492,9 @@ legend {
   background: #181818;
   width: 390px;
   height: 920px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .sec-news {
@@ -532,7 +535,7 @@ legend {
 }
 .sec-news .txt_area .cate {
   margin-top: 10px;
-  color: #7CE9E2;
+  color: #246beb;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -543,8 +546,36 @@ legend {
 }
 .sec-news .txt_area .date {
   margin-bottom: 20px;
-  color: rgba(190, 190, 190, 0.5882352941);
+  color: #8e8e8e;
   font-size: 1.4rem;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  display: none;
+}
+.swiper .swiper-button-next::before,
+.swiper .swiper-button-prev::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3rem;
+  color: #000;
+  opacity: 0.5;
+}
+.swiper .swiper-button-next::before {
+  content: "\f138";
+}
+.swiper .swiper-button-prev::before {
+  content: "\f137";
 }
 
 .inner {
@@ -864,6 +895,17 @@ legend {
   width: 390px;
   height: 400px;
 }
+.main-middle-banner .main-middle-banner__intro-text {
+  position: absolute;
+  top: 50%;
+  margin-left: 20px;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.main-middle-banner .main-middle-banner__intro-text .highlighted-text {
+  color: #eff14d;
+}
 .main-middle-banner .main-middle-banner__message-text {
   position: absolute;
   display: inline-flex;
@@ -889,24 +931,24 @@ legend {
 }
 
 .event-banner {
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: #ffffff;
-  position: relative;
   margin-top: 20px;
 }
 .event-banner .event-banner__description {
   position: absolute;
   font-size: 1.2rem;
   z-index: 200;
-  top: 5px;
+  top: 45px;
+  color: #3888FF;
+  font-weight: bold;
+  margin-left: 40px;
 }
 .event-banner .event-banner__tit {
   position: absolute;
   font-size: 2rem;
   z-index: 200;
-  top: 20px;
+  top: 60px;
+  color: #fff;
+  margin-left: 40px;
 }
 .event-banner .event-banner__img {
   position: relative;
@@ -917,14 +959,20 @@ legend {
 .event-banner .btn-event {
   position: absolute;
   display: inline-block;
-  padding: 10px 20px;
-  margin-top: 10px;
+  padding: 5px 10px;
+  top: 55px;
+  left: 70%;
   background-color: #eff14d;
   color: #181818;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s;
+  z-index: 202;
+}
+.event-banner .btn-event #Bold {
+  width: 25px;
+  height: 25px;
 }
 .event-banner .btn-event:hover {
   background-color: #003cff;
@@ -939,6 +987,11 @@ legend {
     display: none;
   }
 }
+.sec-service .sec-g__cont .swiper-slide a {
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+
 .intro .input-value {
   font: bold;
 }
