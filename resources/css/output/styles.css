@@ -867,13 +867,10 @@ legend {
 }
 
 #footer {
-  display: block;
-  background: #181818;
-}
-
-#list-corp a {
-  color: #ffffff;
-  text-decoration: none;
+  background-color: #000;
+  width: 100%;
+  height: 260px;
+  color: #fff;
 }
 
 .main-hanatour .logo {
@@ -932,6 +929,21 @@ legend {
 
 .event-banner {
   margin-top: 20px;
+  margin-bottom: 80px;
+}
+.event-banner .event-banner__slides {
+  position: relative;
+  height: 138px;
+}
+.event-banner .event-banner__slides li {
+  display: none; /* 모든 슬라이드 숨기기 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.event-banner .event-banner__slides li.active {
+  display: block; /* 활성 슬라이드만 보이기 */
 }
 .event-banner .event-banner__description {
   position: absolute;
@@ -948,11 +960,39 @@ legend {
   z-index: 200;
   top: 90px;
   color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   margin-left: 40px;
+}
+.event-banner .event-banner__description2 {
+  position: absolute;
+  font-size: 1.2rem;
+  z-index: 200;
+  top: 75px;
+  color: #000;
+  font-weight: bold;
+  margin-left: 40px;
+}
+.event-banner .event-banner__tit2 {
+  position: absolute;
+  font-size: 1.7rem;
+  font-weight: bold;
+  z-index: 200;
+  top: 90px;
+  color: #3888FF;
+  margin-left: 40px;
+}
+.event-banner .event-banner__tit3 {
+  position: absolute;
+  font-size: 1.8rem;
+  top: 70px;
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-left: 40px;
+  z-index: 200;
 }
 .event-banner .event-banner__img {
   position: relative;
-  margin: 32px auto 80px;
+  margin: 32px 20px 80px;
   width: 350px;
   height: 138px;
   z-index: 1;
@@ -962,14 +1002,15 @@ legend {
 .event-banner .btn-event {
   position: absolute;
   display: inline-flex;
-  padding: 5px 10px;
+  padding: 5px 6px;
   top: 80px;
-  left: 70%;
-  background-color: #eff14d;
-  color: #181818;
+  left: 73%;
+  background-color: #fff;
+  color: #000;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
   align-items: center;
   transition: background-color 0.3s;
   z-index: 202;
@@ -1039,7 +1080,7 @@ legend {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 600px;
+  top: 610px;
   margin-left: 20px;
 }
 .video-container .video-overlay__main-text {
