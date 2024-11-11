@@ -251,7 +251,7 @@
 		
         <!-- 스튜디오 섹션 -->
         <section class="sec-g sec-service">
-          <div class="inner">
+          <div class="inner-sec-service">
             <h2 class="sec-g__tit">service</h2>
             <div class="sec-g__cont">
               <div class="swiper slide-service">
@@ -372,14 +372,14 @@
             <div class="sec-news-wrapper">
               <div class="sec-g__desc">하나투어가 전하는 최신 여행 트렌드와 소식</div>
                   <h2 class="sec-g__tit">Travel Insights</h2>
-                  <a href="#" class="btn-more btn-icon">
+                  <a href="#" class="btn-more">
                     More<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512"><path d="M17.061,9.525,13.475,5.939a1.5,1.5,0,0,0-2.121,2.122L13.793,10.5H5a1.5,1.5,0,0,0,0,3h8.793l-2.439,2.439a1.5,1.5,0,0,0,2.121,2.122l3.586-3.586A3.505,3.505,0,0,0,17.061,9.525Z"/></svg>
                   </a>
               </div>
             <div class="sec-g__cont">
               <div class="board_list">
                 <ul class="board">
-                  <li class="active">
+                  <li class="board-item">
                     <div class="thumb_area">
                        <img src="../resources/images/pattern/thumb/Travel Insights-1.jpg" alt="img" class="thumb-img">
                     </div>
@@ -388,8 +388,10 @@
                        <p class="tit">하나투어, 각 분야 전문가와 함께하는 인문학 여행 출시</p>
                        <p class="date">2024.10.30</p>
                     </div>
+                  </li>
   
           <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
+                  <li class="board-item">
                     <div class="thumb_area">
                        <img src="../resources/images/pattern/thumb/Travel Insights-2.jpg" alt="img" class="thumb-img">
                     </div>
@@ -398,8 +400,10 @@
                        <p class="tit">하나투어, 김태리와 함께한 하반기 캠페인 영상 2편 공개</p>
                        <p class="date">2024.10.29</p>
                     </div>
+                  </li>
   
           <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
+                  <li class="board-item">
                     <div class="thumb_area">
                        <img src="../resources/images/pattern/thumb/Travel Insights-3.jpg" alt="img" class="thumb-img">
                     </div>
@@ -469,14 +473,32 @@
 
         <section class="event-banner">
           <div class="inner">
-          <div class="event-banner__content">
-            <p class="event-banner__description">2024년 여름, 특별한 여행을 떠나세요!</p>
-            <h2 class="event-banner__tit">7월 할인 한정 혜택</h2>
-            <img src="../resources/images/pattern/banners/summer-banner.jpg" alt="img" class="event-banner__img">
-            <a href="#">
-               <button class="btn-event">More<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512"><path d="M17.061,9.525,13.475,5.939a1.5,1.5,0,0,0-2.121,2.122L13.793,10.5H5a1.5,1.5,0,0,0,0,3h8.793l-2.439,2.439a1.5,1.5,0,0,0,2.121,2.122l3.586-3.586A3.505,3.505,0,0,0,17.061,9.525Z"/></svg></button>
-            </a>
-          </div>
+          <ul class="event-banner__slides">
+            <li>
+              <p class="event-banner__description">2024년 여름, 특별한 여행을 떠나세요!</p>
+              <h2 class="event-banner__tit">7월 할인 한정 혜택</h2>
+              <img src="../resources/images/pattern/banners/summer-banner.jpg" alt="img" class="event-banner__img">
+              <a href="#">
+                <button class="btn-event">More<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512"><path d="M17.061,9.525,13.475,5.939a1.5,1.5,0,0,0-2.121,2.122L13.793,10.5H5a1.5,1.5,0,0,0,0,3h8.793l-2.439,2.439a1.5,1.5,0,0,0,2.121,2.122l3.586-3.586A3.505,3.505,0,0,0,17.061,9.525Z"/></svg></button>
+              </a>
+            </li>
+            <li>
+              <p class="event-banner__description">2024년 여름, 특별한 여행을 떠나세요!</p>
+              <h2 class="event-banner__tit">7월 할인 한정 혜택</h2>
+              <img src="../resources/images/pattern/banners/summer-banner.jpg" alt="img" class="event-banner__img">
+              <a href="#">
+                <button class="btn-event">More<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512"><path d="M17.061,9.525,13.475,5.939a1.5,1.5,0,0,0-2.121,2.122L13.793,10.5H5a1.5,1.5,0,0,0,0,3h8.793l-2.439,2.439a1.5,1.5,0,0,0,2.121,2.122l3.586-3.586A3.505,3.505,0,0,0,17.061,9.525Z"/></svg></button>
+              </a>
+            </li>
+            <li>
+              <p class="event-banner__description">2024년 여름, 특별한 여행을 떠나세요!</p>
+              <h2 class="event-banner__tit">7월 할인 한정 혜택</h2>
+              <img src="../resources/images/pattern/banners/summer-banner.jpg" alt="img" class="event-banner__img">
+              <a href="#">
+                <button class="btn-event">More<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512"><path d="M17.061,9.525,13.475,5.939a1.5,1.5,0,0,0-2.121,2.122L13.793,10.5H5a1.5,1.5,0,0,0,0,3h8.793l-2.439,2.439a1.5,1.5,0,0,0,2.121,2.122l3.586-3.586A3.505,3.505,0,0,0,17.061,9.525Z"/></svg></button>
+              </a>
+            </li>
+          </ul>
          </div>
         </section>
 
