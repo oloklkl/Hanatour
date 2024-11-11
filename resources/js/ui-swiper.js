@@ -27,3 +27,19 @@ var swiper = new Swiper(".slide-intro", {
       },
     },
   });
+
+  const slides = document.querySelectorAll('.event-banner__slides li');
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// 일정 시간마다 슬라이드 전환
+setInterval(nextSlide, 7000); // 7초마다 슬라이드 전환
