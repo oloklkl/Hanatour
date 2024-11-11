@@ -10,9 +10,6 @@
 
 // section layout
 .sec-g {
-  overflow: hidden;
-  padding: 10vw 0;
-  height: 880px;
   &__tit {
     padding-bottom: 2.34375vw;
     font-size: 3rem;
@@ -70,6 +67,9 @@
 }
 
 .sec-service  {
+  .inner-sec-service {
+    margin-top: 40px;
+  }
   .sec-g__tit {
     position: absolute;
     width: 1px;
@@ -110,6 +110,9 @@
     display: inline-block;
       .image-content {
         z-index: 3;
+        width: 290px;
+        height: 462px;
+        object-fit: cover;
       }
       .image-wrapper1 {
         position: absolute;
@@ -238,10 +241,8 @@
 }
 
 .sec-news {
-  padding-bottom: 40px;
-
     .sec-news-wrapper {
-      padding: 30px 0;
+      padding-top: 40px;
     }
     .sec-g__desc {
       text-align: center;
@@ -254,7 +255,7 @@
       margin-bottom: 10px;
     }
     .btn-more {
-      display: flex;
+      display: inline-flex;
       font-weight: 500;
       text-align: center;
       padding: 8px 10px;
@@ -270,13 +271,13 @@
       }
     }
     .thumb-img {
+      margin: 32px auto 24px;
       width: 350px;
       height: 233px;
       border-radius: 10px;
     }
     .txt_area {
       .cate {
-        margin-top: 10px;
         color: $primary-50;
         font-weight: 700;
         font-size: 1.5rem;
@@ -287,7 +288,6 @@
         font-size: 1.8rem;
       }
       .date {
-        margin-bottom: 20px;
         color: $gray-50;
         font-size: 1.4rem;
       }
