@@ -10,18 +10,17 @@
 
 .main-middle-banner {
     position: relative;
-    
 
-    .main-middle-banner__inner {
+    .inner {
         padding: 0;
     }
-    .main-middle-banner__banner-image {
+    .banner-image {
         width: 390px;
         height: 400px;
         object-fit: cover;
           
     }
-    .main-middle-banner__intro-text {
+    .intro-text {
         position: absolute;
         top: 50%;
         margin-left: 20px;
@@ -32,8 +31,15 @@
             color: #eff14d;
         }
     }
-    .main-middle-banner__message-text {
+    
+    .message-container{
         position: absolute;
+        transform: rotate(-90deg);
+        bottom: 0;
+        right: 0;
+        
+        .message-text {
+        position: relative;
         display: inline-flex;
         height: 56px;
         background-color: #003cff;
@@ -43,13 +49,11 @@
         align-items: center;
         padding: 0 12px;
         white-space: nowrap;
-        // writing-mode: vertical-lr;
-        top: 0;
-        right: 0;
 
-        animation: message-text 10s linear infinite;
 
-        @keyframes message-text {
+        animation: message-container 10s linear infinite;
+    }
+        @keyframes message-container {
             0% {
                 transform: translateX(-100%);
             }
