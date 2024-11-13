@@ -908,15 +908,16 @@ legend {
   overflow: hidden;
 }
 .main-middle-banner .inner {
+  position: relative;
   padding: 0;
 }
-.main-middle-banner .banner-image {
+.main-middle-banner .inner .banner-image {
   width: 390px;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.main-middle-banner .intro-text {
+.main-middle-banner .inner .intro-text {
   position: absolute;
   top: 50%;
   margin-left: 20px;
@@ -924,30 +925,32 @@ legend {
   font-size: 3rem;
   font-weight: bold;
 }
-.main-middle-banner .intro-text .highlighted-text {
+.main-middle-banner .inner .intro-text .highlighted-text {
   color: #eff14d;
 }
-.main-middle-banner .message-container {
+.main-middle-banner .inner .message-container {
   position: absolute;
+  bottom: 395px;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
   transform: rotate(-90deg);
-  transform-origin: right 0;
+  transform-origin: bottom right;
+  z-index: 1000;
 }
-.main-middle-banner .message-container .message-text {
-  position: absolute;
-  display: inline-flex;
+.main-middle-banner .inner .message-container .message-text {
+  display: inline-block;
   height: 56px;
-  line-height: 1.5;
+  line-height: 3;
   color: #fff;
   background-color: #003cff;
-  z-index: 3;
-  align-items: center;
   padding: 0 12px;
   white-space: nowrap;
-  animation: message-container 10s linear infinite;
+  animation: scroll-message 100s linear infinite;
 }
-@keyframes message-container {
+@keyframes scroll-message {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
