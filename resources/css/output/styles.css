@@ -905,6 +905,7 @@ legend {
 
 .main-middle-banner {
   position: relative;
+  overflow: hidden;
 }
 .main-middle-banner .inner {
   padding: 0;
@@ -929,16 +930,15 @@ legend {
 .main-middle-banner .message-container {
   position: absolute;
   transform: rotate(-90deg);
-  bottom: 0;
-  right: 0;
+  transform-origin: right 0;
 }
 .main-middle-banner .message-container .message-text {
-  position: relative;
+  position: absolute;
   display: inline-flex;
   height: 56px;
-  background-color: #003cff;
   line-height: 1.5;
   color: #fff;
+  background-color: #003cff;
   z-index: 3;
   align-items: center;
   padding: 0 12px;
@@ -947,10 +947,10 @@ legend {
 }
 @keyframes message-container {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
 }
 
