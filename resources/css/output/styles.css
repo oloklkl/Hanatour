@@ -916,6 +916,73 @@ legend {
   left: 0;
 }
 
+.video-container {
+  position: relative;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+.video-container .fi-sr-pause {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 610px;
+  margin-left: 20px;
+}
+.video-container .video-overlay__main-text {
+  white-space: nowrap;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.video-container .video-overlay__subtit {
+  color: rgba(255, 255, 255, 0.937254902);
+  margin-left: 20px;
+}
+.video-container .video-overlay__subtit .btn-pause::before {
+  content: "\f04c";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3rem;
+}
+.video-container .video-container__video {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: linear-gradient(#000 0%, rgba(102, 102, 102, 0) 100%);
+}
+@media (min-width: 1024px) {
+  .video-container .video-container__video {
+    height: 1024px;
+  }
+}
+@media (min-width: 600px) {
+  .video-container .video-container__video {
+    height: 844px;
+  }
+}
+.video-container .video-container__video-overlay {
+  position: absolute;
+  top: 60%;
+  margin-left: 20px;
+  text-align: left;
+  color: white;
+}
+@media (min-width: 600px) {
+  .video-container .video-container__video-overlay {
+    margin-left: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .video-container .video-container__video-overlay {
+    margin-left: 240px;
+  }
+}
+
 #footer {
   background-color: #000;
   width: 100%;
@@ -1122,45 +1189,4 @@ legend {
   line-height: 1;
   color: #181818;
   background-color: #ececec;
-}
-
-.video-container {
-  position: relative;
-  top: 0;
-  width: auto;
-  height: auto;
-  overflow: hidden;
-}
-.video-container .fi-sr-pause {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 610px;
-  margin-left: 20px;
-}
-.video-container .video-overlay__main-text {
-  white-space: nowrap;
-  width: 100%;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: 20px;
-}
-.video-container .video-overlay__subtit {
-  color: rgba(255, 255, 255, 0.937254902);
-  margin-left: 20px;
-}
-.video-container .video-container__video {
-  width: 100%;
-  height: 832px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.video-container .video-container__video-overlay {
-  position: absolute;
-  top: 60%;
-  left: 105%;
-  text-align: left;
-  color: white;
-  transform: translate(-140%, -50%);
 }/*# sourceMappingURL=styles.css.map */
