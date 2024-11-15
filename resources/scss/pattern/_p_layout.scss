@@ -303,14 +303,6 @@
     .video-overlay__subtit {
         color: #ffffffef;
         margin-left: 20px;
-
-        .btn-pause {
-            &::before {
-                content: '\f04c';
-                @include lineAwesome;
-                font-size: 3rem;
-            }
-        }
     }
 
     .video-container__video {
@@ -335,13 +327,13 @@
         position: absolute;
         top: 60%;
         margin-left: 20px;
-        text-align: left;
         color: white;
-        @include mobileMore {
-            margin-left: 30px;
-        }
-        @include tabletMore {
-            margin-left: 240px;
+    }
+    .video-container {
+        &::before {
+            content: '\f04c';
+            @include lineAwesome;
+            font-size: 3rem;
         }
     }
 }
