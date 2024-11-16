@@ -314,12 +314,11 @@
         // opacity: 0.1;
         background: linear-gradient(#000 0%, rgba(102, 102, 102, 0) 100%);
 
-        @include tabletMore {
-            height: 1024px;
-        }
-
         @include mobileMore {
             height: 844px;
+        }
+        @include tabletMore {
+            height: 1024px;
         }
     }
 

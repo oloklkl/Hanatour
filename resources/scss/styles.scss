@@ -6,7 +6,9 @@
         font: bold;
     }
     .form-input-search {
+        display: flex;
         padding-bottom: 5px;
+        justify-content: space-between;
         margin-top: 80px;
         border-bottom: 3px solid #18181b;
         box-sizing: border-box;
@@ -15,8 +17,6 @@
     #Capa_1 {
         width: 35px;
         height: 35px;
-        margin-left: 100px;
-        margin-right: 8px;
     }
     .keyword {
         margin: 32px 0;

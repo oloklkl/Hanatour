@@ -68,11 +68,6 @@
     margin-top: 20px;
     margin-bottom: 80px;
 
-    .event-banner__slides {
-        position: relative;
-        height: 138px;
-    }
-
     .event-banner__slides li {
         display: none; /* 모든 슬라이드 숨기기 */
         position: absolute;
@@ -88,7 +83,7 @@
     .event-banner__description {
         position: absolute;
         font-size: 1.2rem;
-        z-index: 200;
+        z-index: 1000;
         top: 70px;
         color: #3888ff;
         font-weight: bold;
@@ -97,7 +92,7 @@
     .event-banner__tit {
         position: absolute;
         font-size: 2rem;
-        z-index: 200;
+        z-index: 1000;
         top: 90px;
         color: $white;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -106,7 +101,7 @@
     .event-banner__description2 {
         position: absolute;
         font-size: 1.2rem;
-        z-index: 200;
+        z-index: 1000;
         top: 75px;
         color: $black;
         font-weight: bold;
@@ -116,7 +111,7 @@
         position: absolute;
         font-size: 1.7rem;
         font-weight: bold;
-        z-index: 200;
+        z-index: 1000;
         top: 90px;
         color: #3888ff;
         margin-left: 40px;
@@ -128,15 +123,24 @@
         color: $white;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         margin-left: 40px;
-        z-index: 200;
+        z-index: 1000;
     }
 
     .event-banner__img {
         position: relative;
         display: block;
         width: 100%;
-        z-index: 1;
+        height: 138px;
+        padding: 120px;
+        z-index: 800;
         object-fit: cover;
+
+        @include mobileMore {
+            height: 180px;
+        }
+        @include tabletMore {
+            height: 200px;
+        }
     }
 
     .btn-event {

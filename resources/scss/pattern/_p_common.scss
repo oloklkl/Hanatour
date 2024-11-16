@@ -31,7 +31,7 @@
         align-items: center;
         img {
             position: relative;
-            width: 260px;
+            width: 100%;
             height: auto;
         }
         a {
@@ -322,12 +322,14 @@
 
     .board {
         display: grid;
+
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
         @include mobileMore {
             grid-template-columns: repeat(2, 1fr);
         }
         @include tabletMore {
+            height: 306px;
             grid-template-columns: repeat(4, 1fr);
         }
     }
