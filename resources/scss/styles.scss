@@ -2,9 +2,6 @@
 @import 'pattern/p_include';
 
 .intro {
-    .input-value {
-        font: bold;
-    }
     .form-input-search {
         display: flex;
         padding-bottom: 5px;
@@ -12,28 +9,43 @@
         margin-top: 80px;
         border-bottom: 3px solid #18181b;
         box-sizing: border-box;
+
+        .input-value {
+            font: bold;
+        }
+
+        #Capa_1 {
+            width: 35px;
+            height: 35px;
+        }
     }
 
-    #Capa_1 {
-        width: 35px;
-        height: 35px;
-    }
-    .keyword {
-        margin: 32px 0;
-    }
-    .btn-main-search-keyword {
-        display: inline-flex;
-        align-items: center;
-        height: 36px;
-        padding: 0 16px;
-        margin: 5px 0;
-        border-radius: 30px;
+    .effect-data {
+        .keyword {
+            margin: 32px 0;
+        }
+        .btn-main-search-keyword {
+            display: inline-flex;
+            align-items: center;
+            height: 36px;
+            padding: 0 16px;
+            margin: 5px 0;
+            border-radius: 30px;
 
-        font-size: 1.7rem;
-        font-weight: 700;
-        line-height: 1;
-        color: #181818;
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #181818;
 
-        background-color: #ececec;
+            background-color: #ececec;
+        }
+        .decorative-visual {
+            width: 100%;
+            height: 500px;
+
+            @include mobileMore {
+                height: 1000px;
+            }
+        }
     }
 }

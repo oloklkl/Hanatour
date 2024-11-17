@@ -937,11 +937,9 @@ legend {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 10px;
-  margin-left: 20px;
 }
 .video-container .video-overlay__subtit {
   color: rgba(255, 255, 255, 0.937254902);
-  margin-left: 20px;
 }
 .video-container .video-container__video {
   width: 100%;
@@ -973,13 +971,6 @@ legend {
   font-size: 3rem;
 }
 
-#footer {
-  background-color: #000;
-  width: 100%;
-  height: 260px;
-  color: #fff;
-}
-
 .main-hanatour .logo {
   font-size: 1.8rem;
 }
@@ -987,19 +978,20 @@ legend {
   font-size: 2rem;
 }
 
-.main-middle-banner {
-  position: relative;
-  overflow: hidden;
-}
 .main-middle-banner .inner {
-  position: relative;
   padding: 0;
 }
 .main-middle-banner .inner .banner-image {
-  width: 390px;
+  position: relative;
+  width: 100%;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 600px) {
+  .main-middle-banner .inner .banner-image {
+    height: 750px;
+  }
 }
 .main-middle-banner .inner .intro-text {
   position: absolute;
@@ -1009,41 +1001,21 @@ legend {
   font-size: 3rem;
   font-weight: bold;
 }
+@media (min-width: 600px) {
+  .main-middle-banner .inner .intro-text {
+    font-size: 5rem;
+  }
+}
 .main-middle-banner .inner .intro-text .highlighted-text {
   color: #eff14d;
 }
-.main-middle-banner .inner .message-container {
+.main-middle-banner .inner .message-text {
   position: absolute;
-  bottom: 399px;
-  right: 0;
-  width: 390px;
-  overflow: hidden;
-  transform: rotate(-90deg);
-  transform-origin: bottom right;
-}
-.main-middle-banner .inner .message-container .message-text {
-  display: inline-block;
-  height: 56px;
-  line-height: 3;
   color: #fff;
   background-color: #003cff;
-  padding: 0 12px;
-  white-space: nowrap;
-  animation: scroll-message linear infinite;
-}
-@keyframes scroll-message {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  transform: rotate(-90deg);
 }
 
-.event-banner {
-  margin-top: 20px;
-  margin-bottom: 80px;
-}
 .event-banner .event-banner__slides li {
   display: none; /* 모든 슬라이드 숨기기 */
   position: absolute;
@@ -1056,12 +1028,12 @@ legend {
 }
 .event-banner .event-banner__description {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   z-index: 1000;
   top: 70px;
   color: #3888ff;
   font-weight: bold;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 .event-banner .event-banner__tit {
   position: absolute;
@@ -1070,41 +1042,42 @@ legend {
   top: 90px;
   color: #fff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 .event-banner .event-banner__description2 {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   z-index: 1000;
-  top: 75px;
-  color: #000;
+  top: 50px;
+  color: red;
   font-weight: bold;
   margin-left: 40px;
 }
 .event-banner .event-banner__tit2 {
   position: absolute;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: bold;
   z-index: 1000;
-  top: 90px;
-  color: #3888ff;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+  top: 75px;
+  color: #fff;
   margin-left: 40px;
 }
 .event-banner .event-banner__tit3 {
   position: absolute;
-  font-size: 1.8rem;
-  top: 70px;
+  font-size: 1.7rem;
+  top: 30px;
   color: #fff;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  margin-left: 40px;
+  margin-left: 20px;
   z-index: 1000;
 }
 .event-banner .event-banner__img {
   position: relative;
   display: block;
+  margin-top: 20px;
+  margin-bottom: 80px;
   width: 100%;
   height: 138px;
-  padding: 120px;
   z-index: 800;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1117,14 +1090,15 @@ legend {
 @media (min-width: 1024px) {
   .event-banner .event-banner__img {
     height: 200px;
+    padding: 120px;
   }
 }
 .event-banner .btn-event {
   position: absolute;
   display: inline-flex;
   padding: 5px 6px;
-  top: 80px;
-  left: 73%;
+  top: 30%;
+  left: 80%;
   background-color: #fff;
   color: #000;
   text-decoration: none;
@@ -1133,7 +1107,7 @@ legend {
   font-weight: 600;
   align-items: center;
   transition: background-color 0.3s;
-  z-index: 202;
+  z-index: 1000;
 }
 .event-banner .btn-event #Bold {
   width: 25px;
@@ -1157,9 +1131,6 @@ legend {
      object-position: 50% 100%;
 }
 
-.intro .input-value {
-  font: bold;
-}
 .intro .form-input-search {
   display: flex;
   padding-bottom: 5px;
@@ -1168,14 +1139,17 @@ legend {
   border-bottom: 3px solid #18181b;
   box-sizing: border-box;
 }
-.intro #Capa_1 {
+.intro .form-input-search .input-value {
+  font: bold;
+}
+.intro .form-input-search #Capa_1 {
   width: 35px;
   height: 35px;
 }
-.intro .keyword {
+.intro .effect-data .keyword {
   margin: 32px 0;
 }
-.intro .btn-main-search-keyword {
+.intro .effect-data .btn-main-search-keyword {
   display: inline-flex;
   align-items: center;
   height: 36px;
@@ -1187,4 +1161,13 @@ legend {
   line-height: 1;
   color: #181818;
   background-color: #ececec;
+}
+.intro .effect-data .decorative-visual {
+  width: 100%;
+  height: 500px;
+}
+@media (min-width: 600px) {
+  .intro .effect-data .decorative-visual {
+    height: 1000px;
+  }
 }/*# sourceMappingURL=styles.css.map */

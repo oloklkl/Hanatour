@@ -8,17 +8,17 @@
 }
 
 .main-middle-banner {
-    position: relative;
-    overflow: hidden;
-
     .inner {
-        position: relative;
         padding: 0;
 
         .banner-image {
-            width: 390px;
+            position: relative;
+            width: 100%;
             height: 400px;
             object-fit: cover;
+            @include mobileMore {
+                height: 750px;
+            }
         }
 
         .intro-text {
@@ -28,46 +28,23 @@
             color: $white;
             font-size: 3rem;
             font-weight: bold;
+            @include mobileMore {
+                font-size: 5rem;
+            }
 
             .highlighted-text {
                 color: #eff14d;
             }
         }
-        .message-container {
+        .message-text {
             position: absolute;
-            bottom: 399px;
-            right: 0;
-            width: 390px;
-            overflow: hidden;
+            color: $white;
+            background-color: #003cff;
             transform: rotate(-90deg);
-            transform-origin: bottom right;
-
-            .message-text {
-                display: inline-block;
-                height: 56px;
-                line-height: 3;
-                color: $white;
-                background-color: #003cff;
-                padding: 0 12px;
-                white-space: nowrap;
-                animation: scroll-message linear infinite;
-
-                @keyframes scroll-message {
-                    0% {
-                        transform: translateX(0%);
-                    }
-                    100% {
-                        transform: translateX(-100%);
-                    }
-                }
-            }
         }
     }
 }
 .event-banner {
-    margin-top: 20px;
-    margin-bottom: 80px;
-
     .event-banner__slides li {
         display: none; /* 모든 슬라이드 숨기기 */
         position: absolute;
@@ -82,12 +59,12 @@
 
     .event-banner__description {
         position: absolute;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         z-index: 1000;
         top: 70px;
         color: #3888ff;
         font-weight: bold;
-        margin-left: 40px;
+        margin-left: 50px;
     }
     .event-banner__tit {
         position: absolute;
@@ -96,42 +73,43 @@
         top: 90px;
         color: $white;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        margin-left: 40px;
+        margin-left: 50px;
     }
     .event-banner__description2 {
         position: absolute;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         z-index: 1000;
-        top: 75px;
-        color: $black;
+        top: 50px;
+        color: red;
         font-weight: bold;
         margin-left: 40px;
     }
     .event-banner__tit2 {
         position: absolute;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         font-weight: bold;
         z-index: 1000;
-        top: 90px;
-        color: #3888ff;
+        text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+        top: 75px;
+        color: $white;
         margin-left: 40px;
     }
     .event-banner__tit3 {
         position: absolute;
-        font-size: 1.8rem;
-        top: 70px;
+        font-size: 1.7rem;
+        top: 30px;
         color: $white;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        margin-left: 40px;
+        margin-left: 20px;
         z-index: 1000;
     }
 
     .event-banner__img {
         position: relative;
         display: block;
+        margin-top: 20px;
+        margin-bottom: 80px;
         width: 100%;
         height: 138px;
-        padding: 120px;
         z-index: 800;
         object-fit: cover;
 
@@ -140,6 +118,7 @@
         }
         @include tabletMore {
             height: 200px;
+            padding: 120px;
         }
     }
 
@@ -147,8 +126,8 @@
         position: absolute;
         display: inline-flex;
         padding: 5px 6px;
-        top: 80px;
-        left: 73%;
+        top: 30%;
+        left: 80%;
         background-color: $white;
         color: $black;
         text-decoration: none;
@@ -157,7 +136,7 @@
         font-weight: 600;
         align-items: center;
         transition: background-color 0.3s;
-        z-index: 202;
+        z-index: 1000;
 
         #Bold {
             width: 25px;
