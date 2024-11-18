@@ -985,8 +985,6 @@ legend {
   position: relative;
   width: 100%;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 @media (min-width: 600px) {
   .main-middle-banner .inner .banner-image {
@@ -995,7 +993,7 @@ legend {
 }
 .main-middle-banner .inner .intro-text {
   position: absolute;
-  top: 50%;
+  top: 20%;
   margin-left: 20px;
   color: #fff;
   font-size: 3rem;
@@ -1007,13 +1005,17 @@ legend {
   }
 }
 .main-middle-banner .inner .intro-text .highlighted-text {
-  color: #eff14d;
+  color: yellow;
 }
 .main-middle-banner .inner .message-text {
   position: absolute;
   color: #fff;
+  top: 0;
+  left: 0;
+  padding: 8px 20px;
+  white-space: nowrap;
+  overflow: hidden;
   background-color: #003cff;
-  transform: rotate(-90deg);
 }
 
 .event-banner .event-banner__slides li {
