@@ -9,6 +9,7 @@
 
 .main-middle-banner {
     .inner {
+        position: relative;
         padding: 0;
 
         .banner-image {
@@ -36,16 +37,24 @@
                 color: yellow;
             }
         }
-        .message-text {
+        .scroll-container {
             position: absolute;
-            color: $white;
+            bottom: 0;
             top: 0;
-            left: 0;
-            padding: 8px 20px;
+            z-index: 1000;
             white-space: nowrap;
             overflow: hidden;
-            background-color: #003cff;
-            // transform: rotate(-90deg);
+
+            .message-text {
+                position: relative;
+                color: $white;
+                background-color: #003cff;
+                width: 100%;
+                padding: 10px 20px;
+                white-space: nowrap;
+                overflow: hidden;
+                z-index: 1500;
+            }
         }
     }
 }

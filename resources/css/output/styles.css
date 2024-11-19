@@ -479,6 +479,7 @@ legend {
   z-index: 200;
 }
 .sec-service .tags {
+  display: block;
   flex-direction: row;
   margin-top: 60px;
   margin-bottom: 20px;
@@ -490,7 +491,7 @@ legend {
   color: rgba(190, 190, 190, 0.5882352941);
   line-height: 1.5;
 }
-.sec-service .sec-g__cont .swiper-slide a {
+.sec-service a.slide-link {
   padding: 0;
   margin: 0;
   display: block;
@@ -979,6 +980,7 @@ legend {
 }
 
 .main-middle-banner .inner {
+  position: relative;
   padding: 0;
 }
 .main-middle-banner .inner .banner-image {
@@ -1007,15 +1009,23 @@ legend {
 .main-middle-banner .inner .intro-text .highlighted-text {
   color: yellow;
 }
-.main-middle-banner .inner .message-text {
+.main-middle-banner .inner .scroll-container {
   position: absolute;
-  color: #fff;
+  bottom: 0;
   top: 0;
-  left: 0;
-  padding: 8px 20px;
+  z-index: 1000;
   white-space: nowrap;
   overflow: hidden;
+}
+.main-middle-banner .inner .scroll-container .message-text {
+  position: relative;
+  color: #fff;
   background-color: #003cff;
+  width: 100%;
+  padding: 10px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 1500;
 }
 
 .event-banner .event-banner__slides li {
