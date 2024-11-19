@@ -617,15 +617,35 @@ legend {
 .swiper .swiper-button-prev::before {
   font-family: "Line Awesome Free";
   font-weight: 900;
-  font-size: 3rem;
-  color: #000;
-  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  z-index: 2000;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
 }
 .swiper .swiper-button-next::before {
-  content: "\f138";
+  content: "\f061";
+  font-size: 4rem;
+  color: #fff;
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .swiper .swiper-button-prev::before {
-  content: "\f137";
+  content: "\f060";
+  font-size: 4rem;
+  color: #fff;
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .inner {
@@ -1014,8 +1034,6 @@ legend {
   bottom: 0;
   top: 0;
   z-index: 1000;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .main-middle-banner .inner .scroll-container .message-text {
   position: relative;

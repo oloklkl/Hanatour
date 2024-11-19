@@ -365,14 +365,34 @@
     .swiper-button-next::before,
     .swiper-button-prev::before {
         @include lineAwesome;
-        font-size: 3rem;
-        color: $black;
-        opacity: 0.5;
+        position: absolute;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0;
+        z-index: 2000;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
     }
     .swiper-button-next::before {
-        content: '\f138';
+        content: '\f061';
+        font-size: 4rem;
+        color: $white;
+        display: block;
+        width: 64px;
+        height: 64px;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
     .swiper-button-prev::before {
-        content: '\f137';
+        content: '\f060';
+        font-size: 4rem;
+        color: $white;
+        display: block;
+        width: 64px;
+        height: 64px;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 }
