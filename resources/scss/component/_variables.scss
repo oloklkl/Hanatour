@@ -3,35 +3,9 @@
 $white: #fff;
 $black: #000;
 
-// ## Primary colors
-$primary: #246beb;
-$primary-0: #ffffff;
-$primary-5: #eff5ff;
-$primary-10: #d3e1fb;
-$primary-20: #a7c4f7;
-$primary-30: #7ca6f3;
-$primary-40: #5089ef; // (3 : 1 with white)
-$primary-50: #246beb; // base (4.5 : 1 with white), 입력창 활성화
-$primary-60: #1d56bc;
-$primary-70: #16408d;
-$primary-80: #0e2b5e;
-$primary-90: #07152f;
-$primary-100: #000000;
-
-// # Secondary colors
-$secondary: #003675;
-$secondary-0: #ffffff;
-$secondary-5: #edf1f5;
-$secondary-10: #cdd7e4;
-$secondary-20: #b4c4d6;
-$secondary-30: #99b0cb;
-$secondary-40: #2a5c96; // (3 : 1 with white)
-$secondary-50: #003675; // base (4.5 : 1 with white)
-$secondary-60: #002b5e;
-$secondary-70: #002046;
-$secondary-80: #00162f;
-$secondary-90: #000b17;
-$secondary-100: #000000;
+$primary: #fae100;
+$secondary: #50fe43;
+$secondary-5: #007aff;
 
 // Grayscale
 $gray-0: #ffffff; // background-base
@@ -48,7 +22,7 @@ $gray-90: #1d1d1d;
 $gray-100: #000000;
 
 // font-style
-$font-family-base: "Noto Sans KR", sans-serif !default;
+$font-family-base: 'Pretendard', sans-serif !default;
 $font-size-root: 62.5% !default; //10px 1rem으로 설정
 $font-size-base: 1.7rem !default;
 $font-color-base: $gray-90 !default;

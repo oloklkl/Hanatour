@@ -34,7 +34,7 @@
             }
 
             .highlighted-text {
-                color: yellow;
+                color: $primary;
             }
         }
         .scroll-container {
@@ -46,7 +46,7 @@
             .message-text {
                 position: relative;
                 color: $white;
-                background-color: #003cff;
+                background-color: $secondary-5;
                 width: 100%;
                 padding: 10px 20px;
                 white-space: nowrap;
