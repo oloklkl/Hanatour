@@ -46,7 +46,7 @@
             .message-text {
                 position: relative;
                 color: $white;
-                background-color: $secondary-5;
+                background-color: $secondary-2;
                 width: 100%;
                 padding: 10px 20px;
                 white-space: nowrap;
@@ -157,7 +157,7 @@
     }
 
     .btn-event:hover {
-        background-color: #003cff;
+        background-color: $secondary-2;
     }
 }
 

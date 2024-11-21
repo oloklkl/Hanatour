@@ -101,84 +101,71 @@
         font-size: 2.4rem;
         color: $gray-30;
     }
+
     .image-container {
         position: relative;
         text-align: center;
         display: inline-block;
+
         .image-content {
             z-index: 3;
-            width: 290px;
-            height: 462px;
             object-fit: cover;
         }
-        .image-wrapper1 {
-            position: absolute;
-            background-color: $secondary-business2;
-            opacity: 0.5;
-            width: 260px;
+
+        .image-contant,
+        .image-wrapper1,
+        .image-wrapper2,
+        .image-wrapper3,
+        .image-wrapper4,
+        .image-wrapper5,
+        .image-wrapper6 {
+            width: 290px;
             height: 462px;
+            @include mobileMore {
+                width: 640px;
+                height: 800px;
+            }
+        }
+        .image-wrapper1,
+        .image-wrapper3,
+        .image-wrapper5 {
+            position: absolute;
+            opacity: 0.5;
             transform: rotate(-10deg);
             z-index: 2;
             top: 0;
             right: 40px;
+        }
+        .image-wrapper2,
+        .image-wrapper4,
+        .image-wrapper6 {
+            position: absolute;
+            opacity: 0.5;
+            transform: rotate(-25deg);
+            z-index: 1;
+            top: 0;
+            right: 20px;
+        }
+        .image-wrapper1 {
+            background-color: $secondary-business2;
         }
 
         .image-wrapper2 {
             position: absolute;
             background-color: $secondary-business3;
-            opacity: 0.5;
-            width: 260px;
-            height: 462px;
-            transform: rotate(-25deg);
-            z-index: 1;
-            top: 0;
-            right: 20px;
         }
         .image-wrapper3 {
-            position: absolute;
             background-color: $secondary-business3;
-            opacity: 0.5;
-            width: 260px;
-            height: 462px;
-            transform: rotate(-10deg);
-            z-index: 2;
-            top: 0;
-            right: 40px;
         }
 
         .image-wrapper4 {
-            position: absolute;
             background-color: $secondary-business1;
-            opacity: 0.5;
-            width: 260px;
-            height: 462px;
-            transform: rotate(-25deg);
-            z-index: 1;
-            top: 0;
-            right: 20px;
         }
         .image-wrapper5 {
-            position: absolute;
             background-color: $secondary-business1;
-            opacity: 0.5;
-            width: 260px;
-            height: 462px;
-            transform: rotate(-10deg);
-            z-index: 2;
-            top: 0;
-            right: 40px;
         }
-
         .image-wrapper6 {
-            position: absolute;
             background-color: $secondary-business2;
-            opacity: 0.5;
-            width: 260px;
-            height: 462px;
-            transform: rotate(-25deg);
-            z-index: 1;
-            top: 0;
-            right: 20px;
         }
 
         .slide-description {
@@ -306,7 +293,7 @@
     }
     .txt_area {
         .cate {
-            color: $primary-50;
+            color: $secondary-2;
             font-weight: 700;
             font-size: 1.5rem;
         }

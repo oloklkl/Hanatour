@@ -310,7 +310,7 @@
         height: 100vh;
         object-fit: cover;
         // opacity: 0.1;
-        background: linear-gradient(#000 0%, rgba(102, 102, 102, 0) 100%);
+        background: linear-gradient($black 0%, rgba(102, 102, 102, 0) 100%);
 
         @include mobileMore {
             height: 844px;
@@ -324,7 +324,7 @@
         position: absolute;
         top: 60%;
         margin-left: 20px;
-        color: white;
+        color: $white;
     }
     .video-container {
         &::before {
