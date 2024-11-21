@@ -7,7 +7,7 @@
         padding-bottom: 5px;
         justify-content: space-between;
         margin-top: 80px;
-        border-bottom: 3px solid #18181b;
+        border-bottom: 3px solid $black;
         box-sizing: border-box;
 
         .input-value {
@@ -35,9 +35,9 @@
             font-size: 1.7rem;
             font-weight: 700;
             line-height: 1;
-            color: #181818;
+            color: $black;
 
-            background-color: #ececec;
+            background-color: $secondary-keyword;
         }
         .decorative-visual {
             width: 100%;

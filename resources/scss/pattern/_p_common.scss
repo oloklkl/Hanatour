@@ -1,6 +1,6 @@
 // 사이트 공통 스타일
 :root {
-    --swiper-theme-color: red;
+    --swiper-theme-color: $black;
 }
 
 .bg-gray {
@@ -25,7 +25,7 @@
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #181818;
+        background: $black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -99,7 +99,7 @@
     .sub-tit {
         margin-bottom: 80px;
         font-size: 2.4rem;
-        color: #bebebe;
+        color: $gray-30;
     }
     .image-container {
         position: relative;
@@ -113,7 +113,7 @@
         }
         .image-wrapper1 {
             position: absolute;
-            background-color: #c7d67a;
+            background-color: $secondary-business2;
             opacity: 0.5;
             width: 260px;
             height: 462px;
@@ -125,7 +125,7 @@
 
         .image-wrapper2 {
             position: absolute;
-            background-color: #9eaddb;
+            background-color: $secondary-business3;
             opacity: 0.5;
             width: 260px;
             height: 462px;
@@ -136,7 +136,7 @@
         }
         .image-wrapper3 {
             position: absolute;
-            background-color: #9eaddb;
+            background-color: $secondary-business3;
             opacity: 0.5;
             width: 260px;
             height: 462px;
@@ -148,7 +148,7 @@
 
         .image-wrapper4 {
             position: absolute;
-            background-color: #7ce9e2;
+            background-color: $secondary-business1;
             opacity: 0.5;
             width: 260px;
             height: 462px;
@@ -159,7 +159,7 @@
         }
         .image-wrapper5 {
             position: absolute;
-            background-color: #7ce9e2;
+            background-color: $secondary-business1;
             opacity: 0.5;
             width: 260px;
             height: 462px;
@@ -171,7 +171,7 @@
 
         .image-wrapper6 {
             position: absolute;
-            background-color: #c7d67a;
+            background-color: $secondary-business2;
             opacity: 0.5;
             width: 260px;
             height: 462px;
@@ -221,7 +221,7 @@
             font-weight: 600;
             font-size: 1.9rem;
             padding: 2px 5px;
-            color: #bebebe96;
+            color: $gray-50;
             line-height: 1.5;
         }
     }
@@ -229,7 +229,7 @@
         padding: 0;
         margin: 0;
         display: block;
-        background-color: #181818;
+        background-color: $black;
         width: 100%;
         height: auto;
         max-width: 390px;
@@ -240,30 +240,30 @@
 }
 
 .swiper-slide:nth-of-type(1) .business-tit {
-    color: #7ce9e2;
-    border: 2px solid #7ce9e2;
+    color: $secondary-business1;
+    border: 2px solid $secondary-business1;
 }
 
 .swiper-slide:nth-of-type(2) .business-tit {
-    color: #c7d67a;
-    border: 2px solid #c7d67a;
+    color: $secondary-business2;
+    border: 2px solid $secondary-business2;
 }
 
 .swiper-slide:nth-of-type(3) .business-tit {
-    color: #9eaddb;
-    border: 2px solid #9eaddb;
+    color: $secondary-business3;
+    border: 2px solid $secondary-business3;
 }
 
 .swiper-slide:nth-of-type(1) .category {
-    color: #7ce9e2;
+    color: $secondary-business1;
 }
 
 .swiper-slide:nth-of-type(2) .category {
-    color: #c7d67a;
+    color: $secondary-business2;
 }
 
 .swiper-slide:nth-of-type(3) .category {
-    color: #9eaddb;
+    color: $secondary-business3;
 }
 
 .sec-news {
