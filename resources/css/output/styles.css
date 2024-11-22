@@ -294,8 +294,7 @@ legend {
 }
 .swiper .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #000;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,6 +336,16 @@ legend {
   border-radius: 50%;
 }
 
+.sec-service {
+  background-color: #000;
+  width: 100%;
+  height: 880px;
+}
+@media (min-width: 600px) {
+  .sec-service {
+    height: 1500px;
+  }
+}
 .sec-service .inner-sec-service {
   margin-top: 40px;
 }
@@ -378,24 +387,12 @@ legend {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.sec-service .image-container .image-contant,
-.sec-service .image-container .image-wrapper1,
-.sec-service .image-container .image-wrapper2,
-.sec-service .image-container .image-wrapper3,
-.sec-service .image-container .image-wrapper4,
-.sec-service .image-container .image-wrapper5,
-.sec-service .image-container .image-wrapper6 {
+.sec-service .image-container .images {
   width: 290px;
   height: 462px;
 }
 @media (min-width: 600px) {
-  .sec-service .image-container .image-contant,
-  .sec-service .image-container .image-wrapper1,
-  .sec-service .image-container .image-wrapper2,
-  .sec-service .image-container .image-wrapper3,
-  .sec-service .image-container .image-wrapper4,
-  .sec-service .image-container .image-wrapper5,
-  .sec-service .image-container .image-wrapper6 {
+  .sec-service .image-container .images {
     width: 640px;
     height: 800px;
   }
@@ -408,7 +405,8 @@ legend {
   transform: rotate(-10deg);
   z-index: 2;
   top: 0;
-  right: 40px;
+  right: 10px;
+  gap: 20px;
 }
 .sec-service .image-container .image-wrapper2,
 .sec-service .image-container .image-wrapper4,
@@ -424,7 +422,6 @@ legend {
   background-color: #c7d67a;
 }
 .sec-service .image-container .image-wrapper2 {
-  position: absolute;
   background-color: #9eaddb;
 }
 .sec-service .image-container .image-wrapper3 {
@@ -439,12 +436,12 @@ legend {
 .sec-service .image-container .image-wrapper6 {
   background-color: #c7d67a;
 }
-.sec-service .image-container .slide-description {
+.sec-service .slide-description {
   font-size: 1.5rem;
   margin-top: 10px;
   text-align: left;
 }
-.sec-service .image-container .slide-description .category {
+.sec-service .slide-description .category {
   position: absolute;
   top: 15px;
   left: 40px;
@@ -455,7 +452,7 @@ legend {
   border-radius: 15px;
   z-index: 200;
 }
-.sec-service .image-container .slide-description .text {
+.sec-service .slide-description .text {
   position: absolute;
   top: 60px;
   left: 40px;
@@ -466,31 +463,19 @@ legend {
   text-align: left;
   z-index: 200;
 }
-.sec-service .tags {
+
+.tags {
   display: block;
   flex-direction: row;
   margin-top: 60px;
   margin-bottom: 20px;
 }
-.sec-service .tags .tag-item {
+.tags .tag-item {
   font-weight: 600;
   font-size: 1.9rem;
   padding: 2px 5px;
   color: #8e8e8e;
   line-height: 1.5;
-}
-.sec-service a.slide-link {
-  padding: 0;
-  margin: 0;
-  display: block;
-  background-color: #000;
-  width: 100%;
-  height: auto;
-  max-width: 390px;
-  max-height: 880px;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .swiper-slide:nth-of-type(1) .business-tit {
@@ -553,12 +538,18 @@ legend {
 .sec-news .thumb-img {
   margin: 32px auto 24px;
   width: 100%;
+  height: 233px;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 600px) {
+  .sec-news .thumb-img {
+    height: 222px;
+  }
+}
 .sec-news .txt_area .cate {
-  color: #007aff;
+  color: #90eb97;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -948,7 +939,7 @@ legend {
   margin-bottom: 10px;
 }
 .video-container .video-overlay__subtit {
-  color: rgba(255, 255, 255, 0.937254902);
+  color: rgba(255, 255, 255, 0.937);
 }
 .video-container .video-container__video {
   width: 100%;
@@ -1049,7 +1040,7 @@ legend {
   font-size: 1.3rem;
   z-index: 1000;
   top: 70px;
-  color: #007aff;
+  color: #79e3ff;
   font-weight: bold;
   margin-left: 50px;
 }
@@ -1132,7 +1123,7 @@ legend {
   height: 25px;
 }
 .event-banner .btn-event:hover {
-  background-color: #007aff;
+  background-color: #79e3ff;
 }
 
 @media screen and (min-width: 1024px) {
