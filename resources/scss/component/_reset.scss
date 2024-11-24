@@ -87,6 +87,8 @@ table {
 }
 
 body {
+    position: relative;
+    height: 100%;
     -webkit-text-size-adjust: none;
 }
 
@@ -141,6 +143,7 @@ body {
 a {
     color: $font-color-base;
     text-decoration: none;
+    overflow: hidden;
 
     &:active,
     &:hover {

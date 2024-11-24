@@ -8,43 +8,46 @@
 }
 
 .main-middle-banner {
-    .inner {
-        position: relative;
+    .inner-middle-banner {
+        margin: 0;
         padding: 0;
+    }
 
-        .banner-image {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            // object-fit: cover;
-            @include mobileMore {
-                height: 750px;
-            }
-        }
-
-        .intro-text {
-            position: absolute;
-            top: 20%;
-            margin-left: 20px;
-            color: $white;
-            font-size: 3rem;
-            font-weight: bold;
-            @include mobileMore {
-                font-size: 5rem;
-            }
-
-            .highlighted-text {
-                color: $primary;
-            }
-        }
-        .scroll-container {
-            position: absolute;
-            bottom: 0;
-            top: 0;
-            z-index: 1000;
-
-            .message-text {
+    .banner-container {
+        position: relative;
+        .banner-content {
+            margin-bottom: 10px;
+            .banner-image {
                 position: relative;
+                width: 100%;
+                height: 400px;
+                @include mobileMore {
+                    height: 750px;
+                }
+            }
+
+            .intro-text {
+                position: absolute;
+                top: 20%;
+                margin-left: 20px;
+                color: $white;
+                font-size: 3rem;
+                font-weight: bold;
+                @include mobileMore {
+                    margin-left: 30px;
+                    font-size: 5rem;
+                }
+
+                .highlighted-text {
+                    color: $primary;
+                }
+            }
+        }
+
+        .scroll-container {
+            z-index: 1000;
+            .message-text {
+                position: absolute;
                 color: $white;
                 background-color: $secondary-3;
                 width: 100%;
@@ -52,6 +55,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 z-index: 1500;
+                bottom: 0;
             }
         }
     }
@@ -74,9 +78,13 @@
         font-size: 1.3rem;
         z-index: 1000;
         top: 70px;
-        color: $secondary-2;
+        color: $secondary-3;
         font-weight: bold;
         margin-left: 50px;
+        @include mobileMore {
+            margin-left: 100px;
+            font-size: 2rem;
+        }
     }
     .event-banner__tit {
         position: absolute;
@@ -86,6 +94,12 @@
         color: $white;
         text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
         margin-left: 50px;
+
+        @include mobileMore {
+            margin-left: 100px;
+            top: 100px;
+            font-size: 3rem;
+        }
     }
     .event-banner__description2 {
         position: absolute;
@@ -95,6 +109,10 @@
         color: red;
         font-weight: bold;
         margin-left: 40px;
+        @include mobileMore {
+            top: 55px;
+            font-size: 1.8rem;
+        }
     }
     .event-banner__tit2 {
         position: absolute;
@@ -105,6 +123,11 @@
         top: 75px;
         color: $white;
         margin-left: 40px;
+
+        @include mobileMore {
+            top: 80px;
+            font-size: 3rem;
+        }
     }
     .event-banner__tit3 {
         position: absolute;
@@ -113,6 +136,10 @@
         color: $white;
         margin-left: 20px;
         z-index: 1000;
+
+        @include mobileMore {
+            font-size: 2.6rem;
+        }
     }
 
     .event-banner__img {
@@ -143,7 +170,7 @@
         background-color: $white;
         color: $black;
         text-decoration: none;
-        border-radius: 15px;
+        border-radius: 20px;
         font-size: 1.5rem;
         font-weight: 600;
         align-items: center;
@@ -153,6 +180,10 @@
         #Bold {
             width: 25px;
             height: 25px;
+        }
+        @include mobileMore {
+            font-size: 2rem;
+            padding: 10px 15px;
         }
     }
 

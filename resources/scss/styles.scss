@@ -42,6 +42,7 @@
         .decorative-visual {
             width: 100%;
             height: 500px;
+            margin-bottom: 40px;
 
             @include mobileMore {
                 height: 1000px;
