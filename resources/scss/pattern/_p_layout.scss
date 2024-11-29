@@ -284,12 +284,9 @@
     width: auto;
     height: auto;
     overflow: hidden;
-    .fi-sr-pause {
+
+    .btn-pause::before {
         position: absolute;
-        width: 20px;
-        height: 20px;
-        top: 610px;
-        margin-left: 20px;
     }
 
     .video-overlay__main-text {
@@ -298,9 +295,33 @@
         font-size: 3rem;
         font-weight: bold;
         margin-bottom: 10px;
+
+        @include mobileMore {
+            font-size: 4.5rem;
+        }
+        @include tabletMore {
+            font-size: 6rem;
+        }
     }
-    .video-overlay__subtit {
+    .video-overlay__subtit,
+    .video-overlay__sub-text {
+        font-size: 2rem;
         color: rgba(255, 255, 255, 0.937);
+        @include tabletMore {
+            font-size: 3rem;
+        }
+    }
+    .video-overlay__sub-text {
+        @include mobileMore {
+            br {
+                display: none;
+            }
+        }
+        @include tabletMore {
+            br {
+                display: none;
+            }
+        }
     }
 
     .video-container__video {

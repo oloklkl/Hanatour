@@ -74,8 +74,13 @@
         text-align: center;
         display: inline-block;
 
-        .image-content {
+        .image-frame {
             position: relative;
+            z-index: 100;
+            object-fit: cover;
+        }
+
+        .image-content {
             z-index: 100;
             object-fit: cover;
         }
@@ -142,25 +147,25 @@
 
         .category {
             position: absolute;
-            top: 32%;
-            left: 70px;
+            top: 13%;
+            left: 10%;
             font-weight: 600;
             font-size: 1.5rem;
             background-color: $black;
-            padding: 5px 15px;
+            padding: 5px 20px;
             border-radius: 30px;
             z-index: 200;
 
             @include mobileMore {
-                top: 40%;
-                left: 90px;
+                top: 10%;
+                left: 10%;
                 font-size: 2.8rem;
             }
         }
         .text {
             position: absolute;
-            top: 38%;
-            left: 70px;
+            top: 20%;
+            left: 10%;
             font-weight: 600;
             font-size: 1.8rem;
             color: $white;
@@ -170,9 +175,9 @@
 
             @include mobileMore {
                 display: inline-block;
-                width: 200px;
-                top: 55%;
-                left: 90px;
+                width: 300px;
+                top: 20%;
+                left: 10%;
                 font-size: 2.5rem;
             }
         }
@@ -289,7 +294,7 @@
     }
     .txt_area {
         .cate {
-            color: $secondary-1;
+            color: $secondary-4;
             font-weight: 700;
             font-size: 1.5rem;
             @include mobileMore {
