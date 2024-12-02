@@ -513,6 +513,14 @@ legend {
 .sec-news .sec-news-wrapper {
   padding-top: 40px;
 }
+@media (min-width: 1024px) {
+  .sec-news .sec-g__desc,
+  .sec-news .sec-g__tit,
+  .sec-news .btn-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
 .sec-news .sec-g__desc {
   text-align: center;
   font-size: 1.8rem;
@@ -552,6 +560,7 @@ legend {
 }
 .sec-news .thumb_area:hover .thumb-img {
   transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 .sec-news .thumb-img {
   margin: 32px auto 24px;
@@ -1040,6 +1049,145 @@ legend {
   font-size: 3rem;
 }
 
+@media (min-width: 600px) {
+  .intro .intro-text-line,
+  .intro .intro-heading,
+  .intro .search-decoration-suitcase,
+  .intro .search-decoration-london,
+  .intro .search-decoration-hawaii {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .intro .intro-text-line,
+  .intro .intro-heading,
+  .intro .search-decoration-suitcase,
+  .intro .search-decoration-london,
+  .intro .search-decoration-hawaii {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .intro .intro-text-line,
+  .intro .intro-heading,
+  .intro .search-decoration-suitcase,
+  .intro .search-decoration-london,
+  .intro .search-decoration-hawaii {
+    display: block;
+  }
+}
+.intro .intro-text-group {
+  position: relative;
+}
+.intro .effect-heading {
+  position: absolute;
+  font-size: 10rem;
+  font-weight: 900;
+  color: #f0f0f0;
+  display: block;
+  top: 240px;
+  right: -60px;
+}
+@media (min-width: 600px) {
+  .intro .effect-heading {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .intro .effect-heading {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .intro .effect-heading {
+    display: block;
+  }
+}
+.intro .intro-text {
+  color: #717171;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 80px auto 30px;
+}
+.intro .intro-heading {
+  font-size: 7.2rem;
+  width: 50%;
+}
+.intro .form-input-search {
+  display: flex;
+  padding-bottom: 5px;
+  justify-content: space-between;
+  margin-top: 80px;
+  border-bottom: 3px solid #000;
+  box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  .intro .form-input-search {
+    display: flex;
+    width: 40%;
+  }
+}
+.intro .form-input-search .input-value {
+  font: bold;
+}
+.intro .form-input-search #Capa_1 {
+  width: 35px;
+  height: 35px;
+}
+.intro .effect-data .keyword {
+  margin: 32px 0;
+}
+@media (min-width: 1024px) {
+  .intro .effect-data .keyword {
+    width: 35%;
+  }
+}
+.intro .effect-data .btn-main-search-keyword {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 16px;
+  margin: 5px 0;
+  border-radius: 30px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  background-color: #ececec;
+}
+.intro .effect-data .decorative-visual {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 40px;
+}
+@media (min-width: 600px) {
+  .intro .effect-data .decorative-visual {
+    width: 1000px;
+    height: 665px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (min-width: 600px) {
+  .intro .search-decoration-suitcase {
+    width: 500px;
+    height: 720px;
+  }
+}
+@media (min-width: 600px) {
+  .intro .search-decoration-london {
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (min-width: 600px) {
+  .intro .search-decoration-hawaii {
+    width: 360px;
+    height: 550px;
+  }
+}
+
 .main-hanatour .logo {
   font-size: 1.8rem;
 }
@@ -1067,7 +1215,7 @@ legend {
     height: 750px;
   }
 }
-.main-middle-banner .banner-container .banner-content .intro-text {
+.main-middle-banner .banner-container .banner-content .banner-intro-text {
   position: absolute;
   top: 20%;
   margin-left: 20px;
@@ -1076,12 +1224,12 @@ legend {
   font-weight: bold;
 }
 @media (min-width: 600px) {
-  .main-middle-banner .banner-container .banner-content .intro-text {
+  .main-middle-banner .banner-container .banner-content .banner-intro-text {
     margin-left: 30px;
     font-size: 5rem;
   }
 }
-.main-middle-banner .banner-container .banner-content .intro-text .highlighted-text {
+.main-middle-banner .banner-container .banner-content .banner-intro-text .highlighted-text {
   color: #fae100;
 }
 .main-middle-banner .banner-container .scroll-container {
@@ -1248,46 +1396,4 @@ legend {
 .sec-service .sec-g__cont .swiper-slide a {
   -o-object-position: 50% 100%;
      object-position: 50% 100%;
-}
-
-.intro .form-input-search {
-  display: flex;
-  padding-bottom: 5px;
-  justify-content: space-between;
-  margin-top: 80px;
-  border-bottom: 3px solid #000;
-  box-sizing: border-box;
-}
-.intro .form-input-search .input-value {
-  font: bold;
-}
-.intro .form-input-search #Capa_1 {
-  width: 35px;
-  height: 35px;
-}
-.intro .effect-data .keyword {
-  margin: 32px 0;
-}
-.intro .effect-data .btn-main-search-keyword {
-  display: inline-flex;
-  align-items: center;
-  height: 36px;
-  padding: 0 16px;
-  margin: 5px 0;
-  border-radius: 30px;
-  font-size: 1.7rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  background-color: #ececec;
-}
-.intro .effect-data .decorative-visual {
-  width: 100%;
-  height: 500px;
-  margin-bottom: 40px;
-}
-@media (min-width: 600px) {
-  .intro .effect-data .decorative-visual {
-    height: 1000px;
-  }
 }/*# sourceMappingURL=styles.css.map */

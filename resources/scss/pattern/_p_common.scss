@@ -242,6 +242,14 @@
     .sec-news-wrapper {
         padding-top: 40px;
     }
+    .sec-g__desc,
+    .sec-g__tit,
+    .btn-container {
+        @include tabletMore {
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
     .sec-g__desc {
         text-align: center;
         font-size: 1.8rem;
@@ -278,6 +286,7 @@
     }
     .thumb_area:hover .thumb-img {
         transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
     }
     .thumb-img {
         margin: 32px auto 24px;
