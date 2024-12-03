@@ -978,8 +978,14 @@ legend {
   height: auto;
   overflow: hidden;
 }
-.video-container .btn-pause::before {
-  position: absolute;
+.video-container .btn-pause ::before {
+  content: "\f04c";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3rem;
+}
+.video-container .video-container__text-box {
+  margin-left: 255px;
 }
 .video-container .video-overlay__main-text {
   white-space: nowrap;
@@ -1104,8 +1110,9 @@ legend {
   }
 }
 .intro .intro-text {
-  color: #717171;
+  color: #8e8e8e;
   font-size: 2rem;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   margin: 80px auto 30px;
@@ -1161,30 +1168,38 @@ legend {
   height: 500px;
   margin-bottom: 40px;
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .intro .effect-data .decorative-visual {
+    position: relative;
+    top: 50px;
     width: 1000px;
     height: 665px;
     -o-object-fit: cover;
        object-fit: cover;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .intro .search-decoration-suitcase {
+    position: relative;
+    left: 70%;
     width: 500px;
     height: 720px;
   }
 }
-@media (min-width: 600px) {
-  .intro .search-decoration-london {
-    width: 500px;
-    height: 500px;
-  }
-}
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .intro .search-decoration-hawaii {
+    position: relative;
+    left: 70%;
     width: 360px;
     height: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .intro .search-decoration-london {
+    position: relative;
+    left: 30%;
+    width: 500px;
+    height: 500px;
   }
 }
 
