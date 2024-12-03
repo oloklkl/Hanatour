@@ -318,6 +318,15 @@ legend {
 .sec-g__cont .slide-content {
   margin-bottom: 10px;
 }
+@media (min-width: 1024px) {
+  .sec-g__cont .slide-content {
+    text-align: left;
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}
 .sec-g__cont .slide-content .business-tit {
   display: inline-block;
   margin-top: 40px;
@@ -985,7 +994,7 @@ legend {
   font-size: 3rem;
 }
 .video-container .video-container__text-box {
-  margin-left: 255px;
+  margin-left: 260px;
 }
 .video-container .video-overlay__main-text {
   white-space: nowrap;
@@ -1171,7 +1180,8 @@ legend {
 @media (min-width: 1024px) {
   .intro .effect-data .decorative-visual {
     position: relative;
-    top: 50px;
+    top: 220px;
+    left: -150px;
     width: 1000px;
     height: 665px;
     -o-object-fit: cover;
@@ -1181,13 +1191,13 @@ legend {
 @media (min-width: 1024px) {
   .intro .search-decoration-suitcase {
     position: relative;
-    left: 70%;
-    width: 500px;
-    height: 720px;
+    left: 73%;
+    width: 550px;
+    height: 770px;
   }
 }
 @media (min-width: 1024px) {
-  .intro .search-decoration-hawaii {
+  .intro .search-decoration-london {
     position: relative;
     left: 70%;
     width: 360px;
@@ -1195,11 +1205,13 @@ legend {
   }
 }
 @media (min-width: 1024px) {
-  .intro .search-decoration-london {
+  .intro .search-decoration-hawaii {
     position: relative;
-    left: 30%;
+    left: 35%;
     width: 500px;
     height: 500px;
+    z-index: 3;
+    margin-bottom: 200px;
   }
 }
 

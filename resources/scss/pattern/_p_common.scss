@@ -42,6 +42,14 @@
     }
     .slide-content {
         margin-bottom: 10px;
+
+        @include tabletMore {
+            text-align: left;
+            width: 100%;
+            max-width: $grid;
+            margin: 0 auto;
+            padding: 0 $p-tablet;
+        }
         .business-tit {
             display: inline-block;
             margin-top: 40px;
