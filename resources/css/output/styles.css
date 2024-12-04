@@ -84,7 +84,7 @@ table {
 
 body {
   position: relative;
-  height: 100%;
+  height: 100vh;
   -webkit-text-size-adjust: none;
 }
 
@@ -298,6 +298,7 @@ legend {
   margin: 20px 0 0;
   width: 100%;
   height: 880px;
+  overflow: hidden;
 }
 @media (min-width: 600px) {
   .sec-g__cont {
@@ -309,6 +310,11 @@ legend {
     height: 920px;
   }
 }
+@media (min-width: 1024px) {
+  .sec-g__cont .image-container {
+    top: -220px;
+  }
+}
 .sec-g__cont .inner-sec-service {
   margin-top: 40px;
 }
@@ -317,14 +323,13 @@ legend {
 }
 .sec-g__cont .slide-content {
   margin-bottom: 10px;
+  z-index: 10;
 }
 @media (min-width: 1024px) {
   .sec-g__cont .slide-content {
     text-align: left;
-    width: 100%;
-    max-width: 1340px;
-    margin: 0 auto;
-    padding: 0 30px;
+    margin-left: 300px;
+    width: 300px;
   }
 }
 .sec-g__cont .slide-content .business-tit {
@@ -344,6 +349,11 @@ legend {
     font-size: 4.8rem;
   }
 }
+@media (min-width: 1024px) {
+  .sec-g__cont .slide-content .main-tit {
+    font-size: 6rem;
+  }
+}
 .sec-g__cont .slide-content .sub-tit {
   margin-bottom: 20px;
   font-size: 2.4rem;
@@ -352,6 +362,11 @@ legend {
 @media (min-width: 600px) {
   .sec-g__cont .slide-content .sub-tit {
     margin-bottom: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-g__cont .slide-content .sub-tit {
+    margin-bottom: 0;
   }
 }
 .sec-g__cont .image-container {
@@ -462,11 +477,13 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-g__cont .slide-description .text {
-    display: inline-block;
-    width: 300px;
+    width: 68%;
     top: 20%;
     left: 10%;
     font-size: 2.5rem;
+  }
+  .sec-g__cont .slide-description .text br {
+    display: none;
   }
 }
 .sec-g__cont .tags {
@@ -478,8 +495,19 @@ legend {
 @media (min-width: 600px) {
   .sec-g__cont .tags {
     margin-left: 30px;
-    margin-top: 100px;
-    text-align: left;
+    margin-top: 90px;
+  }
+  .sec-g__cont .tags br {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-g__cont .tags {
+    display: inline-block;
+    position: absolute;
+    margin-top: 0;
+    top: 90%;
+    left: 260px;
   }
 }
 .sec-g__cont .tags .tag-item {
@@ -492,6 +520,17 @@ legend {
 @media (min-width: 600px) {
   .sec-g__cont .tags .tag-item {
     font-size: 2.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-g__cont .tags .tag-item {
+    font-size: 3.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-g__cont .tags .tag-br {
+    display: block;
+    text-align: left;
   }
 }
 .sec-g__cont .swiper-slide:nth-of-type(1) .business-tit {
@@ -517,7 +556,8 @@ legend {
 }
 
 .sec-news {
-  padding-bottom: 40px;
+  padding-bottom: 80px;
+  margin-bottom: 120px;
 }
 .sec-news .sec-news-wrapper {
   padding-top: 40px;
@@ -526,8 +566,7 @@ legend {
   .sec-news .sec-g__desc,
   .sec-news .sec-g__tit,
   .sec-news .btn-container {
-    display: flex;
-    justify-content: flex-start;
+    display: table;
   }
 }
 .sec-news .sec-g__desc {
@@ -550,6 +589,11 @@ legend {
     font-size: 5rem;
   }
 }
+@media (min-width: 1024px) {
+  .sec-news .sec-g__tit {
+    font-size: 8rem;
+  }
+}
 .sec-news .btn-more {
   display: flex;
   width: 110px;
@@ -562,10 +606,22 @@ legend {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1024px) {
+  .sec-news .btn-more {
+    width: 130px;
+    padding: 10px 30px;
+  }
+}
 .sec-news .btn-more #Bold {
   margin-left: 3px;
   width: 20px;
   height: 20px;
+}
+@media (min-width: 1024px) {
+  .sec-news .btn-more #Bold {
+    width: 30px;
+    height: 30px;
+  }
 }
 .sec-news .thumb_area:hover .thumb-img {
   transform: scale(1.05);
@@ -604,6 +660,11 @@ legend {
 @media (min-width: 600px) {
   .sec-news .txt_area .tit {
     font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-news .txt_area .tit {
+    font-size: 2.3rem;
   }
 }
 .sec-news .txt_area .date {
@@ -667,6 +728,13 @@ legend {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
+@media (min-width: 1024px) {
+  .swiper .swiper-button-next::before,
+  .swiper .swiper-button-prev::before {
+    position: absolute;
+    top: -350px;
+  }
+}
 .swiper .swiper-button-next::before {
   content: "\f061";
   font-size: 4rem;
@@ -678,6 +746,14 @@ legend {
   background-repeat: no-repeat;
   background-position: center center;
 }
+@media (min-width: 1024px) {
+  .swiper .swiper-button-next::before {
+    font-size: 6rem;
+    right: 500px;
+    width: 90px;
+    height: 90px;
+  }
+}
 .swiper .swiper-button-prev::before {
   content: "\f060";
   font-size: 4rem;
@@ -688,6 +764,14 @@ legend {
   margin-left: 30px;
   background-repeat: no-repeat;
   background-position: center center;
+}
+@media (min-width: 1024px) {
+  .swiper .swiper-button-prev::before {
+    font-size: 6rem;
+    left: 500px;
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .inner {
@@ -993,8 +1077,10 @@ legend {
   font-weight: 900;
   font-size: 3rem;
 }
-.video-container .video-container__text-box {
-  margin-left: 260px;
+@media (min-width: 1024px) {
+  .video-container .video-container__text-box {
+    margin-left: 260px;
+  }
 }
 .video-container .video-overlay__main-text {
   white-space: nowrap;
@@ -1177,6 +1263,12 @@ legend {
   height: 500px;
   margin-bottom: 40px;
 }
+@media (min-width: 600px) {
+  .intro .effect-data .decorative-visual {
+    width: 720px;
+    height: 1000px;
+  }
+}
 @media (min-width: 1024px) {
   .intro .effect-data .decorative-visual {
     position: relative;
@@ -1197,7 +1289,7 @@ legend {
   }
 }
 @media (min-width: 1024px) {
-  .intro .search-decoration-london {
+  .intro .search-decoration-bangkok {
     position: relative;
     left: 70%;
     width: 360px;
@@ -1229,7 +1321,18 @@ legend {
 .main-middle-banner .banner-container {
   position: relative;
 }
+@media (min-width: 1024px) {
+  .main-middle-banner .banner-container {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+}
 .main-middle-banner .banner-container .banner-content {
+  display: flex;
   margin-bottom: 10px;
 }
 .main-middle-banner .banner-container .banner-content .banner-image {
@@ -1242,6 +1345,14 @@ legend {
     height: 750px;
   }
 }
+@media (min-width: 1024px) {
+  .main-middle-banner .banner-container .banner-content .banner-image {
+    display: flex;
+    width: 1200px;
+    height: 900px;
+    margin-right: 20px;
+  }
+}
 .main-middle-banner .banner-container .banner-content .banner-intro-text {
   position: absolute;
   top: 20%;
@@ -1250,28 +1361,46 @@ legend {
   font-size: 3rem;
   font-weight: bold;
 }
+.main-middle-banner .banner-container .banner-content .banner-intro-text .highlighted-text {
+  color: #fae100;
+}
 @media (min-width: 600px) {
   .main-middle-banner .banner-container .banner-content .banner-intro-text {
     margin-left: 30px;
     font-size: 5rem;
   }
 }
-.main-middle-banner .banner-container .banner-content .banner-intro-text .highlighted-text {
-  color: #fae100;
+@media (min-width: 1024px) {
+  .main-middle-banner .banner-container .banner-content .banner-intro-text {
+    margin-left: 300px;
+    font-size: 6rem;
+  }
 }
-.main-middle-banner .banner-container .scroll-container {
-  z-index: 1000;
+.main-middle-banner .banner-container .banner-image-wrapper {
+  display: flex;
 }
-.main-middle-banner .banner-container .scroll-container .message-text {
-  position: absolute;
-  color: #fff;
-  background-color: #007aff;
+@media (min-width: 600px) {
+  .main-middle-banner .banner-container .banner-image-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .main-middle-banner .banner-container .banner-image-wrapper {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .main-middle-banner .banner-container .banner-image-wrapper {
+    display: block;
+  }
+}
+.main-middle-banner .banner-container .banner-image-wrapper .passport-ticket-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
   width: 100%;
-  padding: 10px 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  z-index: 1500;
-  bottom: 0;
+  height: 900px;
 }
 
 .event-banner .event-banner__slides li {
@@ -1299,6 +1428,12 @@ legend {
     font-size: 2rem;
   }
 }
+@media (min-width: 1024px) {
+  .event-banner .event-banner__description {
+    font-size: 3rem;
+    margin-left: 18%;
+  }
+}
 .event-banner .event-banner__tit {
   position: absolute;
   font-size: 2rem;
@@ -1315,6 +1450,13 @@ legend {
     font-size: 3rem;
   }
 }
+@media (min-width: 1024px) {
+  .event-banner .event-banner__tit {
+    font-size: 2.5rem;
+    margin-left: 18%;
+    top: 120px;
+  }
+}
 .event-banner .event-banner__description2 {
   position: absolute;
   font-size: 1.4rem;
@@ -1328,6 +1470,12 @@ legend {
   .event-banner .event-banner__description2 {
     top: 55px;
     font-size: 1.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .event-banner .event-banner__description2 {
+    top: 50px;
+    font-size: 2.3rem;
   }
 }
 .event-banner .event-banner__tit2 {
@@ -1346,6 +1494,12 @@ legend {
     font-size: 3rem;
   }
 }
+@media (min-width: 1024px) {
+  .event-banner .event-banner__tit2 {
+    top: 90px;
+    font-size: 3.4rem;
+  }
+}
 .event-banner .event-banner__tit3 {
   position: absolute;
   font-size: 1.7rem;
@@ -1359,6 +1513,16 @@ legend {
     font-size: 2.6rem;
   }
 }
+@media (min-width: 1024px) {
+  .event-banner .event-banner__tit3 {
+    font-size: 3.5rem;
+    margin-left: 5%;
+    top: 50px;
+  }
+  .event-banner .event-banner__tit3 br {
+    display: none;
+  }
+}
 .event-banner .event-banner__img {
   position: relative;
   display: block;
@@ -1367,8 +1531,7 @@ legend {
   width: 100%;
   height: 138px;
   z-index: 800;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 10px;
 }
 @media (min-width: 600px) {
   .event-banner .event-banner__img {
@@ -1377,9 +1540,12 @@ legend {
 }
 @media (min-width: 1024px) {
   .event-banner .event-banner__img {
-    height: 200px;
-    padding: 120px;
+    height: 250px;
   }
+}
+.event-banner .event-banner__img--first {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .event-banner .btn-event {
   position: absolute;
@@ -1405,6 +1571,12 @@ legend {
   .event-banner .btn-event {
     font-size: 2rem;
     padding: 10px 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .event-banner .btn-event {
+    top: 35%;
+    padding: 12px 20px;
   }
 }
 .event-banner .btn-event:hover {

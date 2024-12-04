@@ -25,12 +25,18 @@
     margin: 20px 0 0;
     width: 100%;
     height: 880px;
+    overflow: hidden;
 
     @include mobileMore {
         height: 1500px;
     }
     @include tabletMore {
         height: 920px;
+    }
+    .image-container {
+        @include tabletMore {
+            top: -220px;
+        }
     }
 
     .inner-sec-service {
@@ -42,13 +48,12 @@
     }
     .slide-content {
         margin-bottom: 10px;
+        z-index: 10;
 
         @include tabletMore {
             text-align: left;
-            width: 100%;
-            max-width: $grid;
-            margin: 0 auto;
-            padding: 0 $p-tablet;
+            margin-left: 300px;
+            width: 300px;
         }
         .business-tit {
             display: inline-block;
@@ -65,6 +70,9 @@
             @include mobileMore {
                 font-size: 4.8rem;
             }
+            @include tabletMore {
+                font-size: 6rem;
+            }
         }
 
         .sub-tit {
@@ -73,6 +81,9 @@
             color: $gray-30;
             @include mobileMore {
                 margin-bottom: 80px;
+            }
+            @include tabletMore {
+                margin-bottom: 0;
             }
         }
     }
@@ -182,11 +193,13 @@
             z-index: 200;
 
             @include mobileMore {
-                display: inline-block;
-                width: 300px;
+                width: 68%;
                 top: 20%;
                 left: 10%;
                 font-size: 2.5rem;
+                br {
+                    display: none;
+                }
             }
         }
     }
@@ -199,8 +212,18 @@
 
         @include mobileMore {
             margin-left: 30px;
-            margin-top: 100px;
-            text-align: left;
+            margin-top: 90px;
+            br {
+                display: none;
+            }
+        }
+
+        @include tabletMore {
+            display: inline-block;
+            position: absolute;
+            margin-top: 0;
+            top: 90%;
+            left: 260px;
         }
 
         .tag-item {
@@ -212,6 +235,16 @@
 
             @include mobileMore {
                 font-size: 2.4rem;
+            }
+
+            @include tabletMore {
+                font-size: 3.2rem;
+            }
+        }
+        .tag-br {
+            @include tabletMore {
+                display: block;
+                text-align: left;
             }
         }
     }
@@ -245,7 +278,8 @@
 }
 
 .sec-news {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
+    margin-bottom: 120px;
 
     .sec-news-wrapper {
         padding-top: 40px;
@@ -254,8 +288,7 @@
     .sec-g__tit,
     .btn-container {
         @include tabletMore {
-            display: flex;
-            justify-content: flex-start;
+            display: table;
         }
     }
     .sec-g__desc {
@@ -273,6 +306,9 @@
         @include mobileMore {
             font-size: 5rem;
         }
+        @include tabletMore {
+            font-size: 8rem;
+        }
     }
     .btn-more {
         display: flex;
@@ -285,11 +321,19 @@
         border: 2px solid rgba(190, 190, 190, 0.5882352941);
         align-items: center;
         justify-content: center;
+        @include tabletMore {
+            width: 130px;
+            padding: 10px 30px;
+        }
 
         #Bold {
             margin-left: 3px;
             width: 20px;
             height: 20px;
+            @include tabletMore {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
     .thumb_area:hover .thumb-img {
@@ -324,6 +368,9 @@
             font-size: 1.8rem;
             @include mobileMore {
                 font-size: 2rem;
+            }
+            @include tabletMore {
+                font-size: 2.3rem;
             }
         }
         .date {
@@ -394,6 +441,11 @@
         z-index: 2000;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.1);
+
+        @include tabletMore {
+            position: absolute;
+            top: -350px;
+        }
     }
     .swiper-button-next::before {
         content: '\f061';
@@ -405,6 +457,13 @@
         margin-right: 30px;
         background-repeat: no-repeat;
         background-position: center center;
+
+        @include tabletMore {
+            font-size: 6rem;
+            right: 500px;
+            width: 90px;
+            height: 90px;
+        }
     }
     .swiper-button-prev::before {
         content: '\f060';
@@ -416,5 +475,12 @@
         margin-left: 30px;
         background-repeat: no-repeat;
         background-position: center center;
+
+        @include tabletMore {
+            font-size: 6rem;
+            left: 500px;
+            width: 90px;
+            height: 90px;
+        }
     }
 }

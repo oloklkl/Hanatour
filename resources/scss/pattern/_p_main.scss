@@ -15,7 +15,9 @@
     }
 
     .video-container__text-box {
-        margin-left: 260px;
+        @include tabletMore {
+            margin-left: 260px;
+        }
     }
 
     .video-overlay__main-text {
@@ -186,6 +188,11 @@
             height: 500px;
             margin-bottom: 40px;
 
+            @include mobileMore {
+                width: 720px;
+                height: 1000px;
+            }
+
             @include tabletMore {
                 position: relative;
                 top: 220px;
@@ -204,7 +211,7 @@
             height: 770px;
         }
     }
-    .search-decoration-london {
+    .search-decoration-bangkok {
         @include tabletMore {
             position: relative;
             left: 70%;
@@ -241,14 +248,33 @@
 
     .banner-container {
         position: relative;
+
+        @include tabletMore {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
         .banner-content {
+            display: flex;
             margin-bottom: 10px;
+
             .banner-image {
                 position: relative;
                 width: 100%;
                 height: 400px;
+
                 @include mobileMore {
                     height: 750px;
+                }
+                @include tabletMore {
+                    display: flex;
+                    width: 1200px;
+                    height: 900px;
+                    margin-right: 20px;
                 }
             }
 
@@ -259,29 +285,52 @@
                 color: $white;
                 font-size: 3rem;
                 font-weight: bold;
+                .highlighted-text {
+                    color: $primary;
+                }
+
                 @include mobileMore {
                     margin-left: 30px;
                     font-size: 5rem;
                 }
-
-                .highlighted-text {
-                    color: $primary;
+                @include tabletMore {
+                    margin-left: 300px;
+                    font-size: 6rem;
                 }
             }
         }
 
-        .scroll-container {
-            z-index: 1000;
-            .message-text {
-                position: absolute;
-                color: $white;
-                background-color: $secondary-3;
+        // .scroll-container {
+        //     z-index: 1000;
+        //     .message-text {
+        //         position: absolute;
+        //         color: $white;
+        //         background-color: $secondary-3;
+        //         width: 100%;
+        //         padding: 10px 20px;
+        //         white-space: nowrap;
+        //         overflow: hidden;
+        //         z-index: 1500;
+        //         bottom: 0;
+        //     }
+        // }
+        .banner-image-wrapper {
+            display: flex;
+
+            @include mobileMore {
+                display: none;
+            }
+            @include tabletLess {
+                display: none;
+            }
+            @include tabletMore {
+                display: block;
+            }
+            .passport-ticket-image {
+                object-fit: cover;
+                object-position: bottom;
                 width: 100%;
-                padding: 10px 20px;
-                white-space: nowrap;
-                overflow: hidden;
-                z-index: 1500;
-                bottom: 0;
+                height: 900px;
             }
         }
     }
@@ -307,9 +356,14 @@
         color: $secondary-3;
         font-weight: bold;
         margin-left: 50px;
+
         @include mobileMore {
             margin-left: 100px;
             font-size: 2rem;
+        }
+        @include tabletMore {
+            font-size: 3rem;
+            margin-left: 18%;
         }
     }
     .event-banner__tit {
@@ -326,6 +380,11 @@
             top: 100px;
             font-size: 3rem;
         }
+        @include tabletMore {
+            font-size: 2.5rem;
+            margin-left: 18%;
+            top: 120px;
+        }
     }
     .event-banner__description2 {
         position: absolute;
@@ -338,6 +397,10 @@
         @include mobileMore {
             top: 55px;
             font-size: 1.8rem;
+        }
+        @include tabletMore {
+            top: 50px;
+            font-size: 2.3rem;
         }
     }
     .event-banner__tit2 {
@@ -354,6 +417,10 @@
             top: 80px;
             font-size: 3rem;
         }
+        @include tabletMore {
+            top: 90px;
+            font-size: 3.4rem;
+        }
     }
     .event-banner__tit3 {
         position: absolute;
@@ -366,6 +433,14 @@
         @include mobileMore {
             font-size: 2.6rem;
         }
+        @include tabletMore {
+            font-size: 3.5rem;
+            margin-left: 5%;
+            top: 50px;
+            br {
+                display: none;
+            }
+        }
     }
 
     .event-banner__img {
@@ -376,15 +451,17 @@
         width: 100%;
         height: 138px;
         z-index: 800;
-        object-fit: cover;
+        border-radius: 10px;
 
         @include mobileMore {
             height: 180px;
         }
         @include tabletMore {
-            height: 200px;
-            padding: 120px;
+            height: 250px;
         }
+    }
+    .event-banner__img--first {
+        object-fit: cover;
     }
 
     .btn-event {
@@ -410,6 +487,10 @@
         @include mobileMore {
             font-size: 2rem;
             padding: 10px 15px;
+        }
+        @include tabletMore {
+            top: 35%;
+            padding: 12px 20px;
         }
     }
 
