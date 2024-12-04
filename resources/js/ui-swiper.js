@@ -41,7 +41,12 @@ const slides = document.querySelectorAll('.event-banner__slides li');
 let currentSlide = 0;
 
 function showSlide(index) {
-    slides.forEach((slide) => slide.classList.remove('active'));
+    // Remove the 'active' class from all slides
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+
+    // Add the 'active' class to the current slide
     slides[index].classList.add('active');
 }
 
@@ -50,5 +55,8 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-// 일정 시간마다 슬라이드 전환
+// Initial slide
+showSlide(currentSlide);
+
+// Change slide every 6 seconds
 setInterval(nextSlide, 6000); // 6초마다 슬라이드 전환
