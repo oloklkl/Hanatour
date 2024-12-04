@@ -31,12 +31,15 @@
         height: 1500px;
     }
     @include tabletMore {
-        height: 920px;
+        height: 980px;
     }
     .image-container {
         @include tabletMore {
             top: -220px;
         }
+    }
+    .slide-link {
+        text-decoration: none;
     }
 
     .inner-sec-service {
@@ -47,6 +50,7 @@
         text-align: center;
     }
     .slide-content {
+        margin-top: 40px;
         margin-bottom: 10px;
         z-index: 10;
 
@@ -72,6 +76,7 @@
             }
             @include tabletMore {
                 font-size: 6rem;
+                white-space: nowrap;
             }
         }
 
@@ -303,6 +308,7 @@
         text-align: center;
         font-size: 4rem;
         margin-bottom: 10px;
+        color: $secondary-4;
         @include mobileMore {
             font-size: 5rem;
         }
@@ -355,9 +361,10 @@
     }
     .txt_area {
         .cate {
-            color: $secondary-4;
+            color: $secondary-2;
             font-weight: 700;
             font-size: 1.5rem;
+            font-weight: bold;
             @include mobileMore {
                 font-size: 1.7rem;
             }
@@ -368,9 +375,6 @@
             font-size: 1.8rem;
             @include mobileMore {
                 font-size: 2rem;
-            }
-            @include tabletMore {
-                font-size: 2.3rem;
             }
         }
         .date {
@@ -444,7 +448,7 @@
 
         @include tabletMore {
             position: absolute;
-            top: -350px;
+            top: -320px;
         }
     }
     .swiper-button-next::before {

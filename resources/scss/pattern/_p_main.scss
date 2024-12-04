@@ -91,7 +91,7 @@
     .intro-text-line,
     .intro-heading,
     .search-decoration-suitcase,
-    .search-decoration-london,
+    .search-decoration-bangkok,
     .search-decoration-hawaii {
         @include mobileMore {
             display: none;
@@ -259,11 +259,11 @@
         }
 
         .banner-content {
+            position: relative;
             display: flex;
             margin-bottom: 10px;
 
             .banner-image {
-                position: relative;
                 width: 100%;
                 height: 400px;
 
@@ -300,20 +300,18 @@
             }
         }
 
-        // .scroll-container {
-        //     z-index: 1000;
-        //     .message-text {
-        //         position: absolute;
-        //         color: $white;
-        //         background-color: $secondary-3;
-        //         width: 100%;
-        //         padding: 10px 20px;
-        //         white-space: nowrap;
-        //         overflow: hidden;
-        //         z-index: 1500;
-        //         bottom: 0;
-        //     }
-        // }
+        .scroll-container {
+            position: absolute;
+            background: $secondary-4;
+            white-space: nowrap;
+            height: 50px;
+            color: $white;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+
+            // transform: rotate(-90deg) translateY(-1060px);
+        }
         .banner-image-wrapper {
             display: flex;
 
@@ -457,7 +455,7 @@
             height: 180px;
         }
         @include tabletMore {
-            height: 250px;
+            height: 230px;
         }
     }
     .event-banner__img--first {
@@ -489,8 +487,8 @@
             padding: 10px 15px;
         }
         @include tabletMore {
-            top: 35%;
-            padding: 12px 20px;
+            top: 33%;
+            padding: 10px 20px;
         }
     }
 

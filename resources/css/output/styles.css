@@ -307,13 +307,16 @@ legend {
 }
 @media (min-width: 1024px) {
   .sec-g__cont {
-    height: 920px;
+    height: 980px;
   }
 }
 @media (min-width: 1024px) {
   .sec-g__cont .image-container {
     top: -220px;
   }
+}
+.sec-g__cont .slide-link {
+  text-decoration: none;
 }
 .sec-g__cont .inner-sec-service {
   margin-top: 40px;
@@ -322,6 +325,7 @@ legend {
   text-align: center;
 }
 .sec-g__cont .slide-content {
+  margin-top: 40px;
   margin-bottom: 10px;
   z-index: 10;
 }
@@ -352,6 +356,7 @@ legend {
 @media (min-width: 1024px) {
   .sec-g__cont .slide-content .main-tit {
     font-size: 6rem;
+    white-space: nowrap;
   }
 }
 .sec-g__cont .slide-content .sub-tit {
@@ -583,6 +588,7 @@ legend {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 10px;
+  color: #f0c0d6;
 }
 @media (min-width: 600px) {
   .sec-news .sec-g__tit {
@@ -643,9 +649,10 @@ legend {
   }
 }
 .sec-news .txt_area .cate {
-  color: #f0c0d6;
+  color: #79e3ff;
   font-weight: 700;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 @media (min-width: 600px) {
   .sec-news .txt_area .cate {
@@ -660,11 +667,6 @@ legend {
 @media (min-width: 600px) {
   .sec-news .txt_area .tit {
     font-size: 2rem;
-  }
-}
-@media (min-width: 1024px) {
-  .sec-news .txt_area .tit {
-    font-size: 2.3rem;
   }
 }
 .sec-news .txt_area .date {
@@ -732,7 +734,7 @@ legend {
   .swiper .swiper-button-next::before,
   .swiper .swiper-button-prev::before {
     position: absolute;
-    top: -350px;
+    top: -320px;
   }
 }
 .swiper .swiper-button-next::before {
@@ -1154,7 +1156,7 @@ legend {
   .intro .intro-text-line,
   .intro .intro-heading,
   .intro .search-decoration-suitcase,
-  .intro .search-decoration-london,
+  .intro .search-decoration-bangkok,
   .intro .search-decoration-hawaii {
     display: none;
   }
@@ -1163,7 +1165,7 @@ legend {
   .intro .intro-text-line,
   .intro .intro-heading,
   .intro .search-decoration-suitcase,
-  .intro .search-decoration-london,
+  .intro .search-decoration-bangkok,
   .intro .search-decoration-hawaii {
     display: none;
   }
@@ -1172,7 +1174,7 @@ legend {
   .intro .intro-text-line,
   .intro .intro-heading,
   .intro .search-decoration-suitcase,
-  .intro .search-decoration-london,
+  .intro .search-decoration-bangkok,
   .intro .search-decoration-hawaii {
     display: block;
   }
@@ -1332,11 +1334,11 @@ legend {
   }
 }
 .main-middle-banner .banner-container .banner-content {
+  position: relative;
   display: flex;
   margin-bottom: 10px;
 }
 .main-middle-banner .banner-container .banner-content .banner-image {
-  position: relative;
   width: 100%;
   height: 400px;
 }
@@ -1375,6 +1377,16 @@ legend {
     margin-left: 300px;
     font-size: 6rem;
   }
+}
+.main-middle-banner .banner-container .scroll-container {
+  position: absolute;
+  background: #f0c0d6;
+  white-space: nowrap;
+  height: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
 }
 .main-middle-banner .banner-container .banner-image-wrapper {
   display: flex;
@@ -1540,7 +1552,7 @@ legend {
 }
 @media (min-width: 1024px) {
   .event-banner .event-banner__img {
-    height: 250px;
+    height: 230px;
   }
 }
 .event-banner .event-banner__img--first {
@@ -1575,8 +1587,8 @@ legend {
 }
 @media (min-width: 1024px) {
   .event-banner .btn-event {
-    top: 35%;
-    padding: 12px 20px;
+    top: 33%;
+    padding: 10px 20px;
   }
 }
 .event-banner .btn-event:hover {
