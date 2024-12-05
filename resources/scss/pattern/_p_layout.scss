@@ -277,6 +277,19 @@
     }
 }
 
+.top {
+    &::before {
+        content: '\f0aa';
+        @include lineAwesome;
+        position: fixed;
+        font-size: 9rem;
+        color: $gray-20;
+        padding-top: 18px;
+        right: 5%;
+        bottom: 5%;
+    }
+}
+
 // footer
 // #footer {
 //     background-color: $black;

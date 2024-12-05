@@ -588,7 +588,7 @@ legend {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 10px;
-  color: #f0c0d6;
+  color: #ffe7f2;
 }
 @media (min-width: 600px) {
   .sec-news .sec-g__tit {
@@ -649,7 +649,7 @@ legend {
   }
 }
 .sec-news .txt_area .cate {
-  color: #79e3ff;
+  color: #f0c0d6;
   font-weight: 700;
   font-size: 1.5rem;
   font-weight: bold;
@@ -1064,6 +1064,18 @@ legend {
 #nav-all.active {
   display: block;
   left: 0;
+}
+
+.top::before {
+  content: "\f0aa";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  position: fixed;
+  font-size: 9rem;
+  color: #e4e4e4;
+  padding-top: 18px;
+  right: 5%;
+  bottom: 5%;
 }
 
 .video-container {

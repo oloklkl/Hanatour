@@ -308,7 +308,7 @@
         text-align: center;
         font-size: 4rem;
         margin-bottom: 10px;
-        color: $secondary-4;
+        color: $primary2;
         @include mobileMore {
             font-size: 5rem;
         }
@@ -361,7 +361,7 @@
     }
     .txt_area {
         .cate {
-            color: $secondary-2;
+            color: $secondary-4;
             font-weight: 700;
             font-size: 1.5rem;
             font-weight: bold;
