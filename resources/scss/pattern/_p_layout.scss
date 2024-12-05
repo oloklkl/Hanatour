@@ -56,9 +56,7 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
-    background-color: transparent; /* 기본 배경 투명 */
-    color: white; /* 글자색 흰색 */
-    transition: background-color 0.3s, color 0.3s;
+    background-color: transparent;
     &.active {
         &::before {
             height: 350px;
