@@ -397,6 +397,7 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-g__cont .image-container .images {
+    margin-top: 20px;
     width: 640px;
     height: 1000px;
   }
@@ -748,6 +749,12 @@ legend {
   background-repeat: no-repeat;
   background-position: center center;
 }
+@media (min-width: 600px) {
+  .swiper .swiper-button-next::before {
+    width: 90px;
+    height: 90px;
+  }
+}
 @media (min-width: 1024px) {
   .swiper .swiper-button-next::before {
     font-size: 6rem;
@@ -766,6 +773,12 @@ legend {
   margin-left: 30px;
   background-repeat: no-repeat;
   background-position: center center;
+}
+@media (min-width: 600px) {
+  .swiper .swiper-button-prev::before {
+    width: 90px;
+    height: 90px;
+  }
 }
 @media (min-width: 1024px) {
   .swiper .swiper-button-prev::before {
@@ -835,15 +848,19 @@ legend {
 }
 
 #header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1000;
+  background-color: transparent; /* 기본 배경 투명 */
+  color: white; /* 글자색 흰색 */
+  transition: background-color 0.3s, color 0.3s;
 }
 #header.active::before {
-  height: 218px;
+  height: 350px;
 }
 #header.active .gnb__depth2 {
-  height: 218px;
-  padding: 30px 0;
+  height: 350px;
+  padding: 20px 0;
 }
 #header::before {
   content: "";
@@ -852,7 +869,7 @@ legend {
   left: 0;
   right: 0;
   height: 0;
-  background: #f8f8f8;
+  background: #fff;
   transition: all 0.3s;
 }
 #header .inner {
@@ -903,6 +920,9 @@ legend {
     display: block;
   }
 }
+#gnb .gnb-item {
+  color: #fff;
+}
 #gnb .gnb__depth1 {
   display: flex;
 }
@@ -910,7 +930,7 @@ legend {
   position: relative;
 }
 #gnb .gnb__depth1 > li:hover > a > span {
-  color: #fae100;
+  color: #000;
 }
 #gnb .gnb__depth1 > li:hover > a > span::after {
   width: 100%;
@@ -960,7 +980,7 @@ legend {
   right: 0;
   height: 0;
   padding: 0;
-  background: #f8f8f8;
+  background: #fff;
   transition: all 0.3s;
 }
 #gnb .gnb__depth2::after {
@@ -1008,13 +1028,14 @@ legend {
   height: 57px;
   margin-right: 10px;
   text-transform: uppercase;
+  color: #fff;
 }
 .util .lang__btn::after {
   content: "\f107";
   font-family: "Line Awesome Free";
   font-weight: 900;
   margin-left: 5px;
-  color: #8e8e8e;
+  color: #fff;
 }
 .util .lang__lst {
   display: none;
@@ -1029,8 +1050,18 @@ legend {
 .util .lang__lst li {
   padding: 5px 0;
   text-transform: uppercase;
+  color: #555555;
 }
 .util .lang__lst li:first-child {
+  border-bottom: 1px solid #c6c6c6;
+}
+.util .lang__lst li:nth-child(2) {
+  border-bottom: 1px solid #c6c6c6;
+}
+.util .lang__lst li:nth-child(3) {
+  border-bottom: 1px solid #c6c6c6;
+}
+.util .lang__lst li:last-child {
   border-bottom: 1px solid #c6c6c6;
 }
 .util .search {
@@ -1041,12 +1072,14 @@ legend {
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 3rem;
+  color: #fff;
 }
 .util .all-menu::before {
   content: "\f0c9";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 3rem;
+  color: #fff;
 }
 
 #nav-all {
@@ -1056,7 +1089,7 @@ legend {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: hsla(0, 0%, 59%, 0.5);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   transition: all 0.3s;
@@ -1082,7 +1115,7 @@ legend {
   position: relative;
   top: 0;
   width: auto;
-  height: auto;
+  height: 100vh;
   overflow: hidden;
 }
 .video-container .btn-pause ::before {
@@ -1135,10 +1168,14 @@ legend {
   }
 }
 .video-container .video-container__video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 844px;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 0;
   background: linear-gradient(#000 0%, rgba(102, 102, 102, 0) 100%);
 }
 @media (min-width: 600px) {
@@ -1148,7 +1185,7 @@ legend {
 }
 @media (min-width: 1024px) {
   .video-container .video-container__video {
-    height: 742px;
+    height: 920px;
   }
 }
 .video-container .video-container__video-overlay {
@@ -1328,6 +1365,10 @@ legend {
   font-size: 2rem;
 }
 
+.main-middle-banner {
+  position: relative;
+  overflow: hidden;
+}
 .main-middle-banner .inner-middle-banner {
   margin: 0;
   padding: 0;
@@ -1349,6 +1390,7 @@ legend {
   position: relative;
   display: flex;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 .main-middle-banner .banner-container .banner-content .banner-image {
   width: 100%;

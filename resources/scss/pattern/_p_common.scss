@@ -113,6 +113,7 @@
             width: 290px;
             height: 462px;
             @include mobileMore {
+                margin-top: 20px;
                 width: 640px;
                 height: 1000px;
             }
@@ -462,6 +463,10 @@
         background-repeat: no-repeat;
         background-position: center center;
 
+        @include mobileMore {
+            width: 90px;
+            height: 90px;
+        }
         @include tabletMore {
             font-size: 6rem;
             right: 500px;
@@ -480,6 +485,10 @@
         background-repeat: no-repeat;
         background-position: center center;
 
+        @include mobileMore {
+            width: 90px;
+            height: 90px;
+        }
         @include tabletMore {
             font-size: 6rem;
             left: 500px;
