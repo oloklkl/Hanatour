@@ -113,6 +113,8 @@
     }
     .gnb-item {
         color: $white;
+        font-size: 2rem;
+        font-weight: 700;
     }
     .gnb__depth1 {
         display: flex;
@@ -306,6 +308,15 @@
         padding-top: 18px;
         right: 5%;
         bottom: 5%;
+    }
+    @include mobileMore {
+        display: none;
+    }
+    @include tabletLess {
+        display: none;
+    }
+    @include tabletMore {
+        display: block;
     }
 }
 

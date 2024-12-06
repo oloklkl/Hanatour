@@ -338,6 +338,7 @@
     }
 }
 .event-banner {
+    display: block;
     .event-banner__slides li {
         display: none; /* 모든 슬라이드 숨기기 */
         position: absolute;
