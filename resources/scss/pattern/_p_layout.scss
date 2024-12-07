@@ -57,6 +57,7 @@
     width: 100%;
     z-index: 1000;
     background-color: transparent;
+
     &.active {
         &::before {
             height: 350px;
@@ -122,7 +123,7 @@
             position: relative;
             &:hover {
                 > a > span {
-                    color: $black;
+                    color: $primary;
                     &::after {
                         width: 100%;
                     }
@@ -209,6 +210,7 @@
     .lang {
         display: none;
         position: relative;
+
         @include tabletMore {
             display: block;
         }
@@ -226,14 +228,12 @@
             margin-right: 10px;
             text-transform: uppercase;
             color: $white;
-
-            &::after {
-                content: '\f107';
-                @include lineAwesome;
-                margin-left: 5px;
-                color: $white;
-            }
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid $white;
+            border-radius: 45%;
+            padding: 0 15px;
         }
+
         &__lst {
             display: none;
             position: absolute;
@@ -241,42 +241,75 @@
             left: 0;
             width: 90%;
             border: 1px solid $gray-40;
+            border-radius: 15px;
             background: $white;
             text-align: center;
             li {
                 padding: 5px 0;
                 text-transform: uppercase;
                 color: $gray-70;
-                &:first-child {
-                    border-bottom: 1px solid $gray-40;
-                }
-                &:nth-child(2) {
-                    border-bottom: 1px solid $gray-40;
-                }
-                &:nth-child(3) {
-                    border-bottom: 1px solid $gray-40;
-                }
-                &:last-child {
-                    border-bottom: 1px solid $gray-40;
-                }
             }
         }
     }
-    .search {
-        transform: scaleX(-1);
-        &::before {
+    .search,
+    .all-menu {
+        position: relative;
+        width: 3rem;
+        height: 57px;
+
+        &::before,
+        &::after {
             content: '\f002';
             @include lineAwesome;
             font-size: 3rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+
+        &::before {
             color: $white;
+            opacity: 1;
+        }
+
+        &::after {
+            color: $black;
+            opacity: 0;
         }
     }
-    .all-menu {
-        &::before {
-            content: '\f0c9';
-            @include lineAwesome;
-            font-size: 3rem;
-            color: $white;
+
+    .all-menu::before,
+    .all-menu::after {
+        content: '\f0c9';
+    }
+}
+
+#header {
+    &:hover {
+        background-color: $white;
+
+        .gnb-item {
+            color: $gray-90;
+        }
+        .lang__btn {
+            color: $black;
+        }
+        #logo a {
+            background: url('../../../resources/images/pattern/common/logo.svg') no-repeat 0 0 / contain;
+        }
+        .search,
+        .all-menu {
+            &::before {
+                opacity: 0; // 원래 아이콘 숨김
+            }
+            &::after {
+                opacity: 1; // 반전된 아이콘 보이기
+            }
         }
     }
 }
@@ -321,9 +354,53 @@
 }
 
 // footer
-// #footer {
-//     background-color: $black;
-//     width: 100%;
-//     height: 260px;
-//     color: $white;
-// }
+#footer {
+    position: relative;
+    background: $black;
+    display: block;
+    width: 100%;
+    height: 350px;
+    margin-top: 80px;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: $white;
+
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 0.5px solid $gray-60;
+    }
+
+    .footer-links a {
+        color: $white;
+    }
+    a.footer-link {
+        color: $gray-40;
+    }
+    .footer-logo {
+        margin: 30px 0 20px;
+    }
+    .footer-info__text {
+        color: $gray-70;
+        margin-bottom: 5px;
+        .footer-info__title {
+            color: $white;
+            font-weight: 300;
+            margin-right: 10px;
+        }
+    }
+    .footer-brand-container {
+        text-align: center;
+        margin: 20px 0;
+        font-family: 'Henny Penny', system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.4rem;
+    }
+    .footer-sns {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 0;
+    }
+}

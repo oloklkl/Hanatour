@@ -339,6 +339,10 @@
 }
 .event-banner {
     display: block;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+
     .event-banner__slides li {
         display: none; /* 모든 슬라이드 숨기기 */
         position: absolute;
@@ -355,7 +359,7 @@
         position: absolute;
         font-size: 1.3rem;
         z-index: 1000;
-        top: 70px;
+        top: 65px;
         color: $secondary-3;
         font-weight: bold;
         margin-left: 50px;
@@ -373,7 +377,7 @@
         position: absolute;
         font-size: 2rem;
         z-index: 1000;
-        top: 90px;
+        top: 85px;
         color: $white;
         text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
         margin-left: 50px;
@@ -393,10 +397,10 @@
         position: absolute;
         font-size: 1.4rem;
         z-index: 1000;
-        top: 50px;
+        top: 48px;
         color: red;
         font-weight: bold;
-        margin-left: 40px;
+        margin-left: 30px;
         @include mobileMore {
             top: 55px;
             font-size: 1.8rem;
@@ -414,7 +418,7 @@
         text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
         top: 75px;
         color: $white;
-        margin-left: 40px;
+        margin-left: 30px;
 
         @include mobileMore {
             top: 80px;
@@ -445,6 +449,36 @@
             }
         }
     }
+    .point {
+        font-family: 'Nosifer', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        display: inline-block;
+        font-size: 1.7rem;
+
+        @include mobileMore {
+            font-size: 2.6rem;
+        }
+
+        @include tabletMore {
+            font-size: 3rem;
+        }
+    }
+    .point2 {
+        font-family: 'Henny Penny', system-ui;
+        font-weight: 400;
+        font-style: normal;
+        display: inline-block;
+        font-size: 2rem;
+
+        @include mobileMore {
+            font-size: 2.6rem;
+        }
+
+        @include tabletMore {
+            font-size: 3.5rem;
+        }
+    }
 
     .event-banner__img {
         position: relative;
@@ -471,21 +505,26 @@
         position: absolute;
         display: inline-flex;
         padding: 5px 6px;
-        top: 30%;
+        top: 45%;
         left: 80%;
         background-color: $white;
         color: $black;
         text-decoration: none;
         border-radius: 20px;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 600;
         align-items: center;
         transition: background-color 0.3s;
         z-index: 1000;
 
         #Bold {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
+
+            @include mobileMore {
+                width: 25px;
+                height: 25px;
+            }
         }
         @include mobileMore {
             font-size: 2rem;

@@ -562,7 +562,6 @@ legend {
 }
 
 .sec-news {
-  padding-bottom: 80px;
   margin-bottom: 120px;
 }
 .sec-news .sec-news-wrapper {
@@ -930,7 +929,7 @@ legend {
   position: relative;
 }
 #gnb .gnb__depth1 > li:hover > a > span {
-  color: #000;
+  color: #fae100;
 }
 #gnb .gnb__depth1 > li:hover > a > span::after {
   width: 100%;
@@ -1029,13 +1028,10 @@ legend {
   margin-right: 10px;
   text-transform: uppercase;
   color: #fff;
-}
-.util .lang__btn::after {
-  content: "\f107";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  margin-left: 5px;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 45%;
+  padding: 0 15px;
 }
 .util .lang__lst {
   display: none;
@@ -1044,6 +1040,7 @@ legend {
   left: 0;
   width: 90%;
   border: 1px solid #c6c6c6;
+  border-radius: 15px;
   background: #fff;
   text-align: center;
 }
@@ -1052,34 +1049,62 @@ legend {
   text-transform: uppercase;
   color: #555555;
 }
-.util .lang__lst li:first-child {
-  border-bottom: 1px solid #c6c6c6;
+.util .search,
+.util .all-menu {
+  position: relative;
+  width: 3rem;
+  height: 57px;
 }
-.util .lang__lst li:nth-child(2) {
-  border-bottom: 1px solid #c6c6c6;
-}
-.util .lang__lst li:nth-child(3) {
-  border-bottom: 1px solid #c6c6c6;
-}
-.util .lang__lst li:last-child {
-  border-bottom: 1px solid #c6c6c6;
-}
-.util .search {
-  transform: scaleX(-1);
-}
-.util .search::before {
+.util .search::before, .util .search::after,
+.util .all-menu::before,
+.util .all-menu::after {
   content: "\f002";
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 3rem;
-  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
 }
+.util .search::before,
 .util .all-menu::before {
-  content: "\f0c9";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  font-size: 3rem;
   color: #fff;
+  opacity: 1;
+}
+.util .search::after,
+.util .all-menu::after {
+  color: #000;
+  opacity: 0;
+}
+.util .all-menu::before,
+.util .all-menu::after {
+  content: "\f0c9";
+}
+
+#header:hover {
+  background-color: #fff;
+}
+#header:hover .gnb-item {
+  color: #1d1d1d;
+}
+#header:hover .lang__btn {
+  color: #000;
+}
+#header:hover #logo a {
+  background: url("../../../resources/images/pattern/common/logo.svg") no-repeat 0 0/contain;
+}
+#header:hover .search::before,
+#header:hover .all-menu::before {
+  opacity: 0;
+}
+#header:hover .search::after,
+#header:hover .all-menu::after {
+  opacity: 1;
 }
 
 #nav-all {
@@ -1124,6 +1149,55 @@ legend {
   .top {
     display: block;
   }
+}
+
+#footer {
+  position: relative;
+  background: #000;
+  display: block;
+  width: 100%;
+  height: 350px;
+  margin-top: 80px;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+#footer .footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid #717171;
+}
+#footer .footer-links a {
+  color: #fff;
+}
+#footer a.footer-link {
+  color: #c6c6c6;
+}
+#footer .footer-logo {
+  margin: 30px 0 20px;
+}
+#footer .footer-info__text {
+  color: #555555;
+  margin-bottom: 5px;
+}
+#footer .footer-info__text .footer-info__title {
+  color: #fff;
+  font-weight: 300;
+  margin-right: 10px;
+}
+#footer .footer-brand-container {
+  text-align: center;
+  margin: 20px 0;
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.4rem;
+}
+#footer .footer-sns {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
 }
 
 .video-container {
@@ -1486,6 +1560,9 @@ legend {
 
 .event-banner {
   display: block;
+  position: relative;
+  width: 100%;
+  min-height: 300px;
 }
 .event-banner .event-banner__slides li {
   display: none; /* 모든 슬라이드 숨기기 */
@@ -1501,7 +1578,7 @@ legend {
   position: absolute;
   font-size: 1.3rem;
   z-index: 1000;
-  top: 70px;
+  top: 65px;
   color: #007aff;
   font-weight: bold;
   margin-left: 50px;
@@ -1522,7 +1599,7 @@ legend {
   position: absolute;
   font-size: 2rem;
   z-index: 1000;
-  top: 90px;
+  top: 85px;
   color: #fff;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
   margin-left: 50px;
@@ -1545,10 +1622,10 @@ legend {
   position: absolute;
   font-size: 1.4rem;
   z-index: 1000;
-  top: 50px;
+  top: 48px;
   color: red;
   font-weight: bold;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 @media (min-width: 600px) {
   .event-banner .event-banner__description2 {
@@ -1570,7 +1647,7 @@ legend {
   text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
   top: 75px;
   color: #fff;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 @media (min-width: 600px) {
   .event-banner .event-banner__tit2 {
@@ -1607,6 +1684,40 @@ legend {
     display: none;
   }
 }
+.event-banner .point {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  font-size: 1.7rem;
+}
+@media (min-width: 600px) {
+  .event-banner .point {
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .event-banner .point {
+    font-size: 3rem;
+  }
+}
+.event-banner .point2 {
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  font-size: 2rem;
+}
+@media (min-width: 600px) {
+  .event-banner .point2 {
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .event-banner .point2 {
+    font-size: 3.5rem;
+  }
+}
 .event-banner .event-banner__img {
   position: relative;
   display: block;
@@ -1635,21 +1746,27 @@ legend {
   position: absolute;
   display: inline-flex;
   padding: 5px 6px;
-  top: 30%;
+  top: 45%;
   left: 80%;
   background-color: #fff;
   color: #000;
   text-decoration: none;
   border-radius: 20px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   align-items: center;
   transition: background-color 0.3s;
   z-index: 1000;
 }
 .event-banner .btn-event #Bold {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 600px) {
+  .event-banner .btn-event #Bold {
+    width: 25px;
+    height: 25px;
+  }
 }
 @media (min-width: 600px) {
   .event-banner .btn-event {
