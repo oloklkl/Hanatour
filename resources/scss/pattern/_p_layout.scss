@@ -365,31 +365,112 @@
     font-size: 1.5rem;
     color: $white;
 
+    @include mobileMore {
+        padding: 30px;
+        height: 600px;
+    }
+    @include tabletMore {
+        height: 630px;
+        padding: 80px 300px 40px;
+    }
+
+    .footer-nav {
+        @include mobileMore {
+            display: none;
+        }
+        @include tabletLess {
+            display: none;
+        }
+        @include tabletMore {
+            display: block;
+        }
+    }
+    .footer-nav__list-item {
+        display: inline-flex;
+        flex-direction: column;
+        margin-right: 50px;
+        margin-bottom: 60px;
+
+        .footer-nav__section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .footer-nav__link-item {
+            margin-bottom: 10px;
+        }
+        .footer-nav__link-item a {
+            font-size: 1.7rem;
+            color: $gray-50;
+        }
+    }
+
     .footer-links {
         display: flex;
         justify-content: space-between;
         padding-bottom: 20px;
         border-bottom: 0.5px solid $gray-60;
+
+        @include mobileMore {
+            font-size: 1.7rem;
+        }
+        @include tabletMore {
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 20px;
+            border-top: 0.5px solid $gray-60;
+        }
     }
 
     .footer-links a {
         color: $white;
+        margin-right: 40px;
     }
     a.footer-link {
         color: $gray-40;
     }
-    .footer-logo {
-        margin: 30px 0 20px;
+    .footer-nav__list {
+        position: relative;
+        width: 70%;
     }
-    .footer-info__text {
-        color: $gray-70;
-        margin-bottom: 5px;
+
+    .footer-info {
+        @include tabletMore {
+            position: absolute;
+            top: 60px;
+            right: 400px;
+        }
+
         .footer-info__title {
-            color: $white;
-            font-weight: 300;
-            margin-right: 10px;
+            margin: 30px 0 15px;
+            font-size: 2rem;
+
+            @include mobileMore {
+                font-size: 2.4rem;
+            }
+            @include tabletMore {
+                font-size: 2.6rem;
+            }
+        }
+        .footer-info__text {
+            color: $gray-70;
+            margin-bottom: 5px;
+
+            @include mobileMore {
+                font-size: 1.7rem;
+            }
+            .footer-info__title {
+                color: $white;
+                font-weight: 300;
+                margin-right: 10px;
+
+                @include mobileMore {
+                    display: flex;
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
+
     .footer-brand-container {
         text-align: center;
         margin: 20px 0;
@@ -397,10 +478,48 @@
         font-weight: 400;
         font-style: normal;
         font-size: 2.4rem;
+
+        @include mobileMore {
+            font-size: 3rem;
+            margin: 30px 0;
+        }
+        @include tabletMore {
+            position: absolute;
+            top: 250px;
+            right: 400px;
+        }
     }
     .footer-sns {
         display: flex;
         justify-content: space-evenly;
         margin: 20px 0;
+
+        @include mobileMore {
+            justify-content: center;
+        }
+        @include tabletMore {
+            position: absolute;
+            top: 473px;
+            right: 300px;
+        }
+
+        .footer-sns__icon {
+            @include mobileMore {
+                padding: 0 15px;
+            }
+        }
+    }
+    .footer-logo {
+        @include mobileMore {
+            display: none;
+        }
+        @include tabletLess {
+            display: none;
+        }
+        @include tabletMore {
+            display: block;
+            margin: 25px 0;
+            width: 12%;
+        }
     }
 }
