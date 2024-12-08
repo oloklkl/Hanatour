@@ -25,11 +25,18 @@
         <link rel="shortcut icon" href="http://www.mysite.com/favicon.ico" />
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
         <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
         <link rel="stylesheet" href="../resources/css/pattern_css.css" />
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                AOS.init(); // AOS 초기화
+            });
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script defer src="../resources/js/include.js"></script>
@@ -96,7 +103,7 @@
                                     <span class="gnb-item">소식</span>
                                 </a>
                                 <ul class="gnb__depth2">
-                                    <li><a href="#">하나인 생활</a></li>
+                                    <li><a href="../pages/sub_01.html">하나인 생활</a></li>
                                     <li><a href="#">직무 인터뷰</a></li>
                                     <li><a href="#">채용공고</a></li>
                                     <li><a href="#">자주묻는 질문</a></li>
@@ -138,6 +145,7 @@
                         </button>
                     </div>
                 </div>
+
                 <!-- active 추가시 활성화 -->
                 <nav id="nav-all" class="">
                     <ul class="gnb__depth1">
@@ -209,7 +217,7 @@
                     </ul>
 
                     <button class="close">
-                        <span class="">전체메뉴 닫기</span>
+                        <span class="blind">전체메뉴 닫기</span>
                     </button>
                 </nav>
             </header>
@@ -229,7 +237,7 @@
                 <section class="video-container" id="abc">
                     <!-- video -->
                     <video class="video-container__video" src="../resources/images/pattern/banners/hanatour_video.mp4" autoplay muted loop></video>
-                    <div class="video-container__video-overlay">
+                    <div class="video-container__video-overlay" data-aos="fade-up" data-aos-duration="1000">
                         <div class="inner">
                             <div class="video-container__text-box">
                                 <h2 class="video-overlay__main-text">꿈꾸는 대로, 펼쳐지다</h2>
@@ -250,13 +258,13 @@
                     <!-- intro -->
                     <div class="inner">
                         <div class="intro-text-group">
-                            <div class="intro-text">
+                            <div class="intro-text" data-aos="fade-up" data-aos-duration="1000">
                                 <p class="intro-text-line">여행, 그 이상의 경험을 선사하는</p>
                                 <p class="intro-text-line">당신의 소중한 순간을 더 빛나게 하는</p>
                                 <p class="intro-text-line">세상을 만나는 새로운 방법</p>
                             </div>
-                            <h2 class="intro-heading">하나투어<br />입니다.</h2>
-                            <div class="form-input-search">
+                            <h2 class="intro-heading" data-aos="fade-up" data-aos-duration="1000">하나투어<br />입니다.</h2>
+                            <div class="form-input-search" data-aos="fade-up" data-aos-duration="1000">
                                 <span class="input-value">
                                     <a href="#">어떤 상품을 찾고 계신가요?</a>
                                 </span>
@@ -272,7 +280,7 @@
                             </div>
 
                             <div class="effect-data actived">
-                                <div class="effect-items">
+                                <div class="effect-items" data-aos="fade-up" data-aos-duration="1000">
                                     <div class="keyword">
                                         <a href="#" class="btn-main-search-keyword">#친환경여행</a>
                                         <a href="#" class="btn-main-search-keyword">#답장</a>
@@ -282,17 +290,17 @@
                                         <a href="#" class="btn-main-search-keyword">#지속가능</a>
                                     </div>
                                 </div>
-                                <h3 class="effect-heading">여행, 그 이상의<br />경험을 선사합니다.</h3>
+                                <h3 class="effect-heading" data-aos="fade-up" data-aos-duration="1000">여행, 그 이상의<br />경험을 선사합니다.</h3>
 
                                 <div class="search-decoration">
-                                    <picture class="search-decoration-image">
+                                    <img src="../resources/images/pattern/content/suitcase.png" alt="suitcase-img" class="search-decoration-suitcase" data-aos="fade-up" data-aos-duration="3000" />
+                                    <picture class="search-decoration-image" data-aos="fade-up" data-aos-duration="1000">
                                         <source srcset="../resources/images/pattern/content/Sydney.png" media="(min-width: 1024px)" />
                                         <source srcset="../resources/images/pattern/content/Hawaii.png" />
                                         <img src="../resources/images/pattern/content/Hawaii.png" alt="hawaii-img" class="decorative-visual" />
                                     </picture>
-                                    <img src="../resources/images/pattern/content/suitcase.png" alt="suitcase-img" class="search-decoration-suitcase" />
-                                    <img src="../resources/images/pattern/content/Bangkok.png" alt="london-img" class="search-decoration-bangkok" />
-                                    <img src="../resources/images/pattern/content/Hawaii.png" alt="hawaii-img" class="search-decoration-hawaii" />
+                                    <img src="../resources/images/pattern/content/Bangkok.png" alt="london-img" class="search-decoration-bangkok" data-aos="fade-up" data-aos-duration="1000" />
+                                    <img src="../resources/images/pattern/content/Hawaii.png" alt="hawaii-img" class="search-decoration-hawaii" data-aos="fade-up" data-aos-duration="1000" />
                                 </div>
                             </div>
                         </div>
@@ -307,14 +315,14 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <a href="#" class="slide-link">
-                                            <div class="slide-content">
+                                            <div class="slide-content" data-aos="fade-down">
                                                 <p class="business-tit">Business</p>
                                                 <h2 class="main-tit"><strong>여행서비스</strong></h2>
                                                 <p class="sub-tit"><b>여행서비스</b></p>
                                             </div>
                                             <div class="image-container">
                                                 <div class="image-frame">
-                                                    <img src="../resources/images/pattern/thumb/travel-services.jpg" alt="img" class="images image-content" />
+                                                    <img src="../resources/images/pattern/thumb/travel-services.jpg" alt="img" class="images image-content" data-aos="zoom-in" data-aos-duration="1500" />
                                                 </div>
                                                 <div class="images image-wrapper1"></div>
                                                 <div class="images image-wrapper2"></div>
@@ -329,12 +337,13 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="tags">
+                                            <div class="tags" data-aos="fade-up">
                                                 <span class="tag-item">#여행디자인</span>
                                                 <span class="tag-item">#맞춤여행</span>
                                                 <span class="tag-item tag-br">#특별한여행</span>
                                             </div>
                                         </a>
+                                        <div class="swiper-button-next" data-aos="fade-left"></div>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="slide-link">
@@ -345,7 +354,7 @@
                                             </div>
                                             <div class="image-container">
                                                 <div class="image-frame">
-                                                    <img src="../resources/images/pattern/thumb/Online-Services.jpg" alt="img" class="images image-content" />
+                                                    <img src="../resources/images/pattern/thumb/Online-Services.jpg" alt="img" class="images image-content" data-aos="zoom-in" />
                                                 </div>
                                                 <div class="images image-wrapper3"></div>
                                                 <div class="images image-wrapper4"></div>
@@ -366,6 +375,8 @@
                                                 <span class="tag-item">#예약상담</span>
                                             </div>
                                         </a>
+                                        <div class="swiper-button-prev" data-aos="fade-right"></div>
+                                        <div class="swiper-button-next" data-aos="fade-left"></div>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="slide-link">
@@ -376,7 +387,7 @@
                                             </div>
                                             <div class="image-container">
                                                 <div class="image-frame">
-                                                    <img src="../resources/images/pattern/thumb/B2B-business.jpg" alt="img" class="images image-content" />
+                                                    <img src="../resources/images/pattern/thumb/B2B-business.jpg" alt="img" class="images image-content" data-aos="zoom-in" />
                                                 </div>
                                                 <div class="images image-wrapper5"></div>
                                                 <div class="images image-wrapper6"></div>
@@ -398,14 +409,11 @@
                                                 <span class="tag-item tag-br">#단체여행솔루션</span>
                                             </div>
                                         </a>
+                                        <div class="swiper-button-prev" data-aos="fade-right"></div>
                                     </div>
                                 </div>
                                 <!-- If we need pagination -->
                                 <div class="swiper-pagination"></div>
-
-                                <!-- If we need navigation buttons -->
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
@@ -444,7 +452,7 @@
                 <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
                 <section class="sec-g sec-news">
                     <div class="inner">
-                        <div class="sec-news-wrapper">
+                        <div class="sec-news-wrapper" data-aos="fade-up" data-aos-duration="1000">
                             <div class="sec-g__desc">하나투어가 전하는 최신 여행 트렌드와 소식</div>
                             <h2 class="sec-g__tit">Travel Insights</h2>
                             <div class="btn-container">
@@ -456,7 +464,7 @@
                         <div class="news-list-container">
                             <div class="board_list">
                                 <ul class="board">
-                                    <li class="board-item">
+                                    <li class="board-item" data-aos="fade-up" data-aos-duration="1000">
                                         <div class="thumb_area">
                                             <img src="../resources/images/pattern/thumb/Travel Insights-3.jpg" alt="img" class="thumb-img" />
                                         </div>
@@ -467,7 +475,7 @@
                                         </div>
                                     </li>
 
-                                    <li class="board-item">
+                                    <li class="board-item" data-aos="fade-up" data-aos-duration="1000">
                                         <div class="thumb_area">
                                             <img src="../resources/images/pattern/thumb/Travel Insights-4.jpg" alt="img" class="thumb-img" />
                                         </div>
@@ -478,7 +486,7 @@
                                         </div>
                                     </li>
 
-                                    <li class="board-item">
+                                    <li class="board-item" data-aos="fade-up" data-aos-duration="1000">
                                         <div class="thumb_area">
                                             <img src="../resources/images/pattern/thumb/Travel Insights-1.jpg" alt="img" class="thumb-img" />
                                         </div>
@@ -489,7 +497,7 @@
                                         </div>
                                     </li>
 
-                                    <li class="board-item">
+                                    <li class="board-item" data-aos="fade-up" data-aos-duration="1000">
                                         <div class="thumb_area">
                                             <img src="../resources/images/pattern/thumb/Travel Insights-2.jpg" alt="img" class="thumb-img" />
                                         </div>
@@ -507,7 +515,7 @@
 
                 <section class="event-banner">
                     <div class="inner">
-                        <ul class="event-banner__slides">
+                        <ul class="event-banner__slides" data-aos="fade-up" data-aos-duration="1000">
                             <li class="active">
                                 <p class="event-banner__description">2024년 여름, 특별한 여행을 떠나세요!</p>
                                 <h2 class="event-banner__tit">7월 할인 한정 혜택</h2>
