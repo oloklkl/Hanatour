@@ -325,13 +325,17 @@
     background: hsla(0, 0%, 59%, 0.5);
     backdrop-filter: blur(10px);
     transition: all 0.3s;
+    .gnb__depth1 {
+        display: inline-flex;
+    }
+
     &.active {
         display: block;
         left: 0;
     }
     .close {
         &::before {
-            content: '';
+            content: '\f00d';
             @include lineAwesome;
         }
     }

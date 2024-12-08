@@ -1124,12 +1124,15 @@ legend {
           backdrop-filter: blur(10px);
   transition: all 0.3s;
 }
+#nav-all .gnb__depth1 {
+  display: inline-flex;
+}
 #nav-all.active {
   display: block;
   left: 0;
 }
 #nav-all .close::before {
-  content: "";
+  content: "\f00d";
   font-family: "Line Awesome Free";
   font-weight: 900;
 }
