@@ -286,6 +286,10 @@
 .sec-news {
     margin-bottom: 120px;
 
+    @include tabletMore {
+        padding-bottom: 150px;
+    }
+
     .sec-news-wrapper {
         padding-top: 40px;
     }
@@ -448,7 +452,7 @@
 
         @include tabletMore {
             position: absolute;
-            top: -320px;
+            top: 50%;
         }
     }
     .swiper-button-next::before {

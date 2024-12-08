@@ -564,6 +564,11 @@ legend {
 .sec-news {
   margin-bottom: 120px;
 }
+@media (min-width: 1024px) {
+  .sec-news {
+    padding-bottom: 150px;
+  }
+}
 .sec-news .sec-news-wrapper {
   padding-top: 40px;
 }
@@ -734,7 +739,7 @@ legend {
   .swiper .swiper-button-next::before,
   .swiper .swiper-button-prev::before {
     position: absolute;
-    top: -320px;
+    top: 50%;
   }
 }
 .swiper .swiper-button-next::before {
@@ -1123,7 +1128,18 @@ legend {
   display: block;
   left: 0;
 }
+#nav-all .close::before {
+  content: "";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}
 
+.top {
+  display: none;
+}
+.top.active {
+  display: block;
+}
 .top::before {
   content: "\f0aa";
   font-family: "Line Awesome Free";
@@ -1147,6 +1163,9 @@ legend {
 }
 @media (min-width: 1024px) {
   .top {
+    display: none;
+  }
+  .top.active {
     display: block;
   }
 }
@@ -1157,7 +1176,6 @@ legend {
   display: block;
   width: 100%;
   height: 350px;
-  margin-top: 80px;
   padding: 20px;
   font-size: 1.5rem;
   color: #fff;
@@ -1166,12 +1184,14 @@ legend {
   #footer {
     padding: 30px;
     height: 600px;
+    margin-top: 80px;
   }
 }
 @media (min-width: 1024px) {
   #footer {
     height: 630px;
     padding: 80px 300px 40px;
+    margin-top: 80px;
   }
 }
 @media (min-width: 600px) {
@@ -1245,15 +1265,22 @@ legend {
 }
 #footer .footer-info .footer-info__title {
   margin: 30px 0 15px;
+  background-color: #2d2d2d;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+#footer .footer-info .footer-info__title a {
+  color: #fff;
   font-size: 2rem;
 }
 @media (min-width: 600px) {
-  #footer .footer-info .footer-info__title {
+  #footer .footer-info .footer-info__title a {
     font-size: 2.4rem;
   }
 }
 @media (min-width: 1024px) {
-  #footer .footer-info .footer-info__title {
+  #footer .footer-info .footer-info__title a {
     font-size: 2.6rem;
   }
 }
@@ -1344,12 +1371,24 @@ legend {
   width: auto;
   height: 100vh;
   overflow: hidden;
+  display: block;
 }
-.video-container .btn-pause ::before {
+.video-container .btn-pause::before {
   content: "\f04c";
   font-family: "Line Awesome Free";
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2rem;
+  color: #fff;
+}
+@media (min-width: 600px) {
+  .video-container .btn-pause::before {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .video-container .btn-pause::before {
+    margin-left: 260px;
+  }
 }
 @media (min-width: 1024px) {
   .video-container .video-container__text-box {
@@ -1384,12 +1423,18 @@ legend {
     font-size: 3rem;
   }
 }
+.video-container .video-overlay__sub-text {
+  margin-bottom: 25px;
+}
 @media (min-width: 600px) {
   .video-container .video-overlay__sub-text br {
     display: none;
   }
 }
 @media (min-width: 1024px) {
+  .video-container .video-overlay__sub-text {
+    margin-bottom: 40px;
+  }
   .video-container .video-overlay__sub-text br {
     display: none;
   }
@@ -1417,15 +1462,14 @@ legend {
 }
 .video-container .video-container__video-overlay {
   position: absolute;
-  top: 60%;
+  top: 70%;
   margin-left: 20px;
   color: #fff;
 }
-.video-container .video-container::before {
-  content: "\f04c";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  font-size: 3rem;
+@media (min-width: 1024px) {
+  .video-container .video-container__video-overlay {
+    top: 60%;
+  }
 }
 
 @media (min-width: 600px) {
@@ -1549,8 +1593,8 @@ legend {
 }
 @media (min-width: 1024px) {
   .intro .effect-data .decorative-visual {
-    position: relative;
-    top: 220px;
+    position: absolute;
+    top: 50%;
     left: -150px;
     width: 1000px;
     height: 665px;
@@ -1568,7 +1612,8 @@ legend {
 }
 @media (min-width: 1024px) {
   .intro .search-decoration-bangkok {
-    position: relative;
+    position: absolute;
+    top: 70%;
     left: 70%;
     width: 360px;
     height: 550px;
@@ -1577,11 +1622,12 @@ legend {
 @media (min-width: 1024px) {
   .intro .search-decoration-hawaii {
     position: relative;
-    left: 35%;
+    left: 30%;
     width: 500px;
     height: 500px;
     z-index: 3;
-    margin-bottom: 200px;
+    margin-top: 600px;
+    margin-bottom: 220px;
   }
 }
 
