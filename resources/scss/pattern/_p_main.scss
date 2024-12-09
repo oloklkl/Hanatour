@@ -86,11 +86,11 @@
     .video-container__video-overlay {
         position: absolute;
         top: 70%;
-        margin-left: 20px;
         color: $white;
 
         @include tabletMore {
             top: 60%;
+            margin-left: 20px;
         }
     }
 }
