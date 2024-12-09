@@ -30,26 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const topButton = document.querySelector('.top');
     const sections = document.querySelectorAll('.video-container, .hero-section'); // 모든 섹션 선택
 
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
         const viewportHeight = window.innerHeight;
+        const isMobile = window.innerWidth <= 768; // 모바일 기준
+        const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024; // 태블릿 기준
 
-        // 모든 섹션에 대해 확인
         let isAnySectionVisible = false;
         sections.forEach((section) => {
             const sectionBottom = section.getBoundingClientRect().bottom;
             const sectionTop = section.getBoundingClientRect().top;
 
-            // 현재 섹션이 화면 안에 있는지 확인
             if (sectionTop < viewportHeight && sectionBottom > 0) {
-                isAnySectionVisible = true; // 섹션이 화면에 보이면 true
+                isAnySectionVisible = true;
             }
         });
 
-        // 섹션이 하나라도 보이면 버튼 숨김
-        if (isAnySectionVisible) {
+        if (isAnySectionVisible || isMobile || isTablet) {
+            // 섹션이 보이거나 모바일/태블릿에서는 버튼 숨김
             topButton.classList.remove('active');
         } else {
             topButton.classList.add('active');
         }
-    });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll); // 뷰포트 크기 변경 시 다시 확인
 });
