@@ -439,10 +439,10 @@ legend {
   background-color: #9eaddb;
 }
 .sec-g__cont .image-container .image-wrapper4 {
-  background-color: #7ce9e2;
+  background-color: #79e3ff;
 }
 .sec-g__cont .image-container .image-wrapper5 {
-  background-color: #7ce9e2;
+  background-color: #79e3ff;
 }
 .sec-g__cont .image-container .image-wrapper6 {
   background-color: #ffe7f2;
@@ -540,8 +540,8 @@ legend {
   }
 }
 .sec-g__cont .swiper-slide:nth-of-type(1) .business-tit {
-  color: #7ce9e2;
-  border: 2px solid #7ce9e2;
+  color: #79e3ff;
+  border: 2px solid #79e3ff;
 }
 .sec-g__cont .swiper-slide:nth-of-type(2) .business-tit {
   color: #ffe7f2;
@@ -552,7 +552,7 @@ legend {
   border: 2px solid #fae100;
 }
 .sec-g__cont .swiper-slide:nth-of-type(1) .category {
-  color: #7ce9e2;
+  color: #79e3ff;
 }
 .sec-g__cont .swiper-slide:nth-of-type(2) .category {
   color: #ffe7f2;
