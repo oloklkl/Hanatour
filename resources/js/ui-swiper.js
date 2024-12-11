@@ -4,7 +4,6 @@ var swiper = new Swiper('.mySwiper', {
         prevEl: '.swiper-button-prev',
     },
     watchSlidesProgress: true,
-    overflow: true,
 });
 
 const slides = document.querySelectorAll('.event-banner__slides li');
@@ -30,3 +29,13 @@ showSlide(currentSlide);
 
 // Change slide every 6 seconds
 setInterval(nextSlide, 6000); // 6초마다 슬라이드 전환
+
+var swiper2 = new Swiper('.mySwiper2', {
+    navigation: {
+        nextEl: '.swiper-button-next-thumb',
+        prevEl: '.swiper-button-prev-thumb',
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
