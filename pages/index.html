@@ -31,7 +31,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
         <link rel="stylesheet" href="../resources/css/pattern_css.css" />
+
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
         <script>
@@ -295,8 +297,10 @@
                                 <h3 class="effect-heading" data-aos="fade-up" data-aos-duration="1000">여행, 그 이상의<br />경험을 선사합니다.</h3>
 
                                 <div class="search-decoration">
-                                    <img src="../resources/images/pattern/content/suitcase.png" alt="suitcase-img" class="search-decoration-suitcase" data-aos="fade-up" data-aos-duration="3000" />
-                                    <picture class="search-decoration-image" data-aos="fade-up" data-aos-duration="1000">
+                                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                                        <img src="../resources/images/pattern/content/suitcase.png" alt="suitcase-img" class="search-decoration-suitcase" data-aos="fade-up" data-aos-duration="3000" />
+                                    </div>
+                                    <picture class="search-decoration-image">
                                         <source srcset="../resources/images/pattern/content/Sydney.png" media="(min-width: 1024px)" />
                                         <source srcset="../resources/images/pattern/content/Hawaii.png" />
                                         <img src="../resources/images/pattern/content/Hawaii.png" alt="hawaii-img" class="decorative-visual" />
