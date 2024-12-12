@@ -322,7 +322,7 @@ legend {
 .sec-g__cont .slide-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   height: 100vh;
 }
@@ -1657,7 +1657,7 @@ legend {
 @media (min-width: 1024px) {
   .main-middle-banner .banner-container .scroll-container {
     font-size: 2rem;
-    height: 900px;
+    height: 910px;
     padding: 20px;
   }
 }
@@ -1667,10 +1667,10 @@ legend {
 }
 @keyframes scroll-text {
   0% {
-    transform: translateY(0);
+    transform: translateY(10%);
   }
   100% {
-    transform: translateY(-100%); /* 원하는 스크롤 방향 */
+    transform: translateY(-70%); /* 원하는 스크롤 방향 */
   }
 }
 @media (min-width: 1024px) {
