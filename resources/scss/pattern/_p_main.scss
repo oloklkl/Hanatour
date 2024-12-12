@@ -122,6 +122,7 @@
         display: block;
         top: 240px;
         right: -60px;
+        line-height: 1.2;
         @include mobileMore {
             display: none;
         }
@@ -144,6 +145,7 @@
     .intro-heading {
         font-size: 7.2rem;
         width: 50%;
+        line-height: 1.2;
     }
 
     .form-input-search {
@@ -253,6 +255,14 @@
 .main-middle-banner {
     position: relative;
     overflow: hidden;
+    height: 400px;
+
+    @include mobileMore {
+        height: 750px;
+    }
+    @include tabletMore {
+        height: 900px;
+    }
 
     .inner-middle-banner {
         margin: 0;
@@ -261,6 +271,46 @@
 
     .banner-container {
         position: relative;
+
+        .scroll-container {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: $secondary-5;
+            white-space: nowrap;
+            height: 400px;
+            padding: 13px;
+            color: $white;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 1.3rem;
+            line-height: 1.9;
+
+            @include mobileMore {
+                font-size: 1.8rem;
+                height: 750px;
+                padding: 18px;
+            }
+            @include tabletMore {
+                font-size: 2rem;
+                height: 900px;
+                padding: 20px;
+            }
+        }
+        .message-text {
+            animation: scroll-text 10s linear infinite;
+            letter-spacing: 1.3px;
+        }
+
+        @keyframes scroll-text {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%); /* 원하는 스크롤 방향 */
+            }
+        }
 
         @include tabletMore {
             display: flex;
@@ -314,18 +364,6 @@
             }
         }
 
-        .scroll-container {
-            position: absolute;
-            background: $secondary-4;
-            white-space: nowrap;
-            height: 50px;
-            color: $white;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-
-            // transform: rotate(-90deg) translateY(-1060px);
-        }
         .banner-image-wrapper {
             display: flex;
 
@@ -410,7 +448,7 @@
         top: 48px;
         color: red;
         font-weight: bold;
-        margin-left: 30px;
+        margin-left: 20px;
         @include mobileMore {
             top: 55px;
             font-size: 1.8rem;
@@ -422,13 +460,13 @@
     }
     .event-banner__tit2 {
         position: absolute;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         font-weight: bold;
         z-index: 1000;
-        text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+        text-shadow: -2px 0 red, 0 2px red, 2px 0 red, 0 -2px red;
         top: 75px;
         color: $white;
-        margin-left: 30px;
+        margin-left: 20px;
 
         @include mobileMore {
             top: 80px;
@@ -571,6 +609,9 @@
 .sec-service {
     .sec-g__cont .swiper-slide a {
         object-position: 50% 100%;
+
+        display: flex;
+        justify-content: space-between;
     }
 }
 

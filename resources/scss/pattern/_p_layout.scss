@@ -206,6 +206,7 @@
 
 .util {
     display: flex;
+    align-items: center;
     gap: 15px;
     .lang {
         display: none;
@@ -224,13 +225,13 @@
             }
         }
         &__btn {
-            height: 57px;
+            height: 36px;
             margin-right: 10px;
             text-transform: uppercase;
             color: $white;
             background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid $white;
-            border-radius: 45%;
+            border-radius: 36px;
             padding: 0 15px;
         }
 
@@ -433,7 +434,7 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 20px;
-        border-bottom: 0.5px solid $gray-60;
+        border-bottom: 0.5px solid $gray-80;
 
         @include mobileMore {
             font-size: 1.7rem;
@@ -442,7 +443,7 @@
             display: flex;
             justify-content: flex-start;
             padding-top: 20px;
-            border-top: 0.5px solid $gray-60;
+            border-top: 0.5px solid $gray-80;
         }
     }
 
@@ -469,18 +470,12 @@
             margin: 30px 0 15px;
             background-color: $gray-80;
             display: inline-block;
-            padding: 5px 10px;
+            padding: 5px 15px;
             border-radius: 30px;
+            font-weight: 400;
             a {
                 color: $white;
-                font-size: 2rem;
-
-                @include mobileMore {
-                    font-size: 2.4rem;
-                }
-                @include tabletMore {
-                    font-size: 2.6rem;
-                }
+                font-size: 1.7rem;
             }
         }
         .footer-info__text {
