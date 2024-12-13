@@ -2098,10 +2098,10 @@ legend {
 }
 .hero-section .hero-section__text-overlay .hero-section__text-box {
   position: absolute;
-  width: 110%;
+  width: 180%;
   top: 300px;
   left: 670px;
-  margin-top: 50px;
+  margin-top: 120px;
   color: #fff;
   z-index: 2;
   font-size: 2.2rem;
@@ -2130,7 +2130,7 @@ legend {
 }
 .hero-section .hero-section__text-overlay .hero-section__text-box .hero-section__description {
   margin-bottom: 15px;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  font-weight: 600;
 }
 
 .intro--primary .inner {
