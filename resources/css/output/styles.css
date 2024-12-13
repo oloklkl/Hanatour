@@ -578,7 +578,6 @@ legend {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 10px;
-  color: #ffe7f2;
 }
 @media (min-width: 600px) {
   .sec-news .sec-g__tit {
@@ -1645,11 +1644,11 @@ legend {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  background: #f790eb;
+  background: #fae100;
   white-space: nowrap;
   height: 400px;
   padding: 13px;
-  color: #fff;
+  color: #000;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 1.3rem;
@@ -1665,7 +1664,7 @@ legend {
 @media (min-width: 1024px) {
   .main-middle-banner .banner-container .scroll-container {
     font-size: 2rem;
-    height: 910px;
+    height: 760px;
     padding: 20px;
   }
 }
@@ -1710,8 +1709,8 @@ legend {
   .main-middle-banner .banner-container .banner-content .banner-image {
     display: flex;
     width: 1200px;
-    height: 900px;
-    margin-right: 20px;
+    height: 750px;
+    margin-right: 300px;
   }
 }
 .main-middle-banner .banner-container .banner-content .banner-intro-text {
@@ -1761,7 +1760,7 @@ legend {
   -o-object-position: bottom;
      object-position: bottom;
   width: 100%;
-  height: 900px;
+  height: 750px;
 }
 
 .event-banner {
