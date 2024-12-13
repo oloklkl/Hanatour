@@ -18,17 +18,16 @@
     }
 }
 
-.sec-g__cont {
-    position: relative;
+.sec-service {
     display: block;
     background: $black;
     margin: 20px 0 0;
     width: 100%;
-    height: 100vh;
+    height: 900px;
     overflow: hidden;
 
     @include mobileMore {
-        height: 1500px;
+        height: 1300px;
     }
     @include tabletMore {
         height: 980px;
@@ -41,63 +40,112 @@
     .slide-link {
         text-decoration: none;
     }
-
-    .inner-sec-service {
-        margin-top: 40px;
+    .swiper-slide {
+        overflow: hidden;
     }
 
     .slide-service {
         text-align: center;
     }
 
-    .slide-text {
+    .slide-content-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 20px;
         height: 100vh;
-    }
-
-    .slide-content {
-        // margin-top: 40px;
-        // margin-bottom: 10px;
-        // z-index: 10;
 
         @include tabletMore {
-            text-align: left;
-            // margin-left: 300px;
-            // width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            height: 100vh;
         }
-        .business-tit {
-            display: inline-block;
+
+        .slide-content {
             margin-top: 40px;
-            font-size: 2rem;
+            // margin-bottom: 10px;
+            // z-index: 10;
+            // text-align: center;
+
+            @include tabletMore {
+                text-align: left;
+                // margin-left: 300px;
+                // width: 300px;
+            }
+            .business-tit {
+                display: inline-block;
+                margin-top: 40px;
+                font-size: 1.4rem;
+                background-color: $black;
+                padding: 10px 8px;
+                border-radius: 25px;
+            }
+
+            .main-tit {
+                font-size: 4rem;
+                color: $white;
+                @include mobileMore {
+                    font-size: 4.8rem;
+                }
+                @include tabletMore {
+                    font-size: 6rem;
+                    white-space: nowrap;
+                }
+            }
+
+            .sub-tit {
+                margin-bottom: 20px;
+                font-size: 2.4rem;
+                color: $gray-30;
+                @include mobileMore {
+                    margin-bottom: 80px;
+                }
+                @include tabletMore {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .slide-description {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        text-align: left;
+
+        .slide-title {
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            font-weight: 600;
+            font-size: 1.5rem;
             background-color: $black;
-            padding: 10px 8px;
-            border-radius: 25px;
-        }
+            padding: 5px 20px;
+            border-radius: 30px;
+            z-index: 200;
+            color: $secondary-2;
 
-        .main-tit {
-            font-size: 4rem;
+            @include mobileMore {
+                font-size: 2.8rem;
+            }
+        }
+        .slide-text {
+            position: absolute;
+            top: 45%;
+            left: 20%;
+            font-weight: 600;
+            font-size: 1.8rem;
             color: $white;
-            @include mobileMore {
-                font-size: 4.8rem;
-            }
-            @include tabletMore {
-                font-size: 6rem;
-                white-space: nowrap;
-            }
-        }
+            line-height: 1.5;
+            text-align: left;
+            z-index: 200;
 
-        .sub-tit {
-            margin-bottom: 20px;
-            font-size: 2.4rem;
-            color: $gray-30;
             @include mobileMore {
-                margin-bottom: 80px;
-            }
-            @include tabletMore {
-                margin-bottom: 0;
+                font-size: 2.5rem;
+                br {
+                    display: none;
+                }
             }
         }
     }
@@ -112,13 +160,16 @@
             z-index: 100;
             object-fit: cover;
         }
+        .slide-link {
+            display: inline-block;
+            position: relative;
+        }
 
         .image-content {
             z-index: 100;
             object-fit: cover;
         }
         .images {
-            margin-top: 50px;
             width: 290px;
             height: 462px;
             // @include mobileMore {
@@ -139,7 +190,7 @@
             transform: rotate(-10deg);
             z-index: 2;
             top: 0;
-            right: 10px;
+            right: 40px;
             gap: 20px;
         }
         .image-wrapper2,
@@ -150,7 +201,7 @@
             transform: rotate(-25deg);
             z-index: 1;
             top: 0;
-            right: 20px;
+            right: 40px;
         }
         .image-wrapper1 {
             background-color: $primary2;
@@ -174,56 +225,11 @@
         }
     }
 
-    .slide-description {
-        font-size: 1.5rem;
-        margin-top: 10px;
-        text-align: left;
-
-        .category {
-            position: absolute;
-            top: 13%;
-            left: 10%;
-            font-weight: 600;
-            font-size: 1.5rem;
-            background-color: $black;
-            padding: 5px 20px;
-            border-radius: 30px;
-            z-index: 200;
-
-            @include mobileMore {
-                top: 10%;
-                left: 10%;
-                font-size: 2.8rem;
-            }
-        }
-        .text {
-            position: absolute;
-            top: 20%;
-            left: 10%;
-            font-weight: 600;
-            font-size: 1.8rem;
-            color: $white;
-            line-height: 1.5;
-            text-align: left;
-            z-index: 200;
-
-            @include mobileMore {
-                width: 68%;
-                top: 20%;
-                left: 10%;
-                font-size: 2.5rem;
-                br {
-                    display: none;
-                }
-            }
-        }
-    }
-
     .tags {
         display: block;
         flex-direction: row;
         margin-top: 30px;
-        // margin-bottom: 20px;
+        margin-bottom: 20px;
 
         @include mobileMore {
             // margin-left: 30px;
@@ -266,17 +272,17 @@
 
     .swiper-slide:nth-of-type(1) .business-tit {
         color: $secondary-2;
-        border: 2px solid $secondary-2;
+        border: 1px solid $secondary-2;
     }
 
     .swiper-slide:nth-of-type(2) .business-tit {
         color: $primary2;
-        border: 2px solid $primary2;
+        border: 1px solid $primary2;
     }
 
     .swiper-slide:nth-of-type(3) .business-tit {
         color: $primary;
-        border: 2px solid $primary;
+        border: 1px solid $primary;
     }
 
     .swiper-slide:nth-of-type(1) .category {
@@ -430,18 +436,12 @@
     width: 100%;
 
     @include mobileMore {
-        height: 1500px;
+        height: 1300px;
     }
-    .swiper-slide {
-        a {
-            display: block;
-            width: 100%;
+    @include tabletMore {
+        height: 980px;
+    }
 
-            // @include mobileMore {
-            //     height: 1500px;
-            // }
-        }
-    }
     .swiper-button-next::after,
     .swiper-button-prev::after {
         display: none;
@@ -455,16 +455,12 @@
         align-items: center;
         justify-content: center;
         font-size: 0;
-        z-index: 2000;
+        z-index: 9999;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.1);
-
-        @include tabletMore {
-            position: absolute;
-            top: 50%;
-        }
     }
     .swiper-button-next::before {
+        position: absolute;
         content: '\f061';
         font-size: 4rem;
         color: $white;
@@ -487,6 +483,7 @@
         }
     }
     .swiper-button-prev::before {
+        position: absolute;
         content: '\f060';
         font-size: 4rem;
         color: $white;

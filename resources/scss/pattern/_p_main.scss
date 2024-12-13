@@ -152,12 +152,14 @@
         display: flex;
         padding-bottom: 5px;
         justify-content: space-between;
-        margin-top: 80px;
         border-bottom: 3px solid $black;
         box-sizing: border-box;
+        margin-top: 50px;
+
         @include tabletMore {
             display: flex;
             width: 40%;
+            margin-top: 80px;
         }
 
         .input-value {
@@ -605,14 +607,3 @@
         }
     }
 }
-
-.sec-service {
-    .sec-g__cont .swiper-slide a {
-        object-position: 50% 100%;
-
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-@include tabletMore;
