@@ -14,7 +14,15 @@
         font-size: 3rem;
     }
     .swiper-wrapper {
-        height: 880px;
+        width: 100%;
+        height: 900px;
+
+        @include mobileMore {
+            height: 1200px;
+        }
+        @include tabletMore {
+            height: 980px;
+        }
     }
 }
 
@@ -27,7 +35,7 @@
     overflow: hidden;
 
     @include mobileMore {
-        height: 1300px;
+        height: 1200px;
     }
     @include tabletMore {
         height: 980px;
@@ -55,24 +63,17 @@
         gap: 20px;
         height: 100vh;
 
-        @include tabletMore {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 20px;
-            height: 100vh;
-        }
-
         .slide-content {
             margin-top: 40px;
-            // margin-bottom: 10px;
-            // z-index: 10;
-            // text-align: center;
 
-            @include tabletMore {
+            @include mobileMore {
                 text-align: left;
-                // margin-left: 300px;
-                // width: 300px;
+                margin-left: 30px;
+            }
+            @include tabletMore {
+                margin-top: 80px;
+                // text-align: left;
+                width: 300px;
             }
             .business-tit {
                 display: inline-block;
@@ -127,7 +128,13 @@
             color: $secondary-2;
 
             @include mobileMore {
+                background-color: rgba(255, 255, 255, 0.1);
+                text-align: left;
                 font-size: 2.8rem;
+                transform: translateX(-70px);
+            }
+            @include tabletMore {
+                transform: translateX(-100px) translateY(80px);
             }
         }
         .slide-text {
@@ -142,12 +149,50 @@
             z-index: 200;
 
             @include mobileMore {
+                display: block;
+                margin-top: 20px;
                 font-size: 2.5rem;
+                width: 36%;
+                transform: translateX(-70px);
                 br {
                     display: none;
                 }
             }
+            @include tabletMore {
+                transform: translateX(-100px) translateY(80px);
+                font-size: 3rem;
+                width: 27%;
+                display: block;
+                margin-top: 30px;
+            }
         }
+    }
+
+    .swiper-slide:nth-of-type(1) .business-tit {
+        color: $secondary-2;
+        border: 1px solid $secondary-2;
+    }
+
+    .swiper-slide:nth-of-type(2) .business-tit {
+        color: $primary2;
+        border: 1px solid $primary2;
+    }
+
+    .swiper-slide:nth-of-type(3) .business-tit {
+        color: $primary;
+        border: 1px solid $primary;
+    }
+
+    .swiper-slide:nth-of-type(1) .slide-title {
+        color: $secondary-2;
+    }
+
+    .swiper-slide:nth-of-type(2) .slide-title {
+        color: $primary2;
+    }
+
+    .swiper-slide:nth-of-type(3) .slide-title {
+        color: $primary;
     }
 
     .image-container {
@@ -159,27 +204,38 @@
             position: relative;
             z-index: 100;
             object-fit: cover;
-        }
-        .slide-link {
-            display: inline-block;
-            position: relative;
+            @include mobileMore {
+                width: 100%;
+                height: 500px;
+            }
         }
 
         .image-content {
-            z-index: 100;
+            z-index: 110;
             object-fit: cover;
+
+            @include mobileMore {
+                position: absolute;
+                top: 200px;
+                right: 60px;
+            }
+            @include tabletMore {
+                position: absolute;
+                top: -100px;
+                right: 45px;
+            }
         }
         .images {
             width: 290px;
             height: 462px;
-            // @include mobileMore {
-            //     margin-top: 20px;
-            //     width: 640px;
-            //     height: 1000px;
-            // }
+
+            @include mobileMore {
+                width: 350px;
+                height: 420px;
+            }
             @include tabletMore {
                 width: 486px;
-                height: 600px;
+                height: 500px;
             }
         }
         .image-wrapper1,
@@ -192,6 +248,14 @@
             top: 0;
             right: 40px;
             gap: 20px;
+
+            @include mobileMore {
+                top: 200px;
+                right: 60px;
+            }
+            @include tabletMore {
+                top: -100px;
+            }
         }
         .image-wrapper2,
         .image-wrapper4,
@@ -202,6 +266,14 @@
             z-index: 1;
             top: 0;
             right: 40px;
+
+            @include mobileMore {
+                top: 200px;
+                right: 60px;
+            }
+            @include tabletMore {
+                top: -100px;
+            }
         }
         .image-wrapper1 {
             background-color: $primary2;
@@ -228,24 +300,17 @@
     .tags {
         display: block;
         flex-direction: row;
-        margin-top: 30px;
+        margin-top: 50px;
         margin-bottom: 20px;
 
         @include mobileMore {
-            // margin-left: 30px;
-            // margin-top: 30px;
-            br {
-                display: none;
-            }
+            margin-top: 200px;
+            text-align: left;
+            margin-left: 30px;
         }
-
-        // @include tabletMore {
-        //     display: inline-block;
-        //     position: absolute;
-        //     margin-top: 0;
-        //     top: 90%;
-        //     left: 260px;
-        // }
+        @include tabletMore {
+            margin-top: 1px;
+        }
 
         .tag-item {
             font-weight: 600;
@@ -259,42 +324,9 @@
             }
 
             @include tabletMore {
-                font-size: 3.2rem;
+                font-size: 2.6rem;
             }
         }
-        .tag-br {
-            @include tabletMore {
-                display: block;
-                text-align: left;
-            }
-        }
-    }
-
-    .swiper-slide:nth-of-type(1) .business-tit {
-        color: $secondary-2;
-        border: 1px solid $secondary-2;
-    }
-
-    .swiper-slide:nth-of-type(2) .business-tit {
-        color: $primary2;
-        border: 1px solid $primary2;
-    }
-
-    .swiper-slide:nth-of-type(3) .business-tit {
-        color: $primary;
-        border: 1px solid $primary;
-    }
-
-    .swiper-slide:nth-of-type(1) .category {
-        color: $secondary-2;
-    }
-
-    .swiper-slide:nth-of-type(2) .category {
-        color: $primary2;
-    }
-
-    .swiper-slide:nth-of-type(3) .category {
-        color: $primary;
     }
 }
 
@@ -433,13 +465,7 @@
 // swiper 전역 스타일
 .swiper {
     width: 100%;
-
-    @include mobileMore {
-        height: 1300px;
-    }
-    @include tabletMore {
-        height: 980px;
-    }
+    height: 100%;
 
     .swiper-button-next::after,
     .swiper-button-prev::after {
@@ -471,12 +497,12 @@
         background-position: center center;
 
         @include mobileMore {
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
         }
         @include tabletMore {
             font-size: 6rem;
-            right: 500px;
+            right: 50px;
             width: 90px;
             height: 90px;
         }
@@ -494,12 +520,12 @@
         background-position: center center;
 
         @include mobileMore {
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
         }
         @include tabletMore {
             font-size: 6rem;
-            left: 500px;
+            left: 50px;
             width: 90px;
             height: 90px;
         }

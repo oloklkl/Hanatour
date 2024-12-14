@@ -198,20 +198,22 @@
         .decorative-visual {
             width: 100%;
             height: 500px;
-            margin-bottom: 40px;
+            margin-bottom: 80px;
 
             @include mobileMore {
                 width: 720px;
                 height: 1000px;
+                margin-bottom: 40px;
             }
 
             @include tabletMore {
                 position: absolute;
-                top: 50%;
+                top: 35%;
                 left: -150px;
-                width: 1000px;
-                height: 665px;
+                width: 800px;
+                height: 600px;
                 object-fit: cover;
+                margin-bottom: 40px;
             }
         }
     }
@@ -220,15 +222,15 @@
             position: relative;
             left: 73%;
             width: 550px;
-            height: 770px;
+            height: 550px;
         }
     }
     .search-decoration-bangkok {
         @include tabletMore {
             position: absolute;
-            top: 70%;
+            top: 58%;
             left: 70%;
-            width: 360px;
+            width: 400px;
             height: 550px;
         }
     }
@@ -237,10 +239,10 @@
             position: relative;
             left: 30%;
             width: 500px;
-            height: 500px;
+            height: 600px;
             z-index: 3;
             margin-top: 600px;
-            margin-bottom: 220px;
+            margin-bottom: 100px;
         }
     }
 }
@@ -254,11 +256,55 @@
     }
 }
 
-.main-middle-banner {
-    position: relative;
-    overflow: hidden;
-    height: 400px;
+.sustainable-travel-section {
+    .scroll-container {
+        background: $secondary-1;
+        white-space: nowrap;
+        height: 60px;
+        padding: 13px;
+        color: $white;
+        text-orientation: mixed;
+        font-size: 1.3rem;
+        overflow: hidden;
 
+        @include mobileMore {
+            font-size: 1.8rem;
+            height: 80px;
+            padding: 18px;
+        }
+        @include tabletMore {
+            font-size: 2rem;
+            height: 100px;
+            padding: 20px;
+        }
+    }
+    .message-text {
+        animation: scrollText 9s linear infinite;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+        font-family: 'Oswald', sans-serif;
+        vertical-align: middle;
+        font-size: 2.3rem;
+
+        @include mobileMore {
+            font-size: 3rem;
+        }
+        @include tabletMore {
+            font-size: 4rem;
+            animation: scrollText 15s linear infinite;
+        }
+    }
+    @keyframes scrollText {
+        0% {
+            transform: translateX(10%); /* 텍스트 시작 */
+        }
+        100% {
+            transform: translateX(-100%); /* 텍스트 끝 */
+        }
+    }
+}
+
+.main-middle-banner {
     @include mobileMore {
         height: 750px;
     }
@@ -272,103 +318,63 @@
     }
 
     .banner-container {
-        position: relative;
-
-        .scroll-container {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            background: $primary;
-            white-space: nowrap;
-            height: 400px;
-            padding: 13px;
-            color: $black;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            font-size: 1.3rem;
-            line-height: 1.9;
-
-            @include mobileMore {
-                font-size: 1.8rem;
-                height: 750px;
-                padding: 18px;
-            }
-            @include tabletMore {
-                font-size: 2rem;
-                height: 760px;
-                padding: 20px;
-            }
-        }
-        .message-text {
-            animation: scroll-text 10s linear infinite;
-            letter-spacing: 1.3px;
-        }
-
-        @keyframes scroll-text {
-            0% {
-                transform: translateY(10%);
-            }
-            100% {
-                transform: translateY(-70%); /* 원하는 스크롤 방향 */
-            }
-        }
-
         @include tabletMore {
             display: flex;
-            box-sizing: border-box;
             justify-content: space-between;
-            width: 100%;
-            height: auto;
-            overflow: hidden;
         }
 
         .banner-content {
             position: relative;
-            display: flex;
             margin-bottom: 10px;
-            overflow: hidden;
 
             .banner-image {
                 width: 100%;
-                height: 400px;
+                height: 370px;
+                object-fit: cover;
 
                 @include mobileMore {
-                    height: 750px;
+                    width: 100%;
+                    height: 700px;
                 }
                 @include tabletMore {
-                    display: flex;
-                    width: 1200px;
-                    height: 750px;
-                    margin-right: 300px;
+                    width: 700px;
+                    height: 700px;
                 }
             }
 
             .banner-intro-text {
                 position: absolute;
-                top: 20%;
+                top: 40%;
                 margin-left: 20px;
                 color: $white;
                 font-size: 3rem;
                 font-weight: bold;
+
                 .highlighted-text {
                     color: $primary;
                 }
 
                 @include mobileMore {
                     margin-left: 30px;
-                    font-size: 5rem;
+                    font-size: 4.8rem;
                 }
                 @include tabletMore {
                     margin-left: 300px;
-                    font-size: 6rem;
+                    font-size: 5rem;
                 }
+            }
+        }
+        .airplane-image {
+            display: none;
+
+            @include tabletMore {
+                display: block;
+                width: 550px;
+                height: 700px;
             }
         }
 
         .banner-image-wrapper {
-            display: flex;
-
             @include mobileMore {
                 display: none;
             }
@@ -379,10 +385,8 @@
                 display: block;
             }
             .passport-ticket-image {
-                object-fit: cover;
-                object-position: bottom;
-                width: 100%;
-                height: 750px;
+                width: 450px;
+                height: 700px;
             }
         }
     }

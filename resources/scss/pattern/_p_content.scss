@@ -110,6 +110,7 @@
                 }
             }
             @include mobile {
+                width: 140%;
                 padding: 0 20px;
                 font-size: 1.8rem;
             }
@@ -152,11 +153,20 @@
         font-size: 2rem;
 
         @include tabletLess {
+            width: 53%;
             font-size: 1.9rem;
             left: 0;
+            br {
+                display: none;
+            }
         }
         @include mobile {
+            width: 100%;
+            margin-left: 0;
             font-size: 1.7rem;
+            br {
+                display: none;
+            }
         }
 
         .intro-text-line {
@@ -280,7 +290,7 @@
             width: 450px;
         }
         @include mobile {
-            width: 350px;
+            width: 98%;
             margin-bottom: 80px;
         }
     }
