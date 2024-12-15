@@ -137,6 +137,7 @@
                 transform: translateX(-100px) translateY(80px);
             }
         }
+
         .slide-text {
             position: absolute;
             top: 45%;
@@ -168,6 +169,19 @@
         }
     }
 
+    .first-slide {
+        @include mobile {
+            .slide-title {
+                top: 65%;
+                left: 47%;
+            }
+            .slide-text {
+                top: 70%;
+                left: 47%;
+            }
+        }
+    }
+
     .swiper-slide:nth-of-type(1) .business-tit {
         color: $secondary-3;
         border: 2px solid $secondary-3;
@@ -179,8 +193,8 @@
     }
 
     .swiper-slide:nth-of-type(3) .business-tit {
-        color: $primary3;
-        border: 2px solid $primary3;
+        color: $secondary-1;
+        border: 2px solid $secondary-1;
     }
 
     .swiper-slide:nth-of-type(1) .slide-title {
@@ -192,7 +206,7 @@
     }
 
     .swiper-slide:nth-of-type(3) .slide-title {
-        color: $primary3;
+        color: $secondary-1;
     }
 
     .image-container {
@@ -285,14 +299,14 @@
         }
 
         .image-wrapper2 {
-            background-color: $primary;
+            background-color: $secondary-1;
         }
         .image-wrapper3 {
             background-color: $secondary-3;
         }
 
         .image-wrapper4 {
-            background-color: $primary;
+            background-color: $secondary-1;
         }
         .image-wrapper5 {
             background-color: $secondary-5;
@@ -538,4 +552,22 @@
             height: 90px;
         }
     }
+}
+
+// animation
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+}
+
+.motion .char {
+    display: inline-block;
+    animation: slideLeft 1s cubic-bezier(0.1, 0, 0.1, 1) both;
+    animation-delay: calc(30ms * var(--char-index));
 }

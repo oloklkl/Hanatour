@@ -455,6 +455,16 @@ legend {
     margin-top: 30px;
   }
 }
+@media (max-width: 599px) {
+  .sec-service .first-slide .slide-title {
+    top: 65%;
+    left: 47%;
+  }
+  .sec-service .first-slide .slide-text {
+    top: 70%;
+    left: 47%;
+  }
+}
 .sec-service .swiper-slide:nth-of-type(1) .business-tit {
   color: #007aff;
   border: 2px solid #007aff;
@@ -464,8 +474,8 @@ legend {
   border: 2px solid #f790eb;
 }
 .sec-service .swiper-slide:nth-of-type(3) .business-tit {
-  color: #ffcb30;
-  border: 2px solid #ffcb30;
+  color: #fae100;
+  border: 2px solid #fae100;
 }
 .sec-service .swiper-slide:nth-of-type(1) .slide-title {
   color: #007aff;
@@ -474,7 +484,7 @@ legend {
   color: #f790eb;
 }
 .sec-service .swiper-slide:nth-of-type(3) .slide-title {
-  color: #ffcb30;
+  color: #fae100;
 }
 .sec-service .image-container {
   position: relative;
@@ -857,6 +867,22 @@ legend {
   }
 }
 
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+.motion .char {
+  display: inline-block;
+  animation: slideLeft 1s cubic-bezier(0.1, 0, 0.1, 1) both;
+  animation-delay: calc(30ms * var(--char-index));
+}
+
 .inner {
   position: relative;
   width: 100%;
@@ -900,7 +926,7 @@ legend {
   justify-content: center;
   flex-direction: row;
   outline-offset: -0.4rem;
-  outline: 2px solid #fae100;
+  outline: 2px solid #6f47db;
   font-size: 1.5rem;
   color: #fff;
   width: 100%;
@@ -998,7 +1024,7 @@ legend {
   position: relative;
 }
 #gnb .gnb__depth1 > li:hover > a > span {
-  color: #fae100;
+  color: #6f47db;
 }
 #gnb .gnb__depth1 > li:hover > a > span::after {
   width: 100%;
@@ -1037,7 +1063,7 @@ legend {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: #fae100;
+  background: #6f47db;
   transition: all 0.3s;
 }
 #gnb .gnb__depth2 {

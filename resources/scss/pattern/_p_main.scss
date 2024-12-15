@@ -258,7 +258,7 @@
 
 .sustainable-travel-section {
     .scroll-container {
-        background: $secondary-1;
+        background: $primary;
         white-space: nowrap;
         height: 60px;
         padding: 13px;
@@ -350,7 +350,7 @@
                 font-weight: bold;
 
                 .highlighted-text {
-                    color: $primary;
+                    color: $secondary-1;
                 }
 
                 @include mobileMore {
