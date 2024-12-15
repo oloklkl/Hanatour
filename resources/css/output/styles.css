@@ -412,7 +412,7 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-service .slide-description .slide-title {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
     text-align: left;
     font-size: 2.8rem;
     transform: translateX(-70px);
@@ -439,7 +439,7 @@ legend {
     display: block;
     margin-top: 20px;
     font-size: 2.5rem;
-    width: 36%;
+    width: 32%;
     transform: translateX(-70px);
   }
   .sec-service .slide-description .slide-text br {
@@ -456,25 +456,25 @@ legend {
   }
 }
 .sec-service .swiper-slide:nth-of-type(1) .business-tit {
-  color: #79e3ff;
-  border: 1px solid #79e3ff;
+  color: #007aff;
+  border: 2px solid #007aff;
 }
 .sec-service .swiper-slide:nth-of-type(2) .business-tit {
-  color: #ffe7f2;
-  border: 1px solid #ffe7f2;
+  color: #f790eb;
+  border: 2px solid #f790eb;
 }
 .sec-service .swiper-slide:nth-of-type(3) .business-tit {
-  color: #fae100;
-  border: 1px solid #fae100;
+  color: #ffcb30;
+  border: 2px solid #ffcb30;
 }
 .sec-service .swiper-slide:nth-of-type(1) .slide-title {
-  color: #79e3ff;
+  color: #007aff;
 }
 .sec-service .swiper-slide:nth-of-type(2) .slide-title {
-  color: #ffe7f2;
+  color: #f790eb;
 }
 .sec-service .swiper-slide:nth-of-type(3) .slide-title {
-  color: #fae100;
+  color: #ffcb30;
 }
 .sec-service .image-container {
   position: relative;
@@ -491,6 +491,12 @@ legend {
   .sec-service .image-container .image-frame {
     width: 100%;
     height: 500px;
+  }
+}
+@media (min-width: 600px) {
+  .sec-service .image-container .image-frame a img:nth-child(1) {
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 .sec-service .image-container .image-content {
@@ -532,8 +538,8 @@ legend {
 .sec-service .image-container .image-wrapper3,
 .sec-service .image-container .image-wrapper5 {
   position: absolute;
-  opacity: 0.5;
-  transform: rotate(-10deg);
+  opacity: 0.2;
+  transform: rotate(-12deg);
   z-index: 2;
   top: 0;
   right: 40px;
@@ -558,7 +564,7 @@ legend {
 .sec-service .image-container .image-wrapper4,
 .sec-service .image-container .image-wrapper6 {
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.2;
   transform: rotate(-25deg);
   z-index: 1;
   top: 0;
@@ -580,22 +586,22 @@ legend {
   }
 }
 .sec-service .image-container .image-wrapper1 {
-  background-color: #ffe7f2;
+  background-color: #f790eb;
 }
 .sec-service .image-container .image-wrapper2 {
-  background-color: #9eaddb;
+  background-color: #fae100;
 }
 .sec-service .image-container .image-wrapper3 {
-  background-color: #9eaddb;
+  background-color: #007aff;
 }
 .sec-service .image-container .image-wrapper4 {
-  background-color: #79e3ff;
+  background-color: #fae100;
 }
 .sec-service .image-container .image-wrapper5 {
-  background-color: #79e3ff;
+  background-color: #f790eb;
 }
 .sec-service .image-container .image-wrapper6 {
-  background-color: #ffe7f2;
+  background-color: #007aff;
 }
 .sec-service .tags {
   display: block;
@@ -659,6 +665,11 @@ legend {
 @media (min-width: 600px) {
   .sec-news .sec-g__desc {
     font-size: 2.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-news .sec-g__desc {
+    margin-top: 40px;
   }
 }
 .sec-news .sec-g__tit {
@@ -736,7 +747,7 @@ legend {
   }
 }
 .sec-news .txt_area .tit {
-  padding: 10px 0;
+  padding: 5px 0;
   font-weight: bold;
   font-size: 1.8rem;
 }
@@ -1756,7 +1767,7 @@ legend {
 }
 @media (min-width: 1024px) {
   .main-middle-banner {
-    height: 900px;
+    height: 700px;
   }
 }
 .main-middle-banner .inner-middle-banner {
@@ -1776,8 +1787,6 @@ legend {
 .main-middle-banner .banner-container .banner-content .banner-image {
   width: 100%;
   height: 370px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 @media (min-width: 600px) {
   .main-middle-banner .banner-container .banner-content .banner-image {
@@ -1810,7 +1819,8 @@ legend {
 }
 @media (min-width: 1024px) {
   .main-middle-banner .banner-container .banner-content .banner-intro-text {
-    margin-left: 300px;
+    margin-left: 320px;
+    top: 30%;
     font-size: 5rem;
   }
 }
@@ -1820,6 +1830,8 @@ legend {
 @media (min-width: 1024px) {
   .main-middle-banner .banner-container .airplane-image {
     display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 550px;
     height: 700px;
   }
@@ -1840,7 +1852,7 @@ legend {
   }
 }
 .main-middle-banner .banner-container .banner-image-wrapper .passport-ticket-image {
-  width: 450px;
+  width: 500px;
   height: 700px;
 }
 
