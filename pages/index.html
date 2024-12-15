@@ -34,20 +34,29 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
         <link rel="stylesheet" href="../resources/css/pattern_css.css" />
 
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+        <script src="../resources/js/jquery-3.3.1.min.js"></script>
+        <script src="../resources/js/scrolla.jquery.min.js"></script>
+        <script src="../resources/js/splitting.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+        <!-- AOS 초기화 -->
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 AOS.init(); // AOS 초기화
             });
         </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- 프로젝트 스크립트 -->
         <script defer src="../resources/js/include.js"></script>
         <script defer src="../resources/js/ui-pattern.js"></script>
         <script defer src="../resources/js/ui-swiper.js"></script>
+        <script src="../resources/js/script.js"></script>
     </head>
 
     <body>
@@ -243,15 +252,12 @@
                 <section class="video-container" id="abc">
                     <!-- video -->
                     <video class="video-container__video" src="../resources/images/pattern/banners/hanatour_video.mp4" autoplay muted loop></video>
-                    <div class="video-container__video-overlay" data-aos="fade-up" data-aos-duration="500">
+                    <div class="video-container__video-overlay animate" data-animate="motion">
                         <div class="inner">
                             <div class="video-container__text-box">
-                                <h2 class="video-overlay__main-text">꿈꾸는 대로, 펼쳐지다</h2>
-                                <p class="video-overlay__subtit">하나투어와 함께라면,<br /></p>
-                                <p class="video-overlay__sub-text">
-                                    무한한 가능성의<br />
-                                    여정을 시작하세요.
-                                </p>
+                                <h2 class="video-overlay__main-text" data-splitting>꿈꾸는 대로, 펼쳐지다</h2>
+                                <p class="video-overlay__subtit" data-splitting>하나투어와 함께라면,<br /></p>
+                                <p class="video-overlay__sub-text" data-splitting>무한한 가능성의 여정을 시작하세요.</p>
                             </div>
                             <button class="btn-pause">
                                 <span class="blind">일시정지</span>
@@ -324,12 +330,12 @@
                                     <div class="swiper-slide">
                                         <div class="inner">
                                             <div class="slide-content-wrapper">
-                                                <div class="slide-content" data-aos="fade-down">
-                                                    <p class="business-tit">Business</p>
-                                                    <h2 class="main-tit"><strong>여행서비스</strong></h2>
-                                                    <p class="sub-tit"><b>여행서비스</b></p>
+                                                <div class="slide-content animate" data-animate="motion">
+                                                    <p class="business-tit" data-splitting>Business</p>
+                                                    <h2 class="main-tit" data-splitting><strong>여행서비스</strong></h2>
+                                                    <p class="sub-tit" data-splitting><b>여행서비스</b></p>
                                                 </div>
-                                                <div class="slide-description">
+                                                <div class="slide-description first-slide">
                                                     <h3 class="slide-title">여행서비스</h3>
                                                     <p class="slide-text">
                                                         꿈꾸는 모든 여행이<br />
@@ -342,7 +348,7 @@
                                                 <div class="image-container">
                                                     <div class="image-frame">
                                                         <a href="#" class="slide-link">
-                                                            <img src="../resources/images/pattern/thumb/travel-services.jpg" alt="img" class="images image-content" data-aos="zoom-in" data-aos-duration="1500" />
+                                                            <img src="../resources/images/pattern/thumb/travel-services.jpg" alt="img" class="images image-content" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500" />
                                                         </a>
                                                     </div>
                                                     <div class="images image-wrapper1"></div>
@@ -360,10 +366,10 @@
                                     <div class="swiper-slide">
                                         <div class="inner">
                                             <div class="slide-content-wrapper">
-                                                <div class="slide-content" data-aos="fade-down">
-                                                    <p class="business-tit">Business</p>
-                                                    <h2 class="main-tit"><strong>온라인서비스</strong></h2>
-                                                    <p class="sub-tit"><b>온라인서비스</b></p>
+                                                <div class="slide-content animate" data-animate="motion">
+                                                    <p class="business-tit" data-splitting>Business</p>
+                                                    <h2 class="main-tit" data-splitting><strong>온라인서비스</strong></h2>
+                                                    <p class="sub-tit" data-splitting><b>온라인서비스</b></p>
                                                 </div>
                                                 <div class="slide-description">
                                                     <h3 class="slide-title">온라인서비스</h3>
@@ -379,7 +385,7 @@
                                                 <div class="image-container">
                                                     <div class="image-frame">
                                                         <a href="#" class="slide-link">
-                                                            <img src="../resources/images/pattern/thumb/Online-Services.jpg" alt="img" class="images image-content" data-aos="zoom-in" data-aos-duration="1500" />
+                                                            <img src="../resources/images/pattern/thumb/Online-Services.jpg" alt="img" class="images image-content" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500" />
                                                         </a>
                                                     </div>
                                                     <div class="images image-wrapper3"></div>
@@ -396,10 +402,10 @@
                                     <div class="swiper-slide">
                                         <div class="inner">
                                             <div class="slide-content-wrapper">
-                                                <div class="slide-content" data-aos="fade-down">
-                                                    <p class="business-tit">Business</p>
-                                                    <h2 class="main-tit"><strong>B2B비지니스</strong></h2>
-                                                    <p class="sub-tit"><b>B2B비지니스</b></p>
+                                                <div class="slide-content animate" data-animate="motion">
+                                                    <p class="business-tit" data-splitting>Business</p>
+                                                    <h2 class="main-tit" data-splitting><strong>B2B비지니스</strong></h2>
+                                                    <p class="sub-tit" data-splitting><b>B2B비지니스</b></p>
                                                     <p></p>
                                                 </div>
                                                 <div class="slide-description">
@@ -415,7 +421,7 @@
                                                 <div class="image-container">
                                                     <div class="image-frame">
                                                         <a href="#" class="slide-link">
-                                                            <img src="../resources/images/pattern/thumb/B2B-business.jpg" alt="img" class="images image-content" ="1500" />
+                                                            <img src="../resources/images/pattern/thumb/B2B-business.jpg" alt="img" class="images image-content" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500" />
                                                         </a>
                                                     </div>
                                                     <div class="images image-wrapper5"></div>
@@ -476,9 +482,9 @@
                 <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
                 <section class="sec-g sec-news">
                     <div class="inner">
-                        <div class="sec-news-wrapper" data-aos="fade-up" data-aos-duration="500">
-                            <div class="sec-g__desc">하나투어가 전하는 최신 여행 트렌드와 소식</div>
-                            <h2 class="sec-g__tit">Travel Insights</h2>
+                        <div class="sec-news-wrapper animate" data-animate="motion">
+                            <div class="sec-g__desc" data-splitting>하나투어가 전하는 최신 여행 트렌드와 소식</div>
+                            <h2 class="sec-g__tit" data-splitting>Travel Insights</h2>
                             <div class="btn-container">
                                 <a href="#" class="btn-more">
                                     More<svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512"><path d="M17.061,9.525,13.475,5.939a1.5,1.5,0,0,0-2.121,2.122L13.793,10.5H5a1.5,1.5,0,0,0,0,3h8.793l-2.439,2.439a1.5,1.5,0,0,0,2.121,2.122l3.586-3.586A3.505,3.505,0,0,0,17.061,9.525Z" /></svg>
