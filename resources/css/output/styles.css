@@ -792,16 +792,16 @@ legend {
   }
 }
 
-.swiper {
+.mySwiper {
   width: 100%;
   height: 100%;
 }
-.swiper .swiper-button-next::after,
-.swiper .swiper-button-prev::after {
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
   display: none;
 }
-.swiper .swiper-button-next::before,
-.swiper .swiper-button-prev::before {
+.mySwiper .swiper-button-next::before,
+.mySwiper .swiper-button-prev::before {
   font-family: "Line Awesome Free";
   font-weight: 900;
   position: absolute;
@@ -814,7 +814,7 @@ legend {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
-.swiper .swiper-button-next::before {
+.mySwiper .swiper-button-next::before {
   position: absolute;
   content: "\f061";
   font-size: 4rem;
@@ -827,20 +827,20 @@ legend {
   background-position: center center;
 }
 @media (min-width: 600px) {
-  .swiper .swiper-button-next::before {
+  .mySwiper .swiper-button-next::before {
     width: 70px;
     height: 70px;
   }
 }
 @media (min-width: 1024px) {
-  .swiper .swiper-button-next::before {
+  .mySwiper .swiper-button-next::before {
     font-size: 6rem;
     right: 50px;
     width: 90px;
     height: 90px;
   }
 }
-.swiper .swiper-button-prev::before {
+.mySwiper .swiper-button-prev::before {
   position: absolute;
   content: "\f060";
   font-size: 4rem;
@@ -853,13 +853,13 @@ legend {
   background-position: center center;
 }
 @media (min-width: 600px) {
-  .swiper .swiper-button-prev::before {
+  .mySwiper .swiper-button-prev::before {
     width: 70px;
     height: 70px;
   }
 }
 @media (min-width: 1024px) {
-  .swiper .swiper-button-prev::before {
+  .mySwiper .swiper-button-prev::before {
     font-size: 6rem;
     left: 50px;
     width: 90px;
@@ -2468,4 +2468,33 @@ legend {
   .feature-section .feature-section__text {
     font-size: 1.7rem;
   }
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper3 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper3 .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper3 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */
