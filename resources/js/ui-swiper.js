@@ -30,10 +30,18 @@ showSlide(currentSlide);
 // Change slide every 6 seconds
 setInterval(nextSlide, 6000); // 6초마다 슬라이드 전환
 
+// sub_02 swiper
 var swiper2 = new Swiper('.mySwiper2', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper3 = new Swiper('.mySwiper3', {
+    spaceBetween: 10,
     navigation: {
-        nextEl: '.swiper-button-next-thumb',
-        prevEl: '.swiper-button-prev-thumb',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     thumbs: {
         swiper: swiper,
