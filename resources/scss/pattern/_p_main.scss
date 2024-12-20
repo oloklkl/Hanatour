@@ -6,6 +6,16 @@
     overflow: hidden;
     display: block;
 
+    .airplane {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        transform: translate(-40%, -50%); /* 아이콘 위치 조정 */
+        width: 150px; /* 크기 조정 */
+        height: auto;
+        z-index: 10;
+    }
+
     .btn-pause {
         &::before {
             content: '\f04c';
@@ -210,13 +220,20 @@
                 position: absolute;
                 top: 35%;
                 left: -150px;
-                width: 800px;
-                height: 600px;
+                width: 700px;
+                height: 550px;
                 object-fit: cover;
                 margin-bottom: 40px;
             }
         }
     }
+
+    .search-decoration__circle {
+        width: 100px;
+        height: auto;
+        z-index: 9999;
+    }
+
     .search-decoration-suitcase {
         @include tabletMore {
             position: relative;
@@ -225,6 +242,24 @@
             height: 550px;
         }
     }
+    .search-decoration__3d-donut {
+        position: absolute;
+        top: 65%;
+        left: 20%;
+        width: 200px;
+        height: auto;
+        animation: rotateClockwise 4s linear infinite; /* 시계방향 회전 */
+    }
+    /* 시계방향 회전 애니메이션 */
+    @keyframes rotateClockwise {
+        0% {
+            transform: rotate(0deg); /* 시작 위치 */
+        }
+        100% {
+            transform: rotate(360deg); /* 시계방향 360도 회전 */
+        }
+    }
+
     .search-decoration-bangkok {
         @include tabletMore {
             position: absolute;
@@ -258,7 +293,7 @@
 
 .sustainable-travel-section {
     .scroll-container {
-        background: $primary;
+        background: rgba(255, 255, 255, 0.5);
         white-space: nowrap;
         height: 60px;
         padding: 13px;
@@ -266,6 +301,7 @@
         text-orientation: mixed;
         font-size: 1.3rem;
         overflow: hidden;
+        backdrop-filter: blur(10px);
 
         @include mobileMore {
             font-size: 1.8rem;
@@ -282,9 +318,16 @@
         animation: scrollText 9s linear infinite;
         font-weight: bold;
         letter-spacing: 1.3px;
-        font-family: 'Oswald', sans-serif;
+        font-family: 'Anton', serif;
         vertical-align: middle;
         font-size: 2.3rem;
+        background: url(../../images/pattern/banners/font-background.gif);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        background-size: contain;
+        color: transparent;
+        outline: none;
+        -webkit-text-fill-color: transparent;
 
         @include mobileMore {
             font-size: 3rem;
