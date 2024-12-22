@@ -65,16 +65,16 @@ window.addEventListener('DOMContentLoaded', () => {
     const tl = gsap.timeline({ ease: 'power1.inOut' });
 
     tl.to('.search-decoration__circle', {
-        duration: 10, // 애니메이션 지속 시간 증가
+        duration: 12, // 애니메이션 지속 시간 증가
         motionPath: {
             path: [
                 { x: 0, y: 0 }, // 시작 위치
-                { x: 200, y: 300 }, // 첫 번째 니은자
-                { x: 400, y: 0 }, // 첫 번째 니은자 끝
-                { x: 600, y: 400 }, // 두 번째 니은자
-                { x: 800, y: 100 }, // 두 번째 니은자 끝
-                { x: 1000, y: 500 }, // 세 번째 니은자
-                { x: 1200, y: 200 }, // 세 번째 니은자 끝
+                { x: 200, y: 200 }, // 첫 번째 니은자
+                { x: 800, y: 0 }, // 첫 번째 니은자 끝
+                { x: 800, y: 500 }, // 두 번째 니은자
+                { x: 2000, y: 600 }, // 두 번째 니은자 끝
+                { x: 3500, y: 600 }, // 세 번째 니은자
+                { x: 3500, y: 800 }, // 세 번째 니은자 끝
             ],
             autoRotate: true, // 경로에 맞게 회전 (굴러가는 효과)
         },
@@ -84,10 +84,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // ScrollTrigger 애니메이션 적용
     ScrollTrigger.create({
         trigger: '.search-decoration__circle', // 애니메이션이 시작될 요소
-        start: 'top 80%', // 화면의 80% 위치에서 시작
-        end: 'bottom 20%', // 화면의 20% 위치에서 끝
+        start: 'top 40%', // 화면의 50% 위치에서 시작
+        end: 'bottom 10%', // 화면의 10% 위치에서 끝
         animation: tl, // 생성된 타임라인 애니메이션 연결
-        scrub: 2, // 스크롤에 맞게 애니메이션 조정
+        scrub: 20, // 스크롤에 맞게 애니메이션 조정
         markers: true, // 디버그용 마커 표시 (원하는 경우 제거 가능)
     });
 });
