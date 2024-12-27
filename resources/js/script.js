@@ -73,37 +73,40 @@ $(function () {
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.board_list .board',
-            start: 'top 90%',
-            end: '20% 100%',
-            scrub: 2,
-            markers: true,
-        },
-    })
-        .to('.board_list li:nth-child(1)', { y: '-200px', duration: 1, ease: 'none' }, 0.2)
-        .to('.board_list li:nth-child(2)', { y: '-200px', duration: 1, ease: 'none' }, 0.4)
-        .to('.board_list li:nth-child(3)', { y: '-200px', duration: 1, ease: 'none' }, 0.6)
-        .to('.board_list li:nth-child(4)', { y: '-200px', duration: 1, ease: 'none' }, 0.8);
+    // 공통 애니메이션 함수
+    function createScrollAnimation(triggerSelector, targetSelector, start, end, scrub, offsetY, duration) {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: triggerSelector,
+                start: start,
+                end: end,
+                scrub: scrub,
+                markers: true,
+            },
+        }).to(targetSelector, { y: offsetY, duration: duration, ease: 'none' });
+    }
 
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.search-decoration-bangkok',
-            start: 'top 50%',
-            end: '20% 100%',
-            scrub: 2,
-            markers: true,
+    // board_list 애니메이션 (PC와 태블릿/모바일 분리)
+    ScrollTrigger.matchMedia({
+        // PC 버전 (1024px 이상)
+        '(min-width: 1024px)': function () {
+            createScrollAnimation('.board_list .board', '.board_list li:nth-child(1)', 'top 90%', '20% 100%', 2, '-200px', 1);
+            createScrollAnimation('.board_list .board', '.board_list li:nth-child(2)', 'top 90%', '20% 100%', 2, '-200px', 1);
+            createScrollAnimation('.board_list .board', '.board_list li:nth-child(3)', 'top 90%', '20% 100%', 2, '-200px', 1);
+            createScrollAnimation('.board_list .board', '.board_list li:nth-child(4)', 'top 90%', '20% 100%', 2, '-200px', 1);
         },
-    }).to('.search-decoration-bangkok', { y: '-200px', duration: 1, ease: 'none' }, 0.2);
+        // 태블릿 및 모바일 버전 (1023px 이하)
+        '(max-width: 1023px)': function () {
+            createScrollAnimation('.board_list .board', '.board_list li:nth-child(1)', 'top 80%', '20% 100%', 1, '-150px', 0.8);
+            createScrollAnimation('.board_list .board', '.board_list li:nth-child(2)', 'top 80%', '20% 100%', 1, '-150px', 0.8);
+            createScrollAnimation('.board_list .board', '.board_list li:nth-child(3)', 'top 80%', '20% 100%', 1, '-150px', 0.8);
+            createScrollAnimation('.board_list .board', '.board_list li:nth-child(4)', 'top 80%', '20% 100%', 1, '-150px', 0.8);
+        },
+    });
 
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.search-decoration-hawaii',
-            start: 'top 80%',
-            end: '20% 100%',
-            scrub: 2,
-            markers: true,
-        },
-    }).to('.search-decoration-hawaii', { y: '-200px', duration: 1, ease: 'none' }, 0.2);
+    // search-decoration-bangkok 애니메이션
+    createScrollAnimation('.search-decoration-bangkok', '.search-decoration-bangkok', 'top 50%', '20% 100%', 2, '-200px', 1);
+
+    // search-decoration-hawaii 애니메이션
+    createScrollAnimation('.search-decoration-hawaii', '.search-decoration-hawaii', 'top 80%', '20% 100%', 2, '-200px', 1);
 });
