@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrub: 2,
             markers: true,
         },
-    }).to('.search-decoration-bangkok', { y: '-200px', duration: 1, ease: 'none' }, 0.2);
+    }).to('.search-decoration-bangkok', { y: '-400px', duration: 1, ease: 'none' }, 0.2);
 
     // search-decoration-hawaii 애니메이션
     gsap.timeline({
@@ -148,5 +148,5 @@ document.addEventListener('DOMContentLoaded', () => {
             scrub: 2,
             markers: true,
         },
-    }).to('.search-decoration-hawaii', { y: '-200px', duration: 1, ease: 'none' }, 0.2);
+    }).to('.search-decoration-hawaii', { y: '-400px', duration: 1, ease: 'none' }, 0.2);
 });
