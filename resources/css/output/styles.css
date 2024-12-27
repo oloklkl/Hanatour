@@ -2065,6 +2065,8 @@ legend {
   height: 138px;
   z-index: 800;
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 600px) {
   .event-banner .event-banner__img {

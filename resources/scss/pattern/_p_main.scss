@@ -548,6 +548,7 @@
         height: 138px;
         z-index: 800;
         border-radius: 10px;
+        object-fit: cover;
 
         @include mobileMore {
             height: 180px;
