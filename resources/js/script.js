@@ -56,42 +56,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-//search-decoration__circle
-window.addEventListener('DOMContentLoaded', () => {
-    // ScrollTrigger 플러그인 등록
-    gsap.registerPlugin(ScrollTrigger);
-
-    // 타임라인 생성
-    const tl = gsap.timeline({ ease: 'power1.inOut' });
-
-    tl.to('.search-decoration__circle', {
-        duration: 12, // 애니메이션 지속 시간 증가
-        motionPath: {
-            path: [
-                { x: 0, y: 0 }, // 시작 위치
-                { x: 200, y: 200 }, // 첫 번째 니은자
-                { x: 800, y: 0 }, // 첫 번째 니은자 끝
-                { x: 800, y: 500 }, // 두 번째 니은자
-                { x: 2000, y: 600 }, // 두 번째 니은자 끝
-                { x: 3500, y: 600 }, // 세 번째 니은자
-                { x: 3500, y: 800 }, // 세 번째 니은자 끝
-            ],
-            autoRotate: true, // 경로에 맞게 회전 (굴러가는 효과)
-        },
-        rotation: 1440, // 네 바퀴 회전 (각 니은자마다 한 바퀴 이상)
-    });
-
-    // ScrollTrigger 애니메이션 적용
-    ScrollTrigger.create({
-        trigger: '.search-decoration__circle', // 애니메이션이 시작될 요소
-        start: 'top 40%', // 화면의 50% 위치에서 시작
-        end: 'bottom 10%', // 화면의 10% 위치에서 끝
-        animation: tl, // 생성된 타임라인 애니메이션 연결
-        scrub: 20, // 스크롤에 맞게 애니메이션 조정
-        markers: true, // 디버그용 마커 표시 (원하는 경우 제거 가능)
-    });
-});
-
 // 텍스트!!!!!!!!!
 //scrolla.js
 $(function () {
@@ -104,4 +68,42 @@ $(function () {
 //splitting.js
 $(function () {
     Splitting(); //대문자로쓴다!!!
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.board_list .board',
+            start: 'top 90%',
+            end: '20% 100%',
+            scrub: 2,
+            markers: true,
+        },
+    })
+        .to('.board_list li:nth-child(1)', { y: '-200px', duration: 1, ease: 'none' }, 0.2)
+        .to('.board_list li:nth-child(2)', { y: '-200px', duration: 1, ease: 'none' }, 0.4)
+        .to('.board_list li:nth-child(3)', { y: '-200px', duration: 1, ease: 'none' }, 0.6)
+        .to('.board_list li:nth-child(4)', { y: '-200px', duration: 1, ease: 'none' }, 0.8);
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.search-decoration-bangkok',
+            start: 'top 50%',
+            end: '20% 100%',
+            scrub: 2,
+            markers: true,
+        },
+    }).to('.search-decoration-bangkok', { y: '-200px', duration: 1, ease: 'none' }, 0.2);
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.search-decoration-hawaii',
+            start: 'top 80%',
+            end: '20% 100%',
+            scrub: 2,
+            markers: true,
+        },
+    }).to('.search-decoration-hawaii', { y: '-200px', duration: 1, ease: 'none' }, 0.2);
 });

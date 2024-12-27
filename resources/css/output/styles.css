@@ -650,15 +650,12 @@ legend {
 }
 
 .sec-news {
-  margin-bottom: 120px;
+  margin-bottom: 50px;
 }
 @media (min-width: 1024px) {
   .sec-news {
-    padding-bottom: 150px;
+    padding-bottom: 50px;
   }
-}
-.sec-news .sec-news-wrapper {
-  padding-top: 40px;
 }
 @media (min-width: 1024px) {
   .sec-news .sec-g__desc,
@@ -725,6 +722,9 @@ legend {
     width: 30px;
     height: 30px;
   }
+}
+.sec-news .news-list-container {
+  margin-top: 200px;
 }
 .sec-news .thumb_area:hover .thumb-img {
   transform: scale(1.05);
@@ -1579,8 +1579,10 @@ legend {
   }
 }
 
-.intro {
-  /* 시계방향 회전 애니메이션 */
+@media (min-width: 1024px) {
+  .intro {
+    height: 130vh;
+  }
 }
 @media (min-width: 600px) {
   .intro .intro-text-line,
@@ -1666,7 +1668,13 @@ legend {
   }
 }
 .intro .form-input-search .input-value {
-  font: bold;
+  font-weight: 700;
+  color: #8e8e8e;
+}
+@media (min-width: 1024px) {
+  .intro .form-input-search .input-value {
+    font-size: 2rem;
+  }
 }
 .intro .form-input-search #Capa_1 {
   width: 35px;
@@ -1707,88 +1715,31 @@ legend {
 }
 @media (min-width: 1024px) {
   .intro .effect-data .decorative-visual {
-    position: absolute;
-    top: 35%;
-    left: -150px;
-    width: 700px;
-    height: 550px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    margin-bottom: 40px;
-  }
-}
-.intro .search-decoration__circle {
-  position: absolute;
-  top: 20%;
-  left: -40%;
-  width: 150px;
-  height: auto;
-  z-index: 9999;
-}
-@media (min-width: 1024px) {
-  .intro .search-decoration-suitcase {
-    position: relative;
-    left: 73%;
-    width: 550px;
-    height: 550px;
+    display: none;
   }
 }
 @media (max-width: 1023px) {
-  .intro .search-decoration__3d-triangle {
+  .intro .effect-data .search-decoration-bangkok {
     display: none;
   }
 }
 @media (min-width: 1024px) {
-  .intro .search-decoration__3d-triangle {
-    position: absolute;
-    top: 65%;
-    left: 10%;
-    width: 300px;
-    height: auto;
-    animation: rotateClockwise 4s linear infinite; /* 시계방향 회전 */
-  }
-}
-@keyframes rotateClockwise {
-  0% {
-    transform: rotate(0deg); /* 시작 위치 */
-  }
-  100% {
-    transform: rotate(360deg); /* 시계방향 360도 회전 */
-  }
-}
-@media (max-width: 1023px) {
-  .intro .search-decoration__3d-lightning {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .intro .search-decoration__3d-lightning {
-    position: absolute;
-    top: 80%;
-    left: -10%;
-    width: 200px;
-    height: auto;
-    animation: rotateClockwise 4s linear infinite; /* 시계방향 회전 */
-  }
-}
-@media (min-width: 1024px) {
-  .intro .search-decoration-bangkok {
-    position: absolute;
-    top: 58%;
-    left: 70%;
+  .intro .effect-data .search-decoration-bangkok {
     width: 400px;
-    height: 550px;
+    height: 500px;
+    transform: translateX(220%);
+  }
+}
+@media (max-width: 1023px) {
+  .intro .effect-data .search-decoration-hawaii {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
-  .intro .search-decoration-hawaii {
-    position: relative;
-    left: 30%;
-    width: 500px;
-    height: 600px;
-    z-index: 3;
-    margin-top: 600px;
-    margin-bottom: 100px;
+  .intro .effect-data .search-decoration-hawaii {
+    width: 400px;
+    height: 400px;
+    transform: translateX(125%) translateY(-200px);
   }
 }
 
@@ -1886,7 +1837,7 @@ legend {
 @media (min-width: 1024px) {
   .main-middle-banner .banner-container .banner-content .banner-image {
     width: 700px;
-    height: 700px;
+    height: 600px;
   }
 }
 .main-middle-banner .banner-container .banner-content .banner-intro-text {
@@ -1922,7 +1873,7 @@ legend {
     -o-object-fit: cover;
        object-fit: cover;
     width: 550px;
-    height: 700px;
+    height: 600px;
   }
 }
 @media (min-width: 600px) {
@@ -1942,7 +1893,7 @@ legend {
 }
 .main-middle-banner .banner-container .banner-image-wrapper .passport-ticket-image {
   width: 500px;
-  height: 700px;
+  height: 600px;
 }
 
 .event-banner {

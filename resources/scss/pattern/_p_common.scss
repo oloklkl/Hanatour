@@ -350,15 +350,12 @@
 }
 
 .sec-news {
-    margin-bottom: 120px;
+    margin-bottom: 50px;
 
     @include tabletMore {
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
 
-    .sec-news-wrapper {
-        padding-top: 40px;
-    }
     .sec-g__desc,
     .sec-g__tit,
     .btn-container {
@@ -413,6 +410,9 @@
                 height: 30px;
             }
         }
+    }
+    .news-list-container {
+        margin-top: 200px;
     }
     .thumb_area:hover .thumb-img {
         transform: scale(1.05);
