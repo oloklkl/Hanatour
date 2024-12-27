@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     start: 'top 90%',
                     end: '20% 100%',
                     scrub: 2,
-                    markers: true,
+                    markers: false,
                 },
             })
                 .to('.board_list li:nth-child(1)', { y: '-200px', duration: 1, ease: 'none' }, 0.2)
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     start: 'top 85%',
                     end: '20% 100%',
                     scrub: 1.5,
-                    markers: true,
+                    markers: false,
                 },
             })
                 .to('.board_list li:nth-child(1)', { y: '-150px', duration: 0.9, ease: 'none' }, 0.4)
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         start: 'top 80%',
                         end: '20% 100%',
                         scrub: 1,
-                        markers: true,
+                        markers: false,
                     },
                     y: '-100px',
                     duration: 0.8,
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             start: 'top 50%',
             end: '20% 100%',
             scrub: 2,
-            markers: true,
+            markers: false,
         },
     }).to('.search-decoration-bangkok', { y: '-400px', duration: 1, ease: 'none' }, 0.2);
 
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             start: 'top 80%',
             end: '20% 100%',
             scrub: 2,
-            markers: true,
+            markers: false,
         },
     }).to('.search-decoration-hawaii', { y: '-400px', duration: 1, ease: 'none' }, 0.2);
 });
