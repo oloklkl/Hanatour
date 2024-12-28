@@ -143,10 +143,21 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.timeline({
         scrollTrigger: {
             trigger: '.search-decoration-hawaii',
-            start: 'top 80%',
-            end: '20% 100%',
+            start: 'top 75%',
+            end: '20% 90%',
             scrub: 2,
             markers: false,
         },
     }).to('.search-decoration-hawaii', { y: '-400px', duration: 1, ease: 'none' }, 0.2);
+
+    //intro-heading-group 애니메이션
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.intro-heading-group',
+            start: 'top 25%',
+            end: '20% 100%',
+            scrub: 2,
+            markers: false,
+        },
+    }).to('.intro-heading-group', { y: '350px', duration: 1, ease: 'none' }, 0.5);
 });
