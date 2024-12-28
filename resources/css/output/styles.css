@@ -1581,33 +1581,24 @@ legend {
 
 @media (min-width: 1024px) {
   .intro {
-    height: 170vh;
+    height: 320vh;
   }
 }
 @media (min-width: 600px) {
   .intro .intro-text-line,
-  .intro .intro-heading,
-  .intro .search-decoration-suitcase,
-  .intro .search-decoration-bangkok,
-  .intro .search-decoration-hawaii {
+  .intro .intro-heading {
     display: none;
   }
 }
 @media (max-width: 1023px) {
   .intro .intro-text-line,
-  .intro .intro-heading,
-  .intro .search-decoration-suitcase,
-  .intro .search-decoration-bangkok,
-  .intro .search-decoration-hawaii {
+  .intro .intro-heading {
     display: none;
   }
 }
 @media (min-width: 1024px) {
   .intro .intro-text-line,
-  .intro .intro-heading,
-  .intro .search-decoration-suitcase,
-  .intro .search-decoration-bangkok,
-  .intro .search-decoration-hawaii {
+  .intro .intro-heading {
     display: block;
   }
 }
@@ -1618,7 +1609,6 @@ legend {
     width: 100%;
     background-color: white;
     z-index: 10;
-    padding-top: 80px;
     padding-bottom: 50px;
   }
 }
@@ -1704,13 +1694,6 @@ legend {
   color: #111;
   background-color: #ececec;
 }
-@media (min-width: 1024px) {
-  .intro .search-decoration {
-    position: relative;
-    z-index: 1;
-    margin-top: 50vh;
-  }
-}
 .intro .search-decoration .decorative-visual {
   width: 100%;
   height: 500px;
@@ -1728,33 +1711,29 @@ legend {
     display: none;
   }
 }
-.intro .search-decoration .search-decoration-bangkok,
-.intro .search-decoration .search-decoration-hawaii {
-  position: absolute;
-}
 @media (max-width: 1023px) {
-  .intro .search-decoration .search-decoration-bangkok {
+  .intro .search-decoration .search-decoration-common {
     display: none;
   }
 }
 @media (min-width: 1024px) {
-  .intro .search-decoration .search-decoration-bangkok {
-    width: 400px;
-    height: 500px;
-    transform: translateX(240%) translateY(-600px);
-  }
-}
-@media (max-width: 1023px) {
-  .intro .search-decoration .search-decoration-hawaii {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .intro .search-decoration .search-decoration-hawaii {
-    display: block;
-    width: 400px;
+  .intro .search-decoration .search-decoration-common {
+    width: 500px;
     height: 400px;
-    transform: translateX(150%) translateY(-350px);
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .intro .search-decoration .search-decoration-japan,
+  .intro .search-decoration .search-decoration-harbin,
+  .intro .search-decoration .search-decoration-brunei {
+    transform: translateX(200%);
+  }
+}
+@media (min-width: 1024px) {
+  .intro .search-decoration .search-decoration-southeast,
+  .intro .search-decoration .search-decoration-boracay {
+    transform: translateX(100%);
   }
 }
 

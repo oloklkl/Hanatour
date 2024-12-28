@@ -107,14 +107,11 @@
 
 .intro {
     @include tabletMore {
-        height: 170vh;
+        height: 320vh;
     }
 
     .intro-text-line,
-    .intro-heading,
-    .search-decoration-suitcase,
-    .search-decoration-bangkok,
-    .search-decoration-hawaii {
+    .intro-heading {
         @include mobileMore {
             display: none;
         }
@@ -132,7 +129,7 @@
             width: 100%;
             background-color: white;
             z-index: 10;
-            padding-top: 80px;
+            // padding-top: 80px;
             padding-bottom: 50px;
         }
     }
@@ -220,11 +217,6 @@
         }
     }
     .search-decoration {
-        @include tabletMore {
-            position: relative;
-            z-index: 1;
-            margin-top: 50vh;
-        }
         .decorative-visual {
             width: 100%;
             height: 500px;
@@ -240,29 +232,27 @@
                 display: none;
             }
         }
-        .search-decoration-bangkok,
-        .search-decoration-hawaii {
-            position: absolute;
-        }
-        .search-decoration-bangkok {
+        .search-decoration-common {
             @include tabletLess {
                 display: none;
             }
             @include tabletMore {
-                width: 400px;
-                height: 500px;
-                transform: translateX(240%) translateY(-600px);
-            }
-        }
-        .search-decoration-hawaii {
-            @include tabletLess {
-                display: none;
-            }
-            @include tabletMore {
-                display: block;
-                width: 400px;
+                width: 500px;
                 height: 400px;
-                transform: translateX(150%) translateY(-350px);
+                display: block;
+            }
+        }
+        .search-decoration-japan,
+        .search-decoration-harbin,
+        .search-decoration-brunei {
+            @include tabletMore {
+                transform: translateX(200%);
+            }
+        }
+        .search-decoration-southeast,
+        .search-decoration-boracay {
+            @include tabletMore {
+                transform: translateX(100%);
             }
         }
     }
