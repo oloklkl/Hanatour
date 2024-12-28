@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const tl = gsap.timeline({ ease: 'power1.inOut' });
 
     // 화면 크기에 따라 다른 애니메이션 적용
-    if (screenWidth <= 768) {
+    if (screenWidth <= 844) {
         // 모바일: 작은 경로로 이동
         tl.to('.airplane', {
             duration: 2, // 애니메이션 지속 시간
@@ -28,10 +28,10 @@ window.addEventListener('DOMContentLoaded', () => {
             motionPath: {
                 path: [
                     { x: 0, y: 0 }, // 시작
-                    { x: 500, y: -400 }, // 경로 1
-                    { x: 800, y: -600 }, // 경로 2
-                    { x: 1200, y: 200 }, // 경로 3
-                    { x: 1400, y: 0 }, // 끝
+                    { x: 400, y: 100 }, // 경로 1
+                    { x: 200, y: 0 }, // 경로 2
+                    { x: 200, y: 100 }, // 경로 3
+                    { x: 600, y: 0 }, // 끝
                 ],
                 autoRotate: true, // 경로에 맞게 회전
             },
@@ -99,14 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     trigger: '.board_list li:nth-child(1)',
                     start: 'top 85%',
                     end: '20% 100%',
-                    scrub: 1.5,
+                    scrub: 2,
                     markers: false,
                 },
             })
-                .to('.board_list li:nth-child(1)', { y: '-150px', duration: 0.9, ease: 'none' }, 0.4)
-                .to('.board_list li:nth-child(2)', { y: '-150px', duration: 0.9, ease: 'none' }, 0.4)
-                .to('.board_list li:nth-child(3)', { y: '-150px', duration: 0.9, ease: 'none' }, 1)
-                .to('.board_list li:nth-child(4)', { y: '-150px', duration: 0.9, ease: 'none' }, 1);
+                .to('.board_list li:nth-child(1)', { y: '-150px', duration: 1, ease: 'none' }, 0.6)
+                .to('.board_list li:nth-child(2)', { y: '-150px', duration: 1, ease: 'none' }, 0.6)
+                .to('.board_list li:nth-child(3)', { y: '-150px', duration: 1, ease: 'none' }, 0.8)
+                .to('.board_list li:nth-child(4)', { y: '-150px', duration: 1, ease: 'none' }, 0.8);
         },
         // 모바일 버전 (767px 이하)
         '(max-width: 767px)': function () {
@@ -114,12 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 gsap.to(item, {
                     scrollTrigger: {
                         trigger: item, // 각 li 요소를 독립적인 트리거로 설정
-                        start: 'top 80%',
+                        start: 'top 95%',
                         end: '20% 100%',
                         scrub: 1,
                         markers: false,
                     },
-                    y: '-100px',
+                    y: '-70px',
                     duration: 0.8,
                     ease: 'none',
                     delay: index * 0.2, // 순차적 딜레이
@@ -127,37 +127,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         },
     });
-
-    // search-decoration-bangkok 애니메이션
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.search-decoration-bangkok',
-            start: 'top 50%',
-            end: '20% 100%',
-            scrub: 2,
-            markers: false,
-        },
-    }).to('.search-decoration-bangkok', { y: '-400px', duration: 1, ease: 'none' }, 0.2);
-
-    // search-decoration-hawaii 애니메이션
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.search-decoration-hawaii',
-            start: 'top 75%',
-            end: '20% 90%',
-            scrub: 2,
-            markers: false,
-        },
-    }).to('.search-decoration-hawaii', { y: '-400px', duration: 1, ease: 'none' }, 0.2);
-
-    //intro-heading-group 애니메이션
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '.intro-heading-group',
-            start: 'top 25%',
-            end: '20% 100%',
-            scrub: 2,
-            markers: false,
-        },
-    }).to('.intro-heading-group', { y: '350px', duration: 1, ease: 'none' }, 0.5);
 });
