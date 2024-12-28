@@ -142,7 +142,7 @@ body {
 
 a {
     color: $font-color-base;
-    text-decoration: none;
+    text-decoration: none !important;
     overflow: hidden;
 
     &:active,

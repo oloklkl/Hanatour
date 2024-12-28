@@ -46,7 +46,7 @@
         margin-bottom: 10px;
 
         @include mobileMore {
-            font-size: 4.5rem;
+            font-size: 5rem;
         }
         @include tabletMore {
             font-size: 6rem;
@@ -107,7 +107,7 @@
 
 .intro {
     @include tabletMore {
-        height: 130vh;
+        height: 170vh;
     }
 
     .intro-text-line,
@@ -126,17 +126,17 @@
         }
     }
     .intro-text-group {
-        position: relative;
+        @include tabletMore {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 10;
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
     }
     .effect-heading {
-        position: absolute;
-        top: 15%;
-        right: 0;
-        font-size: 10rem;
-        font-weight: 900;
-        color: $gray-10;
-        line-height: 1.2;
-
         @include mobileMore {
             display: none;
         }
@@ -145,6 +145,12 @@
         }
         @include tabletMore {
             display: flex;
+            flex-direction: row-reverse;
+            font-size: 10rem;
+            font-weight: 900;
+            color: $gray-10;
+            line-height: 1.2;
+            transform: translateY(-130%) translateX(5%);
         }
     }
     .intro-text {
@@ -153,10 +159,10 @@
         font-weight: 600;
         display: flex;
         justify-content: space-between;
-        margin: 80px auto 60px;
+        margin: 80px auto 100px;
     }
     .intro-heading {
-        font-size: 7.2rem;
+        font-size: 7rem;
         width: 50%;
         line-height: 1.2;
     }
@@ -167,7 +173,6 @@
         justify-content: space-between;
         border-bottom: 3px solid $black;
         box-sizing: border-box;
-        margin-top: 50px;
 
         @include tabletMore {
             display: flex;
@@ -215,6 +220,11 @@
         }
     }
     .search-decoration {
+        @include tabletMore {
+            position: relative;
+            z-index: 1;
+            margin-top: 50vh;
+        }
         .decorative-visual {
             width: 100%;
             height: 500px;
@@ -230,6 +240,10 @@
                 display: none;
             }
         }
+        .search-decoration-bangkok,
+        .search-decoration-hawaii {
+            position: absolute;
+        }
         .search-decoration-bangkok {
             @include tabletLess {
                 display: none;
@@ -237,7 +251,7 @@
             @include tabletMore {
                 width: 400px;
                 height: 500px;
-                transform: translateX(220%);
+                transform: translateX(240%) translateY(-600px);
             }
         }
         .search-decoration-hawaii {
@@ -248,7 +262,7 @@
                 display: block;
                 width: 400px;
                 height: 400px;
-                transform: translateX(150%) translateY(-100px);
+                transform: translateX(150%) translateY(-350px);
             }
         }
     }
@@ -276,15 +290,14 @@
             padding: 18px;
         }
         @include tabletMore {
-            height: 100px;
+            height: 140px;
             padding: 20px;
         }
     }
     .message-text {
-        // animation: scrollText 10s linear infinite;
+        animation: scrollText 10s linear infinite;
         font-weight: bold;
         letter-spacing: 1.3px;
-        // font-family: 'SBAggroB';
         font-weight: 900;
         vertical-align: middle;
         font-size: 3rem;
@@ -296,8 +309,9 @@
             font-size: 4rem;
         }
         @include tabletMore {
-            font-size: 5.5rem;
-            // animation: scrollText 20s linear infinite;
+            font-size: 8rem;
+            line-height: 1.2;
+            animation: scrollText 20s linear infinite;
         }
     }
     @keyframes scrollText {
@@ -533,8 +547,15 @@
 }
 
 .travel-packages {
-    height: 100vh;
+    height: 180vh;
     background: -webkit-image-set(url(../../images/pattern/banners/travel-packages.jpg)) no-repeat center center/cover;
+
+    @include mobileMore {
+        height: 150vh;
+    }
+    @include tabletMore {
+        height: 100vh;
+    }
 
     .travel-packages__content-wrapper {
         display: flex;
@@ -546,28 +567,46 @@
 
     .travel-packages__title {
         color: #fff;
-        font-size: 30px;
         line-height: 38px;
+
+        @include mobileMore {
+            font-size: 5rem;
+        }
+        @include tabletMore {
+            font-size: 7rem;
+        }
     }
     .travel-packages__list {
-        display: grid;
-        grid-template-columns: 447px 447px 306px;
-        height: 517px;
+        display: flex;
+        flex-direction: column;
+
+        @include mobileMore {
+            display: flex;
+            flex-direction: column;
+        }
+        @include tabletMore {
+            display: grid;
+            grid-template-columns: 447px 447px 306px;
+            height: 517px;
+        }
 
         .travel-packages__item {
+            @include mobile {
+                width: 390px;
+            }
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
 
             h3 {
-                font-size: 20px;
+                font-size: 2rem;
                 margin-bottom: 10px;
             }
             p {
-                font-size: 15px;
+                font-size: 1.5rem;
             }
             span {
-                font-size: 13px;
+                font-size: 1.3rem;
             }
         }
 
@@ -585,6 +624,12 @@
             .travel-packages__video {
                 display: flex;
                 justify-content: center;
+            }
+            .travel-packages__link-text {
+                @include tabletLess {
+                    display: block;
+                    padding-bottom: 25px;
+                }
             }
         }
         li:nth-child(2) {
@@ -609,6 +654,12 @@
                 display: block;
                 margin: 0 auto;
                 border-radius: 50%;
+            }
+            .travel-packages__link-text {
+                @include tabletLess {
+                    display: block;
+                    padding-bottom: 25px;
+                }
             }
         }
     }
