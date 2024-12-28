@@ -91,22 +91,22 @@
                     font-size: 4.8rem;
                 }
                 @include tabletMore {
-                    font-size: 6rem;
+                    font-size: 7rem;
                     white-space: nowrap;
                 }
             }
 
-            .sub-tit {
-                margin-bottom: 20px;
-                font-size: 2.4rem;
-                color: $gray-30;
-                @include mobileMore {
-                    margin-bottom: 80px;
-                }
-                @include tabletMore {
-                    margin-bottom: 0;
-                }
-            }
+            // .sub-tit {
+            //     margin-bottom: 20px;
+            //     font-size: 2.4rem;
+            //     color: $gray-30;
+            //     @include mobileMore {
+            //         margin-bottom: 80px;
+            //     }
+            //     @include tabletMore {
+            //         margin-bottom: 0;
+            //     }
+            // }
         }
     }
 
