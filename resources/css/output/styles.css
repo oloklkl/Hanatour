@@ -1588,7 +1588,7 @@ legend {
 }
 @media (min-width: 1024px) {
   .video-container .video-container__video {
-    height: 920px;
+    height: 100vh;
   }
 }
 .video-container .video-container__video-overlay {
@@ -1605,7 +1605,9 @@ legend {
 
 @media (min-width: 1024px) {
   .intro {
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
+    width: 100%;
   }
 }
 @media (min-width: 600px) {
@@ -1628,8 +1630,6 @@ legend {
 }
 @media (min-width: 1024px) {
   .intro .intro-text-group {
-    position: sticky;
-    top: 0;
     width: 100%;
     background-color: white;
     z-index: 10;
@@ -1654,7 +1654,7 @@ legend {
     font-weight: 900;
     color: #f0f0f0;
     line-height: 1.2;
-    transform: translateY(-130%) translateX(5%);
+    transform: translateY(-150%) translateX(5%);
   }
 }
 .intro .intro-text {
@@ -1751,6 +1751,8 @@ legend {
   }
 }
 .intro .travel-list .travel-item {
+  position: absolute;
+  transition: 1s;
   width: 500px;
   height: 400px;
   -o-object-fit: cover;
@@ -1778,23 +1780,28 @@ legend {
 }
 .intro .travel-list .travel-hokkaido {
   background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
-  transform: translateX(100%) translateY(-50%);
+  transform: translateX(120%) translateY(-80%);
+  z-index: 5;
 }
 .intro .travel-list .travel-southeast-asia {
   background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
-  transform: translateX(150%) translateY(-50%);
+  transform: translateX(150%) translateY(-80%);
+  z-index: 4;
 }
 .intro .travel-list .travel-harbin {
   background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
-  transform: translateX(100%) translateY(-50%);
+  transform: translateX(120%) translateY(-80%);
+  z-index: 3;
 }
 .intro .travel-list .travel-boracay {
   background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
-  transform: translateX(150%) translateY(-50%);
+  transform: translateX(150%) translateY(-80%);
+  z-index: 2;
 }
 .intro .travel-list .travel-brunei {
   background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
-  transform: translateX(100%) translateY(-50%);
+  transform: translateX(120%) translateY(-80%);
+  z-index: 1;
 }
 
 .main-hanatour .logo {
