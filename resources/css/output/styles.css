@@ -403,7 +403,7 @@ legend {
 }
 .sec-service .slide-description .slide-title {
   position: absolute;
-  top: 35%;
+  top: 37%;
   left: 20%;
   font-weight: 600;
   font-size: 1.5rem;
@@ -554,14 +554,14 @@ legend {
   .sec-service .image-container .image-wrapper1,
   .sec-service .image-container .image-wrapper3,
   .sec-service .image-container .image-wrapper5 {
-    display: none;
+    transform: translateY(-80px) translateX(-20px) rotate(-5deg);
   }
 }
 @media (min-width: 1024px) {
   .sec-service .image-container .image-wrapper1,
   .sec-service .image-container .image-wrapper3,
   .sec-service .image-container .image-wrapper5 {
-    display: none;
+    transform: translateY(-250px) translateX(-240px) rotate(8deg);
   }
 }
 .sec-service .image-container .image-wrapper2,
@@ -578,14 +578,14 @@ legend {
   .sec-service .image-container .image-wrapper2,
   .sec-service .image-container .image-wrapper4,
   .sec-service .image-container .image-wrapper6 {
-    display: none;
+    transform: translateY(300px) translateX(-170px) rotate(5deg);
   }
 }
 @media (min-width: 1024px) {
   .sec-service .image-container .image-wrapper2,
   .sec-service .image-container .image-wrapper4,
   .sec-service .image-container .image-wrapper6 {
-    display: none;
+    transform: translateY(100px) translateX(85px) rotate(-20deg);
   }
 }
 .sec-service .image-container .image-wrapper1 {
@@ -1361,13 +1361,13 @@ legend {
 }
 #footer .footer-nav__list {
   position: relative;
-  width: 70%;
+  width: 80%;
 }
 @media (min-width: 1024px) {
   #footer .footer-info {
     position: absolute;
     top: 60px;
-    right: 400px;
+    right: 270px;
   }
 }
 #footer .footer-info .footer-info__title {
@@ -1420,7 +1420,7 @@ legend {
   #footer .footer-brand-container {
     position: absolute;
     top: 250px;
-    right: 400px;
+    right: 270px;
   }
 }
 #footer .footer-sns {
@@ -1581,7 +1581,7 @@ legend {
 
 @media (min-width: 1024px) {
   .intro {
-    height: 320vh;
+    min-height: 100vh;
   }
 }
 @media (min-width: 600px) {
@@ -1711,30 +1711,57 @@ legend {
     display: none;
   }
 }
+.intro .travel-list {
+  /* 나라별 백그라운드 */
+}
 @media (max-width: 1023px) {
-  .intro .search-decoration .search-decoration-common {
+  .intro .travel-list {
     display: none;
   }
 }
 @media (min-width: 1024px) {
-  .intro .search-decoration .search-decoration-common {
-    width: 500px;
-    height: 400px;
-    display: block;
+  .intro .travel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
-@media (min-width: 1024px) {
-  .intro .search-decoration .search-decoration-japan,
-  .intro .search-decoration .search-decoration-harbin,
-  .intro .search-decoration .search-decoration-brunei {
-    transform: translateX(200%);
-  }
+.intro .travel-list .travel-item {
+  width: 500px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 60px 40px 25px;
 }
-@media (min-width: 1024px) {
-  .intro .search-decoration .search-decoration-southeast,
-  .intro .search-decoration .search-decoration-boracay {
-    transform: translateX(100%);
-  }
+.intro .travel-list .travel-item .travel-header {
+  margin-bottom: 20px;
+}
+.intro .travel-list .travel-item .travel-title {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+.intro .travel-list .travel-item .travel-text {
+  font-size: 1.4rem;
+}
+.intro .travel-list .travel-hokkaido {
+  background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
+  transform: translateX(100%) translateY(-50%);
+}
+.intro .travel-list .travel-southeast-asia {
+  background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
+  transform: translateX(200%) translateY(-50%);
+}
+.intro .travel-list .travel-harbin {
+  background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
+  transform: translateX(100%) translateY(-50%);
+}
+.intro .travel-list .travel-boracay {
+  background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
+  transform: translateX(200%) translateY(-50%);
+}
+.intro .travel-list .travel-brunei {
+  background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
+  transform: translateX(100%) translateY(-50%);
 }
 
 .main-hanatour .logo {
@@ -2137,12 +2164,22 @@ legend {
 .travel-packages .travel-packages__list li:nth-child(3) {
   background: #fff;
 }
+@media (max-width: 1023px) {
+  .travel-packages .travel-packages__list li:nth-child(3) h3 {
+    margin-top: 20px;
+  }
+}
 .travel-packages .travel-packages__list li:nth-child(3) .travel-packages__image {
   width: 220px;
   height: 220px;
   display: block;
   margin: 0 auto;
   border-radius: 50%;
+}
+@media (max-width: 1023px) {
+  .travel-packages .travel-packages__list li:nth-child(3) .travel-packages__image {
+    margin-top: 20px;
+  }
 }
 @media (max-width: 1023px) {
   .travel-packages .travel-packages__list li:nth-child(3) .travel-packages__link-text {

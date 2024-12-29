@@ -107,7 +107,7 @@
 
 .intro {
     @include tabletMore {
-        height: 320vh;
+        min-height: 100vh;
     }
 
     .intro-text-line,
@@ -232,28 +232,54 @@
                 display: none;
             }
         }
-        .search-decoration-common {
-            @include tabletLess {
-                display: none;
+    }
+    .travel-list {
+        @include tabletLess {
+            display: none;
+        }
+        @include tabletMore {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .travel-item {
+            width: 500px;
+            height: 400px;
+            object-fit: cover;
+            padding: 60px 40px 25px;
+
+            .travel-header {
+                margin-bottom: 20px;
             }
-            @include tabletMore {
-                width: 500px;
-                height: 400px;
-                display: block;
+            .travel-title {
+                font-size: 3rem;
+                line-height: 1.3;
+            }
+            .travel-text {
+                font-size: 1.4rem;
             }
         }
-        .search-decoration-japan,
-        .search-decoration-harbin,
-        .search-decoration-brunei {
-            @include tabletMore {
-                transform: translateX(200%);
-            }
+
+        /* 나라별 백그라운드 */
+        .travel-hokkaido {
+            background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
+            transform: translateX(100%) translateY(-50%);
         }
-        .search-decoration-southeast,
-        .search-decoration-boracay {
-            @include tabletMore {
-                transform: translateX(100%);
-            }
+        .travel-southeast-asia {
+            background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
+            transform: translateX(200%) translateY(-50%);
+        }
+        .travel-harbin {
+            background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
+            transform: translateX(100%) translateY(-50%);
+        }
+        .travel-boracay {
+            background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
+            transform: translateX(200%) translateY(-50%);
+        }
+        .travel-brunei {
+            background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
+            transform: translateX(100%) translateY(-50%);
         }
     }
 }
@@ -638,7 +664,15 @@
         li:nth-child(3) {
             background: $white;
 
+            h3 {
+                @include tabletLess {
+                    margin-top: 20px;
+                }
+            }
             .travel-packages__image {
+                @include tabletLess {
+                    margin-top: 20px;
+                }
                 width: 220px;
                 height: 220px;
                 display: block;

@@ -456,14 +456,14 @@
     }
     .footer-nav__list {
         position: relative;
-        width: 70%;
+        width: 80%;
     }
 
     .footer-info {
         @include tabletMore {
             position: absolute;
             top: 60px;
-            right: 400px;
+            right: 270px;
         }
 
         .footer-info__title {
@@ -513,7 +513,7 @@
         @include tabletMore {
             position: absolute;
             top: 250px;
-            right: 400px;
+            right: 270px;
         }
     }
     .footer-sns {
