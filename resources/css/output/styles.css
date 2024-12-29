@@ -1737,11 +1737,20 @@ legend {
   margin-bottom: 20px;
 }
 .intro .travel-list .travel-item .travel-title {
+  color: #fff;
   font-size: 3rem;
   line-height: 1.3;
 }
 .intro .travel-list .travel-item .travel-text {
+  color: #fff;
   font-size: 1.4rem;
+}
+.intro .travel-list .travel-black {
+  color: black;
+}
+.intro .travel-list .travel-black .travel-title,
+.intro .travel-list .travel-black .travel-text {
+  color: inherit;
 }
 .intro .travel-list .travel-hokkaido {
   background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
