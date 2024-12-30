@@ -1745,9 +1745,7 @@ legend {
 }
 @media (min-width: 1024px) {
   .intro .travel-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: block;
   }
 }
 .intro .travel-list .travel-item {
@@ -1781,27 +1779,22 @@ legend {
 .intro .travel-list .travel-hokkaido {
   background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
   transform: translateX(120%) translateY(-80%);
-  z-index: 5;
 }
 .intro .travel-list .travel-southeast-asia {
   background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
   transform: translateX(150%) translateY(-80%);
-  z-index: 4;
 }
 .intro .travel-list .travel-harbin {
   background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
   transform: translateX(120%) translateY(-80%);
-  z-index: 3;
 }
 .intro .travel-list .travel-boracay {
   background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
   transform: translateX(150%) translateY(-80%);
-  z-index: 2;
 }
 .intro .travel-list .travel-brunei {
   background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
   transform: translateX(120%) translateY(-80%);
-  z-index: 1;
 }
 
 .main-hanatour .logo {
