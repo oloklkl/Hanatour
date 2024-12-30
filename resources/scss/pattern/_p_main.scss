@@ -89,7 +89,7 @@
             height: 1024px;
         }
         @include tabletMore {
-            height: 920px;
+            height: 100vh;
         }
     }
 
@@ -107,7 +107,8 @@
 
 .intro {
     @include tabletMore {
-        min-height: 100vh;
+        height: 40vh;
+        width: 100%;
     }
 
     .intro-text-line,
@@ -124,12 +125,6 @@
     }
     .intro-text-group {
         @include tabletMore {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            background-color: white;
-            z-index: 10;
-            // padding-top: 80px;
             padding-bottom: 50px;
         }
     }
@@ -147,7 +142,7 @@
             font-weight: 900;
             color: $gray-10;
             line-height: 1.2;
-            transform: translateY(-130%) translateX(5%);
+            transform: translateY(-150%) translateX(5%);
         }
     }
     .intro-text {
@@ -233,21 +228,51 @@
             }
         }
     }
+}
+
+.main-hanatour {
+    .logo {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+.travel-showcase {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
 
     .travel-list {
         @include tabletLess {
             display: none;
         }
         @include tabletMore {
+            position: relative;
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            perspective: 500px;
         }
         .travel-item {
+            position: absolute;
+            top: calc(50% - 150px);
+            left: calc(50% - 230px);
             width: 500px;
             height: 400px;
-            object-fit: cover;
             padding: 60px 40px 25px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition: 0.3s;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+            transform-style: preserve-3d;
+            transform-origin: bottom;
+            user-select: none;
+            -webkit-showcase-reflect: below 1px linear-gradient(transparent, transparent, #0002);
 
             .travel-header {
                 margin-bottom: 20px;
@@ -262,6 +287,34 @@
                 font-size: 1.4rem;
             }
         }
+        .travel-item:nth-child(1) {
+            transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+            z-index: -1;
+        }
+        .travel-item:nth-child(2) {
+            transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+            z-index: 2;
+        }
+        .travel-item:nth-child(3) {
+            transform: translate3d(-150px, 0, 0) scale(0.9) rotateY(15deg);
+            z-index: 3;
+        }
+        .travel-item:nth-child(4) {
+            transform: translate3d(0px, 0, 0) scale(1) rotateY(0deg);
+            z-index: 4;
+        }
+        .travel-item:nth-child(5) {
+            transform: translate3d(150px, 0, 0) scale(0.9) rotateY(-15deg);
+            z-index: 3;
+        }
+        .travel-item:nth-child(6) {
+            transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+            z-index: 2;
+        }
+        .travel-item:nth-child(7) {
+            transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+            z-index: -1;
+        }
 
         .travel-black {
             color: black;
@@ -274,34 +327,67 @@
 
         /* 나라별 백그라운드 */
         .travel-hokkaido {
-            background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
-            transform: translateX(100%) translateY(-50%);
+            background-image: url(../../images/pattern/content/japan.jpg);
         }
         .travel-southeast-asia {
-            background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
-            transform: translateX(200%) translateY(-50%);
+            background-image: url(../../images/pattern/content/southeast-asia.jpg);
         }
         .travel-harbin {
-            background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
-            transform: translateX(100%) translateY(-50%);
+            background-image: url(../../images/pattern/content/harbin.jpg);
         }
         .travel-boracay {
-            background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
-            transform: translateX(200%) translateY(-50%);
+            background-image: url(../../images/pattern/content/boracay.jpg);
         }
         .travel-brunei {
-            background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
-            transform: translateX(100%) translateY(-50%);
+            background-image: url(../../images/pattern/content/brunei.jpg);
+        }
+        .travel-winter-travel {
+            background-image: url(../../images/pattern/content/winter-travel.jpg);
+        }
+        .travel-europe {
+            background-image: url(../../images/pattern/content/europe.jpg);
         }
     }
-}
-
-.main-hanatour {
-    .logo {
-        font-size: 1.8rem;
+    .buttons {
+        position: absolute;
+        bottom: 75px;
+        display: flex;
     }
-    h3 {
-        font-size: 2rem;
+    .buttons span {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border: 2px solid $black;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+    }
+    .buttons span:hover {
+        opacity: 1;
+    }
+    .buttons span::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $black;
+        border-left: 2px solid $black;
+        rotate: -45deg;
+    }
+    .buttons span:last-child::before {
+        content: '';
+        position: absolute;
+        left: initial;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $black;
+        border-left: 2px solid $black;
+        rotate: 135deg;
     }
 }
 

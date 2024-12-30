@@ -157,7 +157,7 @@
                 margin-top: 20px;
                 font-size: 2.5rem;
                 color: $black;
-                width: 32%;
+                width: 35%;
                 transform: translateX(-70px);
             }
             @include tabletMore {
@@ -224,45 +224,59 @@
             @include mobileMore {
                 position: absolute;
                 top: -80px;
-                right: 60px;
+                right: 110px;
                 transform: rotate(5deg);
             }
             @include tabletMore {
                 position: absolute;
                 top: -250px;
                 right: 280px;
-                transform: rotate(0);
+                transform: rotate(-5deg);
             }
         }
+        .image-right {
+            @include tabletMore {
+                top: -250px;
+                right: 5px;
+                transform: rotate(5deg);
+            }
+        }
+
         .image-secondary {
             display: none;
 
             @include mobileMore {
                 display: block;
                 position: absolute;
-                top: 300px;
+                top: 330px;
                 right: 200px;
                 transform: rotate(-5deg);
             }
             @include tabletMore {
                 position: absolute;
-                top: 100px;
-                right: -50px;
+                top: 120px;
+                right: 0;
+                transform: rotate(5deg);
+            }
+        }
+        .image-left {
+            @include tabletMore {
+                top: 120px;
+                right: 330px;
                 transform: rotate(-10deg);
             }
         }
-
         .images {
             width: 290px;
             height: 462px;
 
             @include mobileMore {
-                width: 350px;
-                height: 350px;
+                width: 300px;
+                height: 300px;
             }
             @include tabletMore {
-                width: 400px;
-                height: 400px;
+                width: 350px;
+                height: 350px;
             }
         }
         .image-wrapper1,
@@ -277,12 +291,13 @@
             gap: 20px;
 
             @include mobileMore {
-                transform: translateY(-80px) translateX(-20px) rotate(-5deg);
+                transform: translateY(-80px) translateX(-80px) rotate(-5deg);
             }
             @include tabletMore {
                 transform: translateY(-250px) translateX(-240px) rotate(8deg);
             }
         }
+
         .image-wrapper2,
         .image-wrapper4,
         .image-wrapper6 {
@@ -294,12 +309,24 @@
             right: 40px;
 
             @include mobileMore {
-                transform: translateY(300px) translateX(-170px) rotate(5deg);
+                transform: translateY(330px) translateX(-170px) rotate(5deg);
             }
             @include tabletMore {
-                transform: translateY(100px) translateX(85px) rotate(-20deg);
+                transform: translateY(120px) translateX(40px) rotate(-10deg);
             }
         }
+
+        .wrapper-right {
+            @include tabletMore {
+                transform: translateY(-250px) translateX(30px) rotate(-10deg);
+            }
+        }
+        .wrapper-left {
+            @include tabletMore {
+                transform: translateY(120px) translateX(-300px) rotate(6deg);
+            }
+        }
+
         .image-wrapper1 {
             background-color: $secondary-5;
         }

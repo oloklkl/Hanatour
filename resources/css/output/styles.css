@@ -443,7 +443,7 @@ legend {
     margin-top: 20px;
     font-size: 2.5rem;
     color: #111;
-    width: 32%;
+    width: 35%;
     transform: translateX(-70px);
   }
 }
@@ -491,7 +491,7 @@ legend {
   .sec-service .image-container .image-content {
     position: absolute;
     top: -80px;
-    right: 60px;
+    right: 110px;
     transform: rotate(5deg);
   }
 }
@@ -500,7 +500,14 @@ legend {
     position: absolute;
     top: -250px;
     right: 280px;
-    transform: rotate(0);
+    transform: rotate(-5deg);
+  }
+}
+@media (min-width: 1024px) {
+  .sec-service .image-container .image-right {
+    top: -250px;
+    right: 5px;
+    transform: rotate(5deg);
   }
 }
 .sec-service .image-container .image-secondary {
@@ -510,7 +517,7 @@ legend {
   .sec-service .image-container .image-secondary {
     display: block;
     position: absolute;
-    top: 300px;
+    top: 330px;
     right: 200px;
     transform: rotate(-5deg);
   }
@@ -518,8 +525,15 @@ legend {
 @media (min-width: 1024px) {
   .sec-service .image-container .image-secondary {
     position: absolute;
-    top: 100px;
-    right: -50px;
+    top: 120px;
+    right: 0;
+    transform: rotate(5deg);
+  }
+}
+@media (min-width: 1024px) {
+  .sec-service .image-container .image-left {
+    top: 120px;
+    right: 330px;
     transform: rotate(-10deg);
   }
 }
@@ -529,14 +543,14 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-service .image-container .images {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
   }
 }
 @media (min-width: 1024px) {
   .sec-service .image-container .images {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   }
 }
 .sec-service .image-container .image-wrapper1,
@@ -554,7 +568,7 @@ legend {
   .sec-service .image-container .image-wrapper1,
   .sec-service .image-container .image-wrapper3,
   .sec-service .image-container .image-wrapper5 {
-    transform: translateY(-80px) translateX(-20px) rotate(-5deg);
+    transform: translateY(-80px) translateX(-80px) rotate(-5deg);
   }
 }
 @media (min-width: 1024px) {
@@ -578,14 +592,24 @@ legend {
   .sec-service .image-container .image-wrapper2,
   .sec-service .image-container .image-wrapper4,
   .sec-service .image-container .image-wrapper6 {
-    transform: translateY(300px) translateX(-170px) rotate(5deg);
+    transform: translateY(330px) translateX(-170px) rotate(5deg);
   }
 }
 @media (min-width: 1024px) {
   .sec-service .image-container .image-wrapper2,
   .sec-service .image-container .image-wrapper4,
   .sec-service .image-container .image-wrapper6 {
-    transform: translateY(100px) translateX(85px) rotate(-20deg);
+    transform: translateY(120px) translateX(40px) rotate(-10deg);
+  }
+}
+@media (min-width: 1024px) {
+  .sec-service .image-container .wrapper-right {
+    transform: translateY(-250px) translateX(30px) rotate(-10deg);
+  }
+}
+@media (min-width: 1024px) {
+  .sec-service .image-container .wrapper-left {
+    transform: translateY(120px) translateX(-300px) rotate(6deg);
   }
 }
 .sec-service .image-container .image-wrapper1 {
@@ -1367,7 +1391,7 @@ legend {
   #footer .footer-info {
     position: absolute;
     top: 60px;
-    right: 270px;
+    right: 350px;
   }
 }
 #footer .footer-info .footer-info__title {
@@ -1420,7 +1444,7 @@ legend {
   #footer .footer-brand-container {
     position: absolute;
     top: 250px;
-    right: 270px;
+    right: 355px;
   }
 }
 #footer .footer-sns {
@@ -1564,7 +1588,7 @@ legend {
 }
 @media (min-width: 1024px) {
   .video-container .video-container__video {
-    height: 920px;
+    height: 100vh;
   }
 }
 .video-container .video-container__video-overlay {
@@ -1581,7 +1605,8 @@ legend {
 
 @media (min-width: 1024px) {
   .intro {
-    min-height: 100vh;
+    height: 40vh;
+    width: 100%;
   }
 }
 @media (min-width: 600px) {
@@ -1604,11 +1629,6 @@ legend {
 }
 @media (min-width: 1024px) {
   .intro .intro-text-group {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 10;
     padding-bottom: 50px;
   }
 }
@@ -1630,7 +1650,7 @@ legend {
     font-weight: 900;
     color: #f0f0f0;
     line-height: 1.2;
-    transform: translateY(-130%) translateX(5%);
+    transform: translateY(-150%) translateX(5%);
   }
 }
 .intro .intro-text {
@@ -1711,73 +1731,165 @@ legend {
     display: none;
   }
 }
-.intro .travel-list {
-  /* 나라별 백그라운드 */
-}
-@media (max-width: 1023px) {
-  .intro .travel-list {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .intro .travel-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-.intro .travel-list .travel-item {
-  width: 500px;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 60px 40px 25px;
-}
-.intro .travel-list .travel-item .travel-header {
-  margin-bottom: 20px;
-}
-.intro .travel-list .travel-item .travel-title {
-  color: #fff;
-  font-size: 3rem;
-  line-height: 1.3;
-}
-.intro .travel-list .travel-item .travel-text {
-  color: #fff;
-  font-size: 1.4rem;
-}
-.intro .travel-list .travel-black {
-  color: black;
-}
-.intro .travel-list .travel-black .travel-title,
-.intro .travel-list .travel-black .travel-text {
-  color: inherit;
-}
-.intro .travel-list .travel-hokkaido {
-  background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
-  transform: translateX(100%) translateY(-50%);
-}
-.intro .travel-list .travel-southeast-asia {
-  background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
-  transform: translateX(200%) translateY(-50%);
-}
-.intro .travel-list .travel-harbin {
-  background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
-  transform: translateX(100%) translateY(-50%);
-}
-.intro .travel-list .travel-boracay {
-  background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
-  transform: translateX(200%) translateY(-50%);
-}
-.intro .travel-list .travel-brunei {
-  background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
-  transform: translateX(100%) translateY(-50%);
-}
 
 .main-hanatour .logo {
   font-size: 1.8rem;
 }
 .main-hanatour h3 {
   font-size: 2rem;
+}
+
+.travel-showcase {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transform-style: preserve-3d;
+}
+.travel-showcase .travel-list {
+  /* 나라별 백그라운드 */
+}
+@media (max-width: 1023px) {
+  .travel-showcase .travel-list {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .travel-showcase .travel-list {
+    position: relative;
+    display: flex;
+    perspective: 500px;
+  }
+}
+.travel-showcase .travel-list .travel-item {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 230px);
+  width: 500px;
+  height: 400px;
+  padding: 60px 40px 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.3s;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-showcase-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333));
+}
+.travel-showcase .travel-list .travel-item .travel-header {
+  margin-bottom: 20px;
+}
+.travel-showcase .travel-list .travel-item .travel-title {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+.travel-showcase .travel-list .travel-item .travel-text {
+  color: #fff;
+  font-size: 1.4rem;
+}
+.travel-showcase .travel-list .travel-item:nth-child(1) {
+  transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+  z-index: -1;
+}
+.travel-showcase .travel-list .travel-item:nth-child(2) {
+  transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+  z-index: 2;
+}
+.travel-showcase .travel-list .travel-item:nth-child(3) {
+  transform: translate3d(-150px, 0, 0) scale(0.9) rotateY(15deg);
+  z-index: 3;
+}
+.travel-showcase .travel-list .travel-item:nth-child(4) {
+  transform: translate3d(0px, 0, 0) scale(1) rotateY(0deg);
+  z-index: 4;
+}
+.travel-showcase .travel-list .travel-item:nth-child(5) {
+  transform: translate3d(150px, 0, 0) scale(0.9) rotateY(-15deg);
+  z-index: 3;
+}
+.travel-showcase .travel-list .travel-item:nth-child(6) {
+  transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+  z-index: 2;
+}
+.travel-showcase .travel-list .travel-item:nth-child(7) {
+  transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+  z-index: -1;
+}
+.travel-showcase .travel-list .travel-black {
+  color: black;
+}
+.travel-showcase .travel-list .travel-black .travel-title,
+.travel-showcase .travel-list .travel-black .travel-text {
+  color: inherit;
+}
+.travel-showcase .travel-list .travel-hokkaido {
+  background-image: url(../../images/pattern/content/japan.jpg);
+}
+.travel-showcase .travel-list .travel-southeast-asia {
+  background-image: url(../../images/pattern/content/southeast-asia.jpg);
+}
+.travel-showcase .travel-list .travel-harbin {
+  background-image: url(../../images/pattern/content/harbin.jpg);
+}
+.travel-showcase .travel-list .travel-boracay {
+  background-image: url(../../images/pattern/content/boracay.jpg);
+}
+.travel-showcase .travel-list .travel-brunei {
+  background-image: url(../../images/pattern/content/brunei.jpg);
+}
+.travel-showcase .travel-list .travel-winter-travel {
+  background-image: url(../../images/pattern/content/winter-travel.jpg);
+}
+.travel-showcase .travel-list .travel-europe {
+  background-image: url(../../images/pattern/content/europe.jpg);
+}
+.travel-showcase .buttons {
+  position: absolute;
+  bottom: 75px;
+  display: flex;
+}
+.travel-showcase .buttons span {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #111;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.travel-showcase .buttons span:hover {
+  opacity: 1;
+}
+.travel-showcase .buttons span::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #111;
+  border-left: 2px solid #111;
+  rotate: -45deg;
+}
+.travel-showcase .buttons span:last-child::before {
+  content: "";
+  position: absolute;
+  left: initial;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #111;
+  border-left: 2px solid #111;
+  rotate: 135deg;
 }
 
 .sustainable-travel-section .scroll-container {
