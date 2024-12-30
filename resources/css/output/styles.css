@@ -1605,7 +1605,7 @@ legend {
 
 @media (min-width: 1024px) {
   .intro {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
   }
 }
@@ -1673,20 +1673,34 @@ legend {
   border-bottom: 3px solid #111;
   box-sizing: border-box;
 }
+@media (min-width: 600px) {
+  .intro .form-input-search {
+    font-size: 2.2rem;
+  }
+}
 @media (min-width: 1024px) {
   .intro .form-input-search {
     display: flex;
+    font-size: 3rem;
     width: 40%;
-    margin-top: 80px;
   }
+}
+.intro .form-input-search .btn-input-search::after {
+  display: block;
+  content: "\f002";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 3.5rem;
 }
 .intro .form-input-search .input-value {
   font-weight: 700;
-  color: #8e8e8e;
 }
 @media (min-width: 1024px) {
   .intro .form-input-search .input-value {
-    font-size: 2rem;
+    display: flex;
+    font-size: 2.2rem;
+    margin-top: 80px;
+    color: #717171;
   }
 }
 .intro .form-input-search #Capa_1 {
@@ -1773,8 +1787,8 @@ legend {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  transition: 0.3s;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
   transform-style: preserve-3d;
   transform-origin: bottom;
   -webkit-user-select: none;

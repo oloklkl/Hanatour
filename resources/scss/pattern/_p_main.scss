@@ -107,7 +107,7 @@
 
 .intro {
     @include tabletMore {
-        height: 40vh;
+        height: 50vh;
         width: 100%;
     }
 
@@ -166,18 +166,30 @@
         border-bottom: 3px solid $black;
         box-sizing: border-box;
 
+        @include mobileMore {
+            font-size: 2.2rem;
+        }
+
         @include tabletMore {
             display: flex;
+            font-size: 3rem;
             width: 40%;
-            margin-top: 80px;
+        }
+        .btn-input-search::after {
+            display: block;
+            content: '\f002';
+            @include lineAwesome;
+            font-size: 3.5rem;
         }
 
         .input-value {
             font-weight: 700;
-            color: $gray-50;
 
             @include tabletMore {
-                font-size: 2rem;
+                display: flex;
+                font-size: 2.2rem;
+                margin-top: 80px;
+                color: $gray-60;
             }
         }
 
@@ -267,8 +279,8 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
-            transition: 0.3s;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+            transition: 0.5s;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
             transform-style: preserve-3d;
             transform-origin: bottom;
             user-select: none;
