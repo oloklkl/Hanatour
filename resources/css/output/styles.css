@@ -1605,8 +1605,7 @@ legend {
 
 @media (min-width: 1024px) {
   .intro {
-    position: relative;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
   }
 }
@@ -1630,9 +1629,6 @@ legend {
 }
 @media (min-width: 1024px) {
   .intro .intro-text-group {
-    width: 100%;
-    background-color: white;
-    z-index: 10;
     padding-bottom: 50px;
   }
 }
@@ -1735,73 +1731,91 @@ legend {
     display: none;
   }
 }
-.intro .travel-list {
-  /* 나라별 백그라운드 */
-}
-@media (max-width: 1023px) {
-  .intro .travel-list {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .intro .travel-list {
-    display: block;
-  }
-}
-.intro .travel-list .travel-item {
-  position: absolute;
-  transition: 1s;
-  width: 500px;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 60px 40px 25px;
-}
-.intro .travel-list .travel-item .travel-header {
-  margin-bottom: 20px;
-}
-.intro .travel-list .travel-item .travel-title {
-  color: #fff;
-  font-size: 3rem;
-  line-height: 1.3;
-}
-.intro .travel-list .travel-item .travel-text {
-  color: #fff;
-  font-size: 1.4rem;
-}
-.intro .travel-list .travel-black {
-  color: black;
-}
-.intro .travel-list .travel-black .travel-title,
-.intro .travel-list .travel-black .travel-text {
-  color: inherit;
-}
-.intro .travel-list .travel-hokkaido {
-  background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
-  transform: translateX(120%) translateY(-80%);
-}
-.intro .travel-list .travel-southeast-asia {
-  background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
-  transform: translateX(150%) translateY(-80%);
-}
-.intro .travel-list .travel-harbin {
-  background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
-  transform: translateX(120%) translateY(-80%);
-}
-.intro .travel-list .travel-boracay {
-  background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
-  transform: translateX(150%) translateY(-80%);
-}
-.intro .travel-list .travel-brunei {
-  background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
-  transform: translateX(120%) translateY(-80%);
-}
 
 .main-hanatour .logo {
   font-size: 1.8rem;
 }
 .main-hanatour h3 {
   font-size: 2rem;
+}
+
+.travel-showcase {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.travel-showcase .travel-list {
+  /* 나라별 백그라운드 */
+}
+@media (max-width: 1023px) {
+  .travel-showcase .travel-list {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .travel-showcase .travel-list {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+}
+.travel-showcase .travel-list .travel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 60px 40px 25px;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  animation: animate 20s linear infinite;
+  -webkit-showcase-reflect: below 0px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
+}
+.travel-showcase .travel-list .travel-item .travel-header {
+  margin-bottom: 20px;
+}
+.travel-showcase .travel-list .travel-item .travel-title {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+.travel-showcase .travel-list .travel-item .travel-text {
+  color: #fff;
+  font-size: 1.4rem;
+}
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+.travel-showcase .travel-list .travel-black {
+  color: black;
+}
+.travel-showcase .travel-list .travel-black .travel-title,
+.travel-showcase .travel-list .travel-black .travel-text {
+  color: inherit;
+}
+.travel-showcase .travel-list .travel-hokkaido {
+  background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
+}
+.travel-showcase .travel-list .travel-southeast-asia {
+  background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
+}
+.travel-showcase .travel-list .travel-harbin {
+  background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
+}
+.travel-showcase .travel-list .travel-boracay {
+  background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
+}
+.travel-showcase .travel-list .travel-brunei {
+  background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
 }
 
 .sustainable-travel-section .scroll-container {
