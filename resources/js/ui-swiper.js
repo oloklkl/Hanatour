@@ -59,5 +59,5 @@ next.addEventListener('click', function () {
 });
 prev.addEventListener('click', function () {
     let items = document.querySelectorAll('.item');
-    document.querySelector('.showcase').prepend(items[items.lenght - 1]);
+    document.querySelector('.showcase').prepend(items[items.length - 1]);
 });
