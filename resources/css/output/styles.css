@@ -1605,7 +1605,7 @@ legend {
 
 @media (min-width: 1024px) {
   .intro {
-    height: 80vh;
+    height: 40vh;
     width: 100%;
   }
 }
@@ -1744,7 +1744,9 @@ legend {
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  transform-style: preserve-3d;
 }
 .travel-showcase .travel-list {
   /* 나라별 백그라운드 */
@@ -1757,23 +1759,28 @@ legend {
 @media (min-width: 1024px) {
   .travel-showcase .travel-list {
     position: relative;
-    transform-style: preserve-3d;
+    display: flex;
+    perspective: 500px;
   }
 }
 .travel-showcase .travel-list .travel-item {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: calc(50% - 150px);
+  left: calc(50% - 230px);
   width: 500px;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
   padding: 60px 40px 25px;
-  transform-origin: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.3s;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-  animation: animate 20s linear infinite;
-  -webkit-showcase-reflect: below 0px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
+  transform-origin: bottom;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-showcase-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333));
 }
 .travel-showcase .travel-list .travel-item .travel-header {
   margin-bottom: 20px;
@@ -1787,13 +1794,33 @@ legend {
   color: #fff;
   font-size: 1.4rem;
 }
-@keyframes animate {
-  0% {
-    transform: perspective(1000px) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(1000px) rotateY(360deg);
-  }
+.travel-showcase .travel-list .travel-item:nth-child(1) {
+  transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+  z-index: -1;
+}
+.travel-showcase .travel-list .travel-item:nth-child(2) {
+  transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+  z-index: 2;
+}
+.travel-showcase .travel-list .travel-item:nth-child(3) {
+  transform: translate3d(-150px, 0, 0) scale(0.9) rotateY(15deg);
+  z-index: 3;
+}
+.travel-showcase .travel-list .travel-item:nth-child(4) {
+  transform: translate3d(0px, 0, 0) scale(1) rotateY(0deg);
+  z-index: 4;
+}
+.travel-showcase .travel-list .travel-item:nth-child(5) {
+  transform: translate3d(150px, 0, 0) scale(0.9) rotateY(-15deg);
+  z-index: 3;
+}
+.travel-showcase .travel-list .travel-item:nth-child(6) {
+  transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+  z-index: 2;
+}
+.travel-showcase .travel-list .travel-item:nth-child(7) {
+  transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+  z-index: -1;
 }
 .travel-showcase .travel-list .travel-black {
   color: black;
@@ -1803,19 +1830,66 @@ legend {
   color: inherit;
 }
 .travel-showcase .travel-list .travel-hokkaido {
-  background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
+  background-image: url(../../images/pattern/content/japan.jpg);
 }
 .travel-showcase .travel-list .travel-southeast-asia {
-  background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
+  background-image: url(../../images/pattern/content/southeast-asia.jpg);
 }
 .travel-showcase .travel-list .travel-harbin {
-  background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
+  background-image: url(../../images/pattern/content/harbin.jpg);
 }
 .travel-showcase .travel-list .travel-boracay {
-  background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
+  background-image: url(../../images/pattern/content/boracay.jpg);
 }
 .travel-showcase .travel-list .travel-brunei {
-  background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
+  background-image: url(../../images/pattern/content/brunei.jpg);
+}
+.travel-showcase .travel-list .travel-winter-travel {
+  background-image: url(../../images/pattern/content/winter-travel.jpg);
+}
+.travel-showcase .travel-list .travel-europe {
+  background-image: url(../../images/pattern/content/europe.jpg);
+}
+.travel-showcase .buttons {
+  position: absolute;
+  bottom: 75px;
+  display: flex;
+}
+.travel-showcase .buttons span {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #111;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.travel-showcase .buttons span:hover {
+  opacity: 1;
+}
+.travel-showcase .buttons span::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #111;
+  border-left: 2px solid #111;
+  rotate: -45deg;
+}
+.travel-showcase .buttons span:last-child::before {
+  content: "";
+  position: absolute;
+  left: initial;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #111;
+  border-left: 2px solid #111;
+  rotate: 135deg;
 }
 
 .sustainable-travel-section .scroll-container {

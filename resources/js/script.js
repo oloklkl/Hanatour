@@ -146,21 +146,3 @@ function initializeBoardListAnimations() {
         },
     });
 }
-
-// UpBox animation
-// function initializeUpBoxAnimation() {
-//     const upBox = document.querySelectorAll('.upBox');
-
-//     const upBoxTimeline = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: '.intro',
-//             pin: true,
-//             scrub: 3,
-//             start: 'top top',
-//             end: '+=400%',
-//             markers: true,
-//         },
-//     });
-
-//     upBoxTimeline.from(upBox, { y: '400%', duration: '8', ease: 'none', stagger: '6' }).to(upBox, { y: '0' });
-// }

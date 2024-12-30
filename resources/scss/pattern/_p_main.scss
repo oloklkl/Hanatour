@@ -107,7 +107,7 @@
 
 .intro {
     @include tabletMore {
-        height: 80vh;
+        height: 40vh;
         width: 100%;
     }
 
@@ -244,7 +244,9 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    transform-style: preserve-3d;
 
     .travel-list {
         @include tabletLess {
@@ -252,22 +254,26 @@
         }
         @include tabletMore {
             position: relative;
-
-            transform-style: preserve-3d;
+            display: flex;
+            perspective: 500px;
         }
         .travel-item {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: calc(50% - 150px);
+            left: calc(50% - 230px);
             width: 500px;
             height: 400px;
-            object-fit: cover;
             padding: 60px 40px 25px;
-            transform-origin: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition: 0.3s;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
             transform-style: preserve-3d;
-            transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-            animation: animate 20s linear infinite;
-            -webkit-showcase-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+            transform-origin: bottom;
+            user-select: none;
+            -webkit-showcase-reflect: below 1px linear-gradient(transparent, transparent, #0002);
+
             .travel-header {
                 margin-bottom: 20px;
             }
@@ -281,13 +287,33 @@
                 font-size: 1.4rem;
             }
         }
-        @keyframes animate {
-            0% {
-                transform: perspective(1000px) rotateY(0deg);
-            }
-            100% {
-                transform: perspective(1000px) rotateY(360deg);
-            }
+        .travel-item:nth-child(1) {
+            transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+            z-index: -1;
+        }
+        .travel-item:nth-child(2) {
+            transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+            z-index: 2;
+        }
+        .travel-item:nth-child(3) {
+            transform: translate3d(-150px, 0, 0) scale(0.9) rotateY(15deg);
+            z-index: 3;
+        }
+        .travel-item:nth-child(4) {
+            transform: translate3d(0px, 0, 0) scale(1) rotateY(0deg);
+            z-index: 4;
+        }
+        .travel-item:nth-child(5) {
+            transform: translate3d(150px, 0, 0) scale(0.9) rotateY(-15deg);
+            z-index: 3;
+        }
+        .travel-item:nth-child(6) {
+            transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+            z-index: 2;
+        }
+        .travel-item:nth-child(7) {
+            transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+            z-index: -1;
         }
 
         .travel-black {
@@ -301,20 +327,67 @@
 
         /* 나라별 백그라운드 */
         .travel-hokkaido {
-            background: -webkit-image-set(url(../../images/pattern/content/japan.jpg)) no-repeat center center/cover;
+            background-image: url(../../images/pattern/content/japan.jpg);
         }
         .travel-southeast-asia {
-            background: -webkit-image-set(url(../../images/pattern/content/southeast-asia.jpg)) no-repeat center center/cover;
+            background-image: url(../../images/pattern/content/southeast-asia.jpg);
         }
         .travel-harbin {
-            background: -webkit-image-set(url(../../images/pattern/content/harbin.jpg)) no-repeat center center/cover;
+            background-image: url(../../images/pattern/content/harbin.jpg);
         }
         .travel-boracay {
-            background: -webkit-image-set(url(../../images/pattern/content/boracay.jpg)) no-repeat center center/cover;
+            background-image: url(../../images/pattern/content/boracay.jpg);
         }
         .travel-brunei {
-            background: -webkit-image-set(url(../../images/pattern/content/brunei.jpg)) no-repeat center center/cover;
+            background-image: url(../../images/pattern/content/brunei.jpg);
         }
+        .travel-winter-travel {
+            background-image: url(../../images/pattern/content/winter-travel.jpg);
+        }
+        .travel-europe {
+            background-image: url(../../images/pattern/content/europe.jpg);
+        }
+    }
+    .buttons {
+        position: absolute;
+        bottom: 75px;
+        display: flex;
+    }
+    .buttons span {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border: 2px solid $black;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+    }
+    .buttons span:hover {
+        opacity: 1;
+    }
+    .buttons span::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $black;
+        border-left: 2px solid $black;
+        rotate: -45deg;
+    }
+    .buttons span:last-child::before {
+        content: '';
+        position: absolute;
+        left: initial;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $black;
+        border-left: 2px solid $black;
+        rotate: 135deg;
     }
 }
 

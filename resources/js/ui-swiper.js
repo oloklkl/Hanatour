@@ -1,3 +1,4 @@
+// 스튜디오 섹션 스와이퍼
 var swiper = new Swiper('.mySwiper', {
     navigation: {
         nextEl: '.swiper-button-next',
@@ -6,6 +7,7 @@ var swiper = new Swiper('.mySwiper', {
     watchSlidesProgress: true,
 });
 
+//event-banner 슬라이드
 const slides = document.querySelectorAll('.event-banner__slides li');
 let currentSlide = 0;
 
@@ -24,13 +26,12 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-// Initial slide
 showSlide(currentSlide);
 
-// Change slide every 6 seconds
 setInterval(nextSlide, 6000); // 6초마다 슬라이드 전환
+//event-banner 슬라이드 끝
 
-// sub_02 swiper
+// sub_02 스와이퍼
 var swiper = new Swiper('.mySwiper3', {
     spaceBetween: 10,
     slidesPerView: 4,
@@ -46,4 +47,17 @@ var swiper = new Swiper('.mySwiper2', {
     thumbs: {
         swiper: swiper,
     },
+});
+
+//travel-showcase 섹션 버튼
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+
+next.addEventListener('click', function () {
+    let items = document.querySelectorAll('.item');
+    document.querySelector('.showcase').appendChild(items[0]);
+});
+prev.addEventListener('click', function () {
+    let items = document.querySelectorAll('.item');
+    document.querySelector('.showcase').prepend(items[items.lenght - 1]);
 });
