@@ -66,56 +66,53 @@ const toTopEl = document.querySelector('#to-top');
 
 // 이전 스크롤 위치 저장 변수
 let lastScrollY = window.scrollY;
-
-// 페이지에 스크롤 이벤트를 추가!
-// 스크롤이 지나치게 자주 발생하는 것을 조절(throttle, 일부러 부하를 줌)
+// 페이지에 스크롤 이벤트 추가
 window.addEventListener(
     'scroll',
     _.throttle(function () {
-        // 현재 스크롤 위치
         const currentScrollY = window.scrollY;
 
-        // 스크롤 다운
-        if (currentScrollY > lastScrollY) {
-            // Badge 요소 숨기기!
-            // gsap.to(요소, 시간, 옵션);
+        // 스크롤이 100px 이상이면 헤더 숨기기
+        if (currentScrollY > 100) {
             gsap.to(headerEl, {
                 opacity: 0,
                 display: 'none',
                 duration: 0.6,
             });
-            // 상단으로 스크롤 버튼 보이기!
-            gsap.to(toTopEl, {
-                right: '30px',
-                // x: 0,
-                duration: 0.2,
-            });
-
-            // 스크롤 업
         } else {
-            // Badge 요소 보이기!
+            // 최상단에 있을 때 헤더 보여주기
             gsap.to(headerEl, {
                 opacity: 1,
                 display: 'block',
                 duration: 0.6,
             });
-            // 상단으로 스크롤 버튼 숨기기!
+        }
+
+        // 상단으로 이동 버튼 제어
+        if (currentScrollY > 300) {
+            // 스크롤이 일정 위치를 지나면 버튼 보이기
+            gsap.to(toTopEl, {
+                right: '30px',
+                duration: 0.2,
+            });
+        } else {
+            // 스크롤이 위로 올라가면 버튼 숨기기
             gsap.to(toTopEl, {
                 right: '-50px',
-                // x: 100,
                 duration: 0.2,
             });
         }
 
-        // 이전 스크롤 위치 업데이트
+        // 스크롤 위치 업데이트
         lastScrollY = currentScrollY;
-    }, 300)
+    }, 300) // 스크롤 이벤트를 300ms 간격으로 실행
 );
-// 상단으로 스크롤 버튼을 클릭하면,
+
+// 상단으로 스크롤 버튼 클릭 이벤트
 toTopEl.addEventListener('click', function () {
-    // 페이지 위치를 최상단으로 부드럽게(1초 동안) 이동.
     gsap.to(window, {
-        scrollTo: 0,
+        scrollTo: 0, // 페이지를 최상단으로 부드럽게 이동
+        duration: 1, // 1초 동안 이동
     });
 });
 
