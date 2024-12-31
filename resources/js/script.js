@@ -11,7 +11,7 @@ function initializeAnimations() {
     initializeScrollaJS();
 }
 
-// Airplane animation based on screen size
+// 비행기 animation based on screen size
 function initializeAirplaneAnimation() {
     const screenWidth = window.innerWidth;
     const tl = gsap.timeline({ ease: 'power1.inOut' });
@@ -89,7 +89,7 @@ function initializeScrollEffects() {
     initializeUpBoxAnimation();
 }
 
-// Board list animations for different screen sizes
+// Board list animations for different screen sizes <뉴스>
 function initializeBoardListAnimations() {
     ScrollTrigger.matchMedia({
         // Desktop animation
