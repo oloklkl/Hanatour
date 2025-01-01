@@ -661,20 +661,11 @@
         text-decoration: none;
         border-radius: 20px;
         font-size: 1.4rem;
-        font-weight: 600;
+        font-weight: 500;
         align-items: center;
         transition: background-color 0.3s;
         z-index: 1000;
 
-        #Bold {
-            width: 20px;
-            height: 20px;
-
-            @include mobileMore {
-                width: 25px;
-                height: 25px;
-            }
-        }
         @include mobileMore {
             font-size: 2rem;
             padding: 10px 15px;
@@ -682,6 +673,18 @@
         @include tabletMore {
             top: 33%;
             padding: 10px 20px;
+        }
+
+        &::after {
+            content: '\f061';
+            @include lineAwesome;
+            margin-left: 3px;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            @include mobileMore {
+                font-size: 2rem;
+            }
         }
     }
 
