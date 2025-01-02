@@ -359,7 +359,6 @@ legend {
   display: inline-block;
   margin-top: 40px;
   font-size: 1.4rem;
-  background-color: #fff;
   padding: 10px 10px;
   border-radius: 25px;
   color: #6f47db;
@@ -430,7 +429,6 @@ legend {
   top: 43%;
   left: 20%;
   width: 52%;
-  font-weight: 600;
   font-size: 1.8rem;
   color: #fff;
   line-height: 1.5;
@@ -645,6 +643,7 @@ legend {
 }
 @media (min-width: 1024px) {
   .sec-service .tags {
+    display: flex;
     margin-top: 1px;
   }
 }
@@ -1857,7 +1856,7 @@ legend {
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
 }
 .travel-showcase .travel-list .travel-item:nth-child(1) {
-  transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+  transform: translate3d(-310px, 0, 0) scale(0.7) rotateY(35deg);
   z-index: -1;
 }
 .travel-showcase .travel-list .travel-item:nth-child(2) {
@@ -1881,7 +1880,7 @@ legend {
   z-index: 2;
 }
 .travel-showcase .travel-list .travel-item:nth-child(7) {
-  transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+  transform: translate3d(310px, 0, 0) scale(0.7) rotateY(-35deg);
   z-index: -1;
 }
 .travel-showcase .travel-list .travel-black {

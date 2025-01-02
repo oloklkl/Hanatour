@@ -329,7 +329,7 @@
             }
         }
         .travel-item:nth-child(1) {
-            transform: translate3d(-250px, 0, 0) scale(0.8) rotateY(25deg);
+            transform: translate3d(-310px, 0, 0) scale(0.7) rotateY(35deg);
             z-index: -1;
         }
         .travel-item:nth-child(2) {
@@ -353,7 +353,7 @@
             z-index: 2;
         }
         .travel-item:nth-child(7) {
-            transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
+            transform: translate3d(310px, 0, 0) scale(0.7) rotateY(-35deg);
             z-index: -1;
         }
 
