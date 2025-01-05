@@ -533,9 +533,11 @@
         .footer-sns__icon {
             @include mobileMore {
                 padding: 0 15px;
+                transition: opacity 0.3s ease-in-out;
             }
         }
     }
+
     .footer-logo {
         @include mobileMore {
             display: none;

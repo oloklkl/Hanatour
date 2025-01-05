@@ -1,3 +1,13 @@
+.main-hanatour {
+    .logo {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+// <!-- video 섹션-->
 .video-container {
     position: relative;
     top: 0;
@@ -104,7 +114,9 @@
         }
     }
 }
+// <!-- video 섹션 끝-->
 
+// <!-- intro 섹션 -->
 .intro {
     @include tabletMore {
         height: 50vh;
@@ -224,8 +236,7 @@
             font-weight: 700;
             line-height: 1;
             color: $black;
-
-            background-color: $secondary-keyword;
+            background-color: $gray-10;
         }
     }
     .search-decoration {
@@ -244,16 +255,9 @@
         }
     }
 }
+// <!-- intro 섹션 끝 -->
 
-.main-hanatour {
-    .logo {
-        font-size: 1.8rem;
-    }
-    h3 {
-        font-size: 2rem;
-    }
-}
-
+// <!-- travel-showcase 섹션 -->
 .travel-showcase {
     @include mobile {
         display: none;
@@ -437,7 +441,9 @@
         rotate: 135deg;
     }
 }
+// <!-- travel-showcase 섹션 끝-->
 
+// <!-- sustainable-travel 섹션 -->
 .sustainable-travel-section {
     .scroll-container {
         height: 60px;
@@ -484,7 +490,9 @@
         }
     }
 }
+// <!-- sustainable-travel 섹션 끝-->
 
+// !-- event-banner 섹션 -->
 .event-banner {
     display: block;
     position: relative;
@@ -692,6 +700,7 @@
         background-color: $secondary-3;
     }
 }
+// !-- event-banner 섹션 끝 -->
 
 // desktop
 @media screen and (min-width: 1024px) {
@@ -710,6 +719,7 @@
     }
 }
 
+// <!-- travel-packages 섹션 -->
 .travel-packages {
     height: 180vh;
     background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), -webkit-image-set(url(../../images/pattern/banners/travel-packages.jpg)) no-repeat center center/cover;
@@ -744,7 +754,6 @@
     .travel-packages__list {
         display: flex;
         flex-direction: column;
-
         @include mobileMore {
             display: flex;
             flex-direction: column;
@@ -799,7 +808,11 @@
         }
         li:nth-child(2) {
             padding: 300px 30px 25px;
-            background: -webkit-image-set(url(../../images/pattern/content/travel-packages__item-li2.jpg)) no-repeat center center/cover;
+            // background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), -webkit-image-set(url(../../images/pattern/banners/travel-packages.jpg)) no-repeat center center/cover;
+            background-image: url(../../images/pattern/content/travel-packages__item-li2.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
 
             span {
                 display: block;
@@ -838,3 +851,18 @@
         }
     }
 }
+
+.travel-packages::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 243, 248, 0.2);
+    backdrop-filter: blur(12px);
+    overflow: auto;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+}
+// <!-- travel-packages 섹션 끝-->
