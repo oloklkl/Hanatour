@@ -723,6 +723,10 @@
 .travel-packages {
     height: 180vh;
     background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), -webkit-image-set(url(../../images/pattern/banners/travel-packages.jpg)) no-repeat center center/cover;
+    // background-image: url(../../images/pattern/banners/travel-packages.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
 
     @include mobileMore {
         height: 150vh;
@@ -808,7 +812,6 @@
         }
         li:nth-child(2) {
             padding: 300px 30px 25px;
-            // background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), -webkit-image-set(url(../../images/pattern/banners/travel-packages.jpg)) no-repeat center center/cover;
             background-image: url(../../images/pattern/content/travel-packages__item-li2.jpg);
             background-repeat: no-repeat;
             background-position: center center;
