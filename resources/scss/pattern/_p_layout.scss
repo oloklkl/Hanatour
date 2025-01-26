@@ -323,7 +323,8 @@
     width: 100%;
     height: 100%;
     padding: $p-mobile;
-    background: hsla(0, 0%, 59%, 0.5);
+    // background: hsla(0, 0%, 59%, 0.5);
+    background: hsla(0, 0%, 59%, 1);
     backdrop-filter: blur(10px);
     transition: all 0.3s;
     .gnb__depth1 {
@@ -534,6 +535,13 @@
             @include mobileMore {
                 padding: 0 15px;
                 transition: opacity 0.3s ease-in-out;
+            }
+        }
+        .footer-sns__icon {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+            &:hover {
+                filter: grayscale(0%);
             }
         }
     }

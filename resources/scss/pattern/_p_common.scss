@@ -36,10 +36,10 @@
     overflow: hidden;
 
     li:nth-child(1) {
-        background: #cff0fa;
+        background: #e2daf2;
     }
     li:nth-child(2) {
-        background: #e2daf2;
+        background: #cff0fa;
     }
     li:nth-child(3) {
         background: #f1e6cc;
@@ -164,6 +164,10 @@
             text-align: left;
             z-index: 200;
 
+            @include mobile {
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
+            }
+
             @include mobileMore {
                 display: block;
                 margin-top: 20px;
@@ -181,33 +185,12 @@
             }
         }
         .slide-text-secondary {
-            color: $black;
+            @include mobile {
+                color: $black;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+            }
         }
     }
-
-    // .swiper-slide:nth-of-type(1) .business-tit {
-    //     color: $secondary-3;
-    // }
-
-    // .swiper-slide:nth-of-type(2) .business-tit {
-    //     color: $secondary-5;
-    // }
-
-    // .swiper-slide:nth-of-type(3) .business-tit {
-    //     color: $secondary-1;
-    // }
-
-    // // .swiper-slide:nth-of-type(1) .slide-title {
-    // //     color: $secondary-3;
-    // // }
-
-    // .swiper-slide:nth-of-type(2) .slide-title {
-    //     color: $secondary-5;
-    // }
-
-    // .swiper-slide:nth-of-type(3) .slide-title {
-    //     color: $secondary-1;
-    // }
 
     .image-container {
         position: relative;
@@ -238,12 +221,20 @@
                 top: -80px;
                 right: 110px;
                 transform: rotate(5deg);
+                &:hover {
+                    transform: rotate(-15deg);
+                    transition: 0.2s;
+                }
             }
             @include tabletMore {
                 position: absolute;
                 top: -250px;
                 right: 280px;
                 transform: rotate(-5deg);
+                &:hover {
+                    transform: rotate(20deg);
+                    transition: 0.3s;
+                }
             }
         }
         .image-right {
@@ -251,6 +242,10 @@
                 top: -250px;
                 right: 5px;
                 transform: rotate(5deg);
+                &:hover {
+                    transform: rotate(-20deg);
+                    transition: 0.3s;
+                }
             }
         }
 
@@ -263,12 +258,20 @@
                 top: 330px;
                 right: 200px;
                 transform: rotate(-5deg);
+                &:hover {
+                    transform: rotate(15deg);
+                    transition: 0.3s;
+                }
             }
             @include tabletMore {
                 position: absolute;
                 top: 120px;
                 right: 0;
                 transform: rotate(5deg);
+                &:hover {
+                    transform: rotate(-20deg);
+                    transition: 0.3s;
+                }
             }
         }
         .image-left {
@@ -276,6 +279,10 @@
                 top: 120px;
                 right: 330px;
                 transform: rotate(-10deg);
+                &:hover {
+                    transform: rotate(15deg);
+                    transition: 0.3s;
+                }
             }
         }
         .images {

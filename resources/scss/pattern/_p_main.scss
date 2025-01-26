@@ -141,19 +141,21 @@
         }
     }
     .effect-heading {
-        @include mobileMore {
+        @include mobile {
             display: none;
         }
-        @include tabletLess {
-            display: none;
+        @include mobileMore {
+            display: block;
+            margin-top: 80px;
+            font-size: 8rem;
+            font-weight: 900;
+            color: $gray-10;
+            line-height: 1.2;
         }
         @include tabletMore {
             display: flex;
             flex-direction: row-reverse;
             font-size: 10rem;
-            font-weight: 900;
-            color: $gray-10;
-            line-height: 1.2;
             transform: translateY(-150%) translateX(5%);
         }
     }
@@ -268,6 +270,7 @@
     @include mobileMore {
         width: 100%;
         display: flex;
+        margin-top: -150px;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
@@ -297,8 +300,8 @@
             @include mobileMore {
                 position: absolute;
                 top: calc(50% - 150px);
-                left: calc(50% - 205px);
-                width: 400px;
+                left: calc(50% - 200px);
+                width: 450px;
                 height: 330px;
                 padding: 60px 40px 25px;
                 background-repeat: no-repeat;
@@ -321,15 +324,25 @@
                 margin-bottom: 20px;
             }
             .travel-title {
-                color: $white;
-                font-size: 3rem;
-                line-height: 1.3;
+                @include mobileMore {
+                    color: $white;
+                    font-size: 2.4rem;
+                    line-height: 1.3;
+                }
+                @include tabletMore {
+                    font-size: 3rem;
+                }
             }
             .travel-text {
-                display: inline-block;
-                color: $white;
-                font-size: 1.4rem;
-                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+                @include mobileMore {
+                    display: inline-block;
+                    color: $white;
+                    font-size: 1.4rem;
+                    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+                }
+                @include tabletMore {
+                    font-size: 1.7rem;
+                }
             }
         }
         .travel-item:nth-child(1) {
@@ -341,16 +354,26 @@
             z-index: 2;
         }
         .travel-item:nth-child(3) {
-            transform: translate3d(-150px, 0, 0) scale(0.9) rotateY(15deg);
-            z-index: 3;
+            @include mobileMore {
+                transform: translate3d(-100px, 0, 0) scale(0.9) rotateY(15deg);
+                z-index: 3;
+            }
+            @include tabletMore {
+                transform: translate3d(-150px, 0, 0) scale(0.9) rotateY(15deg);
+            }
         }
         .travel-item:nth-child(4) {
             transform: translate3d(0px, 0, 0) scale(1) rotateY(0deg);
             z-index: 4;
         }
         .travel-item:nth-child(5) {
-            transform: translate3d(150px, 0, 0) scale(0.9) rotateY(-15deg);
-            z-index: 3;
+            @include mobileMore {
+                transform: translate3d(100px, 0, 0) scale(0.9) rotateY(-15deg);
+                z-index: 3;
+            }
+            @include tabletMore {
+                transform: translate3d(150px, 0, 0) scale(0.9) rotateY(-15deg);
+            }
         }
         .travel-item:nth-child(6) {
             transform: translate3d(250px, 0, 0) scale(0.8) rotateY(-25deg);
@@ -397,6 +420,7 @@
         @include mobile {
             display: none;
         }
+
         @include mobileMore {
             position: absolute;
             bottom: 75px;
@@ -415,6 +439,10 @@
         justify-content: center;
         align-items: center;
         opacity: 0.5;
+
+        @include tablet {
+            margin-top: -170px;
+        }
     }
     .buttons span:hover {
         opacity: 1;
@@ -721,12 +749,23 @@
 
 // <!-- travel-packages 섹션 -->
 .travel-packages {
-    height: 180vh;
-    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), -webkit-image-set(url(../../images/pattern/banners/travel-packages.jpg)) no-repeat center center/cover;
-    // background-image: url(../../images/pattern/banners/travel-packages.jpg);
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: cover;
+    position: relative;
+    background-image: url(../../images/pattern/banners/travel-packages.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(241, 243, 248, 0.01);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px); /* Safari 지원 */
+    }
 
     @include mobileMore {
         height: 150vh;
@@ -769,6 +808,9 @@
         }
 
         .travel-packages__item {
+            position: relative;
+            z-index: 2;
+
             @include mobile {
                 width: 390px;
             }
@@ -855,17 +897,4 @@
     }
 }
 
-.travel-packages::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(241, 243, 248, 0.2);
-    backdrop-filter: blur(12px);
-    overflow: auto;
-    z-index: 200;
-    opacity: 0;
-    visibility: hidden;
-}
 // <!-- travel-packages 섹션 끝-->
