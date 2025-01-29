@@ -2336,7 +2336,7 @@ legend {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(241, 243, 248, 0.01);
+  background: rgba(241, 243, 248, 0.15);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px); /* Safari 지원 */
 }
