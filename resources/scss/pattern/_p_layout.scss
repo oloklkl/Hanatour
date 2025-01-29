@@ -114,7 +114,6 @@
     }
     .gnb-item {
         color: $white;
-        font-size: 2rem;
         font-weight: 700;
     }
     .gnb__depth1 {
@@ -126,19 +125,6 @@
                     color: $primary;
                     &::after {
                         width: 100%;
-                    }
-                }
-            }
-            &:first-child {
-                .gnb__depth2 {
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 1px;
-                        height: 100%;
-                        background: $gray-20;
                     }
                 }
             }
@@ -182,15 +168,6 @@
         padding: 0;
         background: $white;
         transition: all 0.3s;
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 1px;
-            height: 100%;
-            background: $gray-20;
-        }
         a {
             display: block;
             padding: 7px 0;
@@ -419,14 +396,14 @@
         margin-bottom: 60px;
 
         .footer-nav__section-title {
-            font-size: 2rem;
+            font-size: 1.7rem;
             margin-bottom: 20px;
         }
         .footer-nav__link-item {
             margin-bottom: 10px;
         }
         .footer-nav__link-item a {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             color: $gray-50;
         }
     }
@@ -454,6 +431,7 @@
     }
     a.footer-link {
         color: $gray-40;
+        font-size: 1.5rem;
     }
     .footer-nav__list {
         position: relative;
@@ -484,7 +462,7 @@
             margin-bottom: 5px;
 
             @include mobileMore {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
             .footer-info__title {
                 color: $white;
@@ -527,7 +505,7 @@
         }
         @include tabletMore {
             position: absolute;
-            top: 473px;
+            top: 445px;
             right: 300px;
         }
 

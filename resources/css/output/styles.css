@@ -1096,7 +1096,6 @@ legend {
 }
 #gnb .gnb-item {
   color: #fff;
-  font-size: 2rem;
   font-weight: 700;
 }
 #gnb .gnb__depth1 {
@@ -1110,15 +1109,6 @@ legend {
 }
 #gnb .gnb__depth1 > li:hover > a > span::after {
   width: 100%;
-}
-#gnb .gnb__depth1 > li:first-child .gnb__depth2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: #e4e4e4;
 }
 #gnb .gnb__depth1 > li > a {
   display: flex;
@@ -1158,15 +1148,6 @@ legend {
   padding: 0;
   background: #fff;
   transition: all 0.3s;
-}
-#gnb .gnb__depth2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1px;
-  height: 100%;
-  background: #e4e4e4;
 }
 #gnb .gnb__depth2 a {
   display: block;
@@ -1398,14 +1379,14 @@ legend {
   margin-bottom: 60px;
 }
 #footer .footer-nav__list-item .footer-nav__section-title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 20px;
 }
 #footer .footer-nav__list-item .footer-nav__link-item {
   margin-bottom: 10px;
 }
 #footer .footer-nav__list-item .footer-nav__link-item a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #8e8e8e;
 }
 #footer .footer-links {
@@ -1433,6 +1414,7 @@ legend {
 }
 #footer a.footer-link {
   color: #c6c6c6;
+  font-size: 1.5rem;
 }
 #footer .footer-nav__list {
   position: relative;
@@ -1463,7 +1445,7 @@ legend {
 }
 @media (min-width: 600px) {
   #footer .footer-info .footer-info__text {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 #footer .footer-info .footer-info__text .footer-info__title {
@@ -1511,7 +1493,7 @@ legend {
 @media (min-width: 1024px) {
   #footer .footer-sns {
     position: absolute;
-    top: 473px;
+    top: 445px;
     right: 300px;
   }
 }
