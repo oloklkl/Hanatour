@@ -146,3 +146,8 @@ function initializeBoardListAnimations() {
         },
     });
 }
+
+// a링크 스크립트 위로 튕기는 형상 제거
+$(document).on('click', 'a[href="#"]', function (e) {
+    e.preventDefault();
+});
