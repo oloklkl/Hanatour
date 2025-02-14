@@ -1273,13 +1273,21 @@ legend {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background: hsl(0, 0%, 59%);
+  background: hsla(0, 0%, 59%, 0.5);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   transition: all 0.3s;
 }
 #nav-all .gnb__depth1 {
   display: inline-flex;
+  gap: 100px;
+}
+#nav-all .gnb__depth1 .gnb-item {
+  display: block;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 #nav-all.active {
   display: block;
@@ -1289,6 +1297,13 @@ legend {
   content: "\f00d";
   font-family: "Line Awesome Free";
   font-weight: 900;
+  color: #fff;
+}
+#nav-all .gnb__depth2 a {
+  display: block;
+  font-size: 2rem;
+  color: #e4e4e4;
+  margin-bottom: 10px;
 }
 
 .top {

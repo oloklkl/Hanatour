@@ -300,12 +300,22 @@
     width: 100%;
     height: 100%;
     padding: $p-mobile;
-    // background: hsla(0, 0%, 59%, 0.5);
-    background: hsla(0, 0%, 59%, 1);
+    background: hsla(0, 0%, 59%, 0.5);
+    // background: hsla(0, 0%, 59%, 1);
     backdrop-filter: blur(10px);
     transition: all 0.3s;
+
     .gnb__depth1 {
         display: inline-flex;
+        gap: 100px;
+
+        .gnb-item {
+            display: block;
+            font-size: 3rem;
+            color: $white;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
     }
 
     &.active {
@@ -316,6 +326,15 @@
         &::before {
             content: '\f00d';
             @include lineAwesome;
+            color: $white;
+        }
+    }
+    .gnb__depth2 {
+        a {
+            display: block;
+            font-size: 2rem;
+            color: $gray-20;
+            margin-bottom: 10px;
         }
     }
 }
