@@ -4,6 +4,27 @@ $('.all-menu').click(function () {
     $('#nav-all').addClass('active');
 });
 
+// gnb-item 또는 gnb__depth2-close 클릭 시 메뉴 열고 닫기
+$('.gnb-item, .gnb__depth2-close').click(function (e) {
+    e.stopPropagation(); // a 태그 클릭 방지
+
+    let $depth2 = $(this).closest('li').find('.gnb__depth2');
+
+    if (!$depth2.hasClass('active')) {
+        $('.gnb__depth2').removeClass('active'); // 모든 메뉴 닫기
+        $depth2.addClass('active'); // 클릭한 메뉴만 열기
+    } else {
+        $depth2.removeClass('active'); // 클릭 시 토글
+    }
+
+    return false; // a 태그 기본 동작 방지
+});
+
+// 버튼 클릭 시 회전
+$('.gnb__depth2-close').click(function () {
+    $(this).toggleClass('active');
+});
+
 // #nav-all .close 를 클릭했을 때
 // #nav-all 에게 .active 클래스를 제거한다.
 $('#nav-all .close').click(function () {
