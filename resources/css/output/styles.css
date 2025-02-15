@@ -1272,38 +1272,178 @@ legend {
   left: 100%;
   width: 100%;
   height: 100%;
-  padding: 20px;
-  background: hsla(0, 0%, 59%, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  padding: 100px;
+  background: hsla(0, 0%, 59%, 0.6);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   transition: all 0.3s;
 }
-#nav-all .gnb__depth1 {
-  display: inline-flex;
-  gap: 100px;
+@media (max-width: 599px) {
+  #nav-all {
+    padding: 60px;
+  }
 }
-#nav-all .gnb__depth1 .gnb-item {
-  display: block;
+@media (min-width: 600px) and (max-width: 1023px) {
+  #nav-all {
+    padding: 80px;
+  }
+}
+#nav-all .nav-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 100px;
+}
+#nav-all .nav-header .nav-logo {
+  width: 18rem;
+}
+@media (max-width: 599px) {
+  #nav-all .nav-header .nav-logo {
+    width: 12rem;
+  }
+}
+#nav-all .nav-header .close::before {
+  content: "\f00d";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 5rem;
+  color: #717171;
+}
+@media (max-width: 599px) {
+  #nav-all .nav-header .close::before {
+    font-size: 3.5rem;
+  }
+}
+#nav-all .gnb__depth1 {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  #nav-all .gnb__depth1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#nav-all .gnb__depth1 .title {
   font-size: 3rem;
-  color: #fff;
+}
+@media (min-width: 600px) and (max-width: 1299px) {
+  #nav-all .gnb__depth1 .title {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  #nav-all .gnb__depth1 .title {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  #nav-all .gnb__depth1 li a {
+    display: flex;
+  }
+}
+#nav-all .gnb-item {
+  display: block;
+  font-size: 2.2rem;
   font-weight: bold;
-  margin-bottom: 30px;
+}
+@media (max-width: 1023px) {
+  #nav-all .gnb-item {
+    padding: 10px 0;
+  }
+}
+@media (min-width: 1920px) {
+  #nav-all .gnb__depth2-close::after {
+    display: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  #nav-all .gnb__depth2-close::after {
+    content: "\f107";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #555555;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) and (max-width: 599px) {
+  #nav-all .gnb__depth2-close::after {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 599px) {
+  #nav-all .gnb__depth2-close::after {
+    font-sie: 1.8rem;
+  }
+}
+#nav-all .gnb__depth2-close.active {
+  display: block;
+  left: 0;
 }
 #nav-all.active {
   display: block;
   left: 0;
 }
-#nav-all .close::before {
-  content: "\f00d";
-  font-family: "Line Awesome Free";
-  font-weight: 900;
-  color: #fff;
+@media (max-width: 1023px) {
+  #nav-all .gnb__depth2 {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin-left: 20px;
+  }
+  #nav-all .gnb__depth2.active {
+    display: block;
+    max-height: 600px;
+  }
 }
 #nav-all .gnb__depth2 a {
   display: block;
-  font-size: 2rem;
-  color: #e4e4e4;
-  margin-bottom: 10px;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  color: #2d2d2d;
+}
+@media (max-width: 599px) {
+  #nav-all .gnb__depth2 a {
+    font-size: 1.5rem;
+  }
+}
+#nav-all .gnb__depth2 a:hover {
+  color: #1d1d1d;
+  background: #f0f0f0;
+  border-radius: 7px;
+}
+#nav-all .nav-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+@media (max-width: 1023px) {
+  #nav-all .nav-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+#nav-all .nav-footer .nav-info {
+  display: flex;
+  gap: 50px;
+}
+@media (max-width: 599px) {
+  #nav-all .nav-footer .nav-info {
+    font-size: 1.5rem;
+    gap: 25px;
+  }
+}
+#nav-all .nav-footer .nav-info .support-link,
+#nav-all .nav-footer .nav-info .about-link {
+  color: #2d2d2d;
+}
+#nav-all .nav-footer .nav-sns {
+  display: flex;
+  gap: 30px;
 }
 
 .top {
@@ -1539,7 +1679,7 @@ legend {
   #footer .footer-logo {
     display: block;
     margin: 25px 0;
-    width: 12%;
+    width: 15rem;
   }
 }
 
