@@ -1,9 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
-@font-face {
-  src: url(../../fonts/NewYork\ PERSONAL\ USE.otf);
-  font-family: "new";
-}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 /* reset */
 body,
 div,
@@ -94,34 +90,25 @@ body {
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
 input[type=text], input[type=password], input[type=submit], input[type=search] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border-radius: 0;
 }
 input:checked[type=checkbox] {
   background-color: #e4e4e4;
-  -webkit-appearance: checkbox;
-     -moz-appearance: checkbox;
-          appearance: checkbox;
+  appearance: checkbox;
 }
 
 button {
-  -webkit-appearance: button;
-     -moz-appearance: button;
-          appearance: button;
+  appearance: button;
   border-radius: 0;
 }
 
 input[type=button], input[type=submit], input[type=reset], input[type=file] {
-  -webkit-appearance: button;
-     -moz-appearance: button;
-          appearance: button;
+  appearance: button;
   border-radius: 0;
 }
 input[type=search]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 /* 기본 폰트 설정 */
@@ -485,8 +472,7 @@ legend {
 .sec-service .image-container .image-frame {
   position: relative;
   z-index: 100;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 600px) {
   .sec-service .image-container .image-frame {
@@ -496,14 +482,12 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-service .image-container .image-frame a img:nth-child(1) {
-    -o-object-fit: fill;
-       object-fit: fill;
+    object-fit: fill;
   }
 }
 .sec-service .image-container .image-content {
   z-index: 110;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 600px) {
   .sec-service .image-container .image-content {
@@ -810,8 +794,7 @@ legend {
   width: 100%;
   height: 233px;
   border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -1274,8 +1257,7 @@ legend {
   height: 100%;
   padding: 100px;
   background: hsla(0, 0%, 59%, 0.6);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   transition: all 0.3s;
 }
 @media (max-width: 599px) {
@@ -1512,6 +1494,10 @@ legend {
     margin-top: 80px;
   }
 }
+#footer .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 @media (min-width: 600px) {
   #footer .footer-nav {
     display: none;
@@ -1575,18 +1561,10 @@ legend {
   position: relative;
   width: 80%;
 }
-@media (min-width: 1024px) {
-  #footer .footer-info {
-    position: absolute;
-    top: 60px;
-    right: 350px;
-  }
-}
 #footer .footer-info .footer-info__title {
   margin: 30px 0 15px;
   background-color: #2d2d2d;
   display: inline-block;
-  padding: 5px 15px;
   border-radius: 30px;
   font-weight: 400;
 }
@@ -1626,13 +1604,6 @@ legend {
   #footer .footer-brand-container {
     font-size: 3rem;
     margin: 30px 0;
-  }
-}
-@media (min-width: 1024px) {
-  #footer .footer-brand-container {
-    position: absolute;
-    top: 250px;
-    right: 355px;
   }
 }
 #footer .footer-sns {
@@ -1779,8 +1750,7 @@ legend {
   left: 0;
   width: 100%;
   height: 844px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: 0;
   background: linear-gradient(#111 0%, rgba(102, 102, 102, 0) 100%);
 }
@@ -2020,9 +1990,7 @@ legend {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
     transform-style: preserve-3d;
     transform-origin: bottom;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
     -webkit-showcase-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333));
   }
 }
@@ -2406,8 +2374,7 @@ legend {
   height: 138px;
   z-index: 800;
   border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 600px) {
   .event-banner .event-banner__img {
@@ -2420,8 +2387,7 @@ legend {
   }
 }
 .event-banner .event-banner__img--first {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .event-banner .btn-event {
   position: absolute;
